@@ -1,0 +1,1604 @@
+<title>Herbstwoche Tagesplan</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Atkinson+Hyperlegible:wght@400;700&display=swap">
+<style>
+/* Layout: Foto-Kopf mit Glas-Statistik, darunter die Ablage als Glasfläche und die Tage als Raster (Handy: wischbares Karussell mit Tagesleiste).
+   Farben aus dem Foto: Himmel, Bucht, Pinie, Sandstein im Abendlicht, Fels, Treibholz-Zaun. */
+:root {
+  --bg: #f5eee2;
+  --sky-wash: #cfe5f6;
+  --sea-wash: #e2f0ee;
+  --glow: rgba(255, 186, 110, .38);
+  --surface: #fcfbf8;
+  --col: #f7f4ed;
+  --line: #d9d4c7;
+  --fg: #1f2420;
+  --muted: #5f6862;
+  --accent: #245b8f;
+  --gold: #b9813c;
+  --drop: #dbe8f4;
+  --wander: #4a6829;  --wander-bg: #e4ebd3;
+  --ausflug: #97601c; --ausflug-bg: #f5e5c9;
+  --stadt: #2c64a5;   --stadt-bg: #dfe9f6;
+  --well: #a94a36;    --well-bg: #f6dfd6;
+  --mix: #6c5236;     --mix-bg: #ede4d7;
+  --spa: #1b6870;     --spa-bg: #d5ebea;
+  --warn: #a8461c;
+  --sun: #d08a12;
+  --cloud: #8796a3;
+  --sea: #bcdcec; --sea-hi: #e8f4fa; --land: #efe6d2; --land-line: #c4b38c;
+  --wind: rgba(36, 91, 143, .5); --rain: rgba(44, 100, 165, .6); --cloudfx: rgba(255, 255, 255, .5); --cloudlive: rgba(105, 122, 140, .5);
+  --shadow: 0 1px 2px rgba(40, 36, 25, .06), 0 8px 24px -12px rgba(40, 36, 25, .18);
+  --font-display: "Bricolage Grotesque", "Avenir Next", system-ui, sans-serif;
+  --font-body: "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0f262f; --sky-wash: #26405a; --sea-wash: #123d46; --glow: rgba(255, 146, 78, .40);
+  --surface: #1a3a47; --col: #16323e; --line: #2f5462; --fg: #f4efe4; --muted: #b0bcbd;
+  --accent: #f2b866; --gold: #f2b866; --drop: #24475c;
+  --wander: #b8d690; --wander-bg: #22361e; --ausflug: #f4c47c; --ausflug-bg: #3e2d18;
+  --stadt: #a9cdf4; --stadt-bg: #1c3654; --well: #f6aa93; --well-bg: #462720;
+  --mix: #e3c59e; --mix-bg: #372b1f; --spa: #88dde0; --spa-bg: #134046; --warn: #ff9f73; --sun: #f7c95a; --cloud: #b6c3cc;
+  --sea: #0f3540; --sea-hi: #1d5260; --land: #294a3f; --land-line: #4f7566;
+  --wind: rgba(244, 239, 228, .6); --rain: rgba(150, 195, 255, .7); --cloudfx: rgba(220, 230, 240, .08); --cloudlive: rgba(205, 220, 235, .32);
+  --shadow: 0 1px 2px rgba(0,0,0,.3), 0 12px 30px -14px rgba(0,0,0,.55);
+  color-scheme: dark;
+} }
+:root[data-theme="dark"] {
+  --bg: #0f262f; --sky-wash: #26405a; --sea-wash: #123d46; --glow: rgba(255, 146, 78, .40);
+  --surface: #1a3a47; --col: #16323e; --line: #2f5462; --fg: #f4efe4; --muted: #b0bcbd;
+  --accent: #f2b866; --gold: #f2b866; --drop: #24475c;
+  --wander: #b8d690; --wander-bg: #22361e; --ausflug: #f4c47c; --ausflug-bg: #3e2d18;
+  --stadt: #a9cdf4; --stadt-bg: #1c3654; --well: #f6aa93; --well-bg: #462720;
+  --mix: #e3c59e; --mix-bg: #372b1f; --spa: #88dde0; --spa-bg: #134046; --warn: #ff9f73; --sun: #f7c95a; --cloud: #b6c3cc;
+  --sea: #0f3540; --sea-hi: #1d5260; --land: #294a3f; --land-line: #4f7566;
+  --wind: rgba(244, 239, 228, .6); --rain: rgba(150, 195, 255, .7); --cloudfx: rgba(220, 230, 240, .08); --cloudlive: rgba(205, 220, 235, .32);
+  --shadow: 0 1px 2px rgba(0,0,0,.3), 0 12px 30px -14px rgba(0,0,0,.55);
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body {
+  background: var(--bg);
+  background-image: radial-gradient(900px 520px at 88% -8%, var(--glow), transparent 70%),
+                    linear-gradient(180deg, var(--sky-wash) 0, var(--sea-wash) 420px, var(--bg) 980px);
+  background-repeat: no-repeat;
+  color: var(--fg); font-family: var(--font-body); font-size: 15px; line-height: 1.45;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 20px 48px;
+}
+.wrap { max-width: 1320px; margin: 0 auto; display: grid; gap: 18px; }
+
+/* ---- Hero ---- */
+.hero { --wave: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 30' preserveAspectRatio='none'%3E%3Cpath d='M0 0h1200v10c-90 14-190 16-300 8S700 0 600 8s-190 20-300 14S90 2 0 12z'/%3E%3C/svg%3E");
+  -webkit-mask: var(--wave) bottom / 100% 30px no-repeat, linear-gradient(#000, #000) top / 100% calc(100% - 29px) no-repeat;
+          mask: var(--wave) bottom / 100% 30px no-repeat, linear-gradient(#000, #000) top / 100% calc(100% - 29px) no-repeat;
+  position: relative; overflow: hidden; border-radius: 24px; min-height: clamp(250px, 34vw, 380px); display: grid; align-items: end; box-shadow: var(--shadow); isolation: isolate; }
+.hero img { position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; object-fit: cover; object-position: 55% 62%; z-index: -2; animation: drift 1.8s cubic-bezier(.2,.7,.2,1) backwards; }
+.hero::before { content: ""; position: absolute; inset: 0; z-index: -1;
+  background: linear-gradient(to top, rgba(9, 22, 31, .82) 0%, rgba(9, 22, 31, .45) 38%, rgba(9, 22, 31, 0) 72%),
+              radial-gradient(120% 80% at 85% 0%, rgba(255, 196, 120, .22), transparent 60%); }
+.hero-in { padding: clamp(18px, 3vw, 32px) clamp(18px, 3vw, 32px) calc(clamp(18px, 3vw, 32px) + 22px); display: grid; gap: 10px; color: #fff; }
+.eyebrow { margin: 0; font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: #ffd9a3; }
+h1 { font-family: var(--font-display); font-weight: 700; font-size: clamp(2rem, 6vw, 3.6rem); line-height: .98; margin: 0; letter-spacing: -0.02em; text-wrap: balance; text-shadow: 0 2px 24px rgba(0,0,0,.35); }
+h1 span { display: inline-block; animation: blurIn .9s cubic-bezier(.2,.7,.2,1) backwards; }
+h1 span + span { animation-delay: .14s; }
+.sub { margin: 0; color: rgba(255,255,255,.86); font-size: 15px; }
+.stats { display: flex; flex-wrap: wrap; gap: 8px; font-variant-numeric: tabular-nums; margin-top: 4px; }
+.stat { background: rgba(255,255,255,.14); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,.28);
+  border-radius: 999px; padding: 5px 12px; font-size: 13px; color: rgba(255,255,255,.85); }
+.stat b { color: #fff; }
+@keyframes blurIn { from { opacity: .15; filter: blur(10px); transform: translateY(10px); } }
+@keyframes drift { from { transform: scale(1.08); } }
+
+/* ---- Pool ---- */
+.pool { background: color-mix(in srgb, var(--surface) 82%, transparent); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px);
+  border: 1px solid var(--line); border-radius: 20px; padding: 16px; display: grid; gap: 12px; box-shadow: var(--shadow); }
+.pool-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px; }
+.pool-actions { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.label { font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+.pool .zone { display: flex; flex-wrap: wrap; gap: 8px; min-height: 64px; align-content: flex-start; border-radius: 12px; transition: background-color .15s; }
+.pool .zone .card, .mpool .card { width: 210px; max-width: 100%; }
+.pool .empty-hint { color: var(--muted); font-size: 13px; align-self: center; }
+.pool-sep { border-top: 1px dashed var(--line); }
+#save { font-size: 13px; color: var(--muted); }
+#save.ok { color: var(--accent); }
+#save.err { color: var(--warn); }
+
+button.add { font: inherit; font-size: 14px; font-weight: 700; border-radius: 999px; padding: 7px 14px; cursor: pointer;
+  color: var(--spa); background: var(--spa-bg); border: 1px solid color-mix(in srgb, var(--spa) 35%, transparent); transition: transform .15s, border-color .15s; }
+button.add:hover { border-color: var(--spa); transform: translateY(-1px); }
+button.add.neutral { color: var(--accent); background: var(--surface); border-color: var(--line); }
+button.add.neutral:hover { border-color: var(--accent); }
+button:focus-visible, .card:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+/* ---- Day tabs (phone) ---- */
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+.tabs { display: none; }
+
+/* ---- Mini day overview (phone) ---- */
+.minis { display: none; }
+.mini { --c: var(--muted); --cb: var(--surface); font: inherit; text-align: left; cursor: pointer; display: grid; align-content: start; gap: 3px;
+  min-height: 74px; padding: 8px 10px; border-radius: 14px; color: var(--fg); background: var(--cb);
+  border: 1px solid color-mix(in srgb, var(--c) 32%, transparent); scroll-snap-align: start; transition: transform .15s, box-shadow .15s; }
+.mini .wd { display: flex; align-items: baseline; justify-content: space-between; gap: 6px; font-family: var(--font-display); font-weight: 700; font-size: 15px; line-height: 1.1; }
+.mini .dt { font-family: var(--font-body); font-weight: 400; font-size: 11px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.mini .mt { font-size: 13px; font-weight: 700; line-height: 1.2; color: var(--c); overflow-wrap: break-word; hyphens: auto; -webkit-hyphens: auto;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.mini.empty { border-style: dashed; border-color: var(--line); }
+.mini.empty .mt { font-weight: 400; color: var(--muted); }
+.mini.today .wd::after { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--gold); flex: none; align-self: center; }
+.mini.active { box-shadow: 0 0 0 2px var(--gold); }
+.mini.over { transform: scale(1.04); background: var(--drop); }
+
+/* ---- Days ---- */
+.days { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
+.day { position: relative; background: color-mix(in srgb, var(--col) 80%, transparent); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); border: 1px solid var(--line); border-radius: 20px; padding: 12px;
+  display: flex; flex-direction: column; gap: 10px; min-width: 0; box-shadow: var(--shadow); }
+.day.today { border-color: transparent; }
+.day.today::before { content: ""; position: absolute; inset: -1px; border-radius: inherit; padding: 2px; pointer-events: none;
+  background: conic-gradient(from var(--ang), var(--gold), var(--accent) 25%, transparent 45%, transparent 55%, var(--gold) 80%, var(--gold));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude;
+  animation: spin 7s linear infinite; }
+@property --ang { syntax: "<angle>"; inherits: false; initial-value: 0deg; }
+@keyframes spin { to { --ang: 360deg; } }
+.day-head { display: grid; grid-template-columns: minmax(0, 1fr); gap: 2px; }
+.day-name { font-family: var(--font-display); font-weight: 700; font-size: 1.35rem; line-height: 1.1; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 8px; }
+.day-name .day-remove { margin-left: auto; }
+.day-date { color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; }
+.today-tag { font-family: var(--font-body); font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold); }
+.day-remove { font: inherit; font-family: var(--font-body); font-size: 12px; font-weight: 700; color: var(--muted); background: none;
+  border: 1px solid transparent; border-radius: 999px; padding: 2px 8px; cursor: pointer; }
+.day-remove:hover { color: var(--warn); border-color: var(--line); }
+.day-remove.armed { color: var(--surface); background: var(--warn); border-color: var(--warn); }
+
+.mzone { border-radius: 14px; transition: background-color .15s; }
+.mzone.over, .zone.over { background: var(--drop); }
+.day .mzone { display: flex; align-items: stretch; min-height: 46px; margin-top: 8px; border: 1.5px dashed var(--line); }
+.day .mzone:has(.card) { border-color: transparent; }
+.day .mzone .card { flex: 1; }
+.mpool { display: flex; flex-wrap: wrap; gap: 8px; min-height: 48px; align-content: flex-start; }
+.motto-empty { color: var(--muted); font-size: 13px; padding: 10px 12px; align-self: center; }
+
+.wx { display: grid; grid-template-columns: 36px 1fr; gap: 0 8px; align-items: center; border-radius: 14px; padding: 7px 10px 7px 7px;
+  background: linear-gradient(135deg, color-mix(in srgb, var(--sky-wash) 70%, var(--surface)), var(--surface)); border: 1px solid color-mix(in srgb, var(--line) 60%, transparent); }
+.wx svg { grid-row: span 2; width: 36px; height: 36px; }
+.wx-temp { font-weight: 700; font-variant-numeric: tabular-nums; font-size: 16px; }
+.wx-temp small { font-weight: 400; color: var(--muted); font-size: 13px; }
+.wx-txt { font-size: 12px; color: var(--muted); line-height: 1.3; min-width: 0; }
+.wx-note { grid-column: 1 / 3; font-size: 12px; color: var(--warn); margin-top: 2px; }
+.wx-src { color: var(--muted); font-size: 13px; margin: 0; max-width: 80ch; }
+.wx-src a { color: var(--accent); }
+
+.day-meta { display: flex; flex-wrap: wrap; gap: 6px; min-height: 20px; font-size: 12px; font-variant-numeric: tabular-nums; }
+.chip { border-radius: 999px; padding: 1px 9px; background: var(--surface); color: var(--muted); border: 1px solid color-mix(in srgb, var(--line) 70%, transparent); }
+.chip.spa { color: var(--spa); background: var(--spa-bg); border-color: transparent; }
+.chip.warn { color: var(--warn); border-color: currentColor; }
+.day .zone { display: flex; flex-direction: column; gap: 8px; flex: 1; min-height: 120px; border-radius: 14px; padding: 2px; transition: background-color .15s; }
+
+/* ---- Cards with pointer spotlight ---- */
+.card {
+  --c: var(--accent); --cb: var(--surface);
+  position: relative; overflow: hidden; display: grid; grid-template-columns: auto 1fr; gap: 2px 8px; align-items: start;
+  background: var(--cb); color: var(--fg); border-radius: 14px; padding: 10px 12px 10px 8px;
+  border: 1px solid color-mix(in srgb, var(--c) 28%, transparent);
+  box-shadow: 0 1px 2px rgba(0,0,0,.05);
+  cursor: grab; user-select: none; -webkit-user-select: none; transition: transform .15s, box-shadow .15s, border-color .15s;
+}
+.card::after { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: 0; transition: opacity .2s;
+  background: radial-gradient(180px circle at var(--mx, 50%) var(--my, 50%), color-mix(in srgb, var(--c) 22%, transparent), transparent 70%); }
+.card:hover { border-color: color-mix(in srgb, var(--c) 60%, transparent); transform: translateY(-1px); box-shadow: 0 6px 18px -10px color-mix(in srgb, var(--c) 60%, transparent); }
+.card:hover::after { opacity: 1; }
+[data-type="wander"]  { --c: var(--wander);  --cb: var(--wander-bg); }
+[data-type="ausflug"] { --c: var(--ausflug); --cb: var(--ausflug-bg); }
+[data-type="stadt"]   { --c: var(--stadt);   --cb: var(--stadt-bg); }
+[data-type="well"]    { --c: var(--well);    --cb: var(--well-bg); }
+[data-type="mix"]     { --c: var(--mix);     --cb: var(--mix-bg); }
+[data-type="spa"]     { --c: var(--spa);     --cb: var(--spa-bg); }
+.card .grip { grid-row: span 3; width: 16px; align-self: stretch; touch-action: none; cursor: grab;
+  background-image: radial-gradient(circle, var(--c) 1.3px, transparent 1.6px); background-size: 6px 6px; background-position: center; opacity: .5; border-radius: 4px; }
+.card .t { font-weight: 700; color: var(--c); line-height: 1.25; min-width: 0; overflow-wrap: break-word; hyphens: auto; -webkit-hyphens: auto; }
+.card .dur { grid-column: 2; font-size: 12px; font-variant-numeric: tabular-nums; color: var(--c); opacity: .85; white-space: nowrap; }
+.card .d { grid-column: 2; font-size: 13px; color: var(--muted); line-height: 1.3; }
+.card .t { padding-right: 26px; }
+.card .x { position: absolute; top: 6px; right: 6px; z-index: 1; min-width: 26px; height: 26px; padding: 0 7px; border-radius: 999px; border: 0; cursor: pointer;
+  font: inherit; font-size: 17px; line-height: 1; color: var(--c); background: color-mix(in srgb, var(--c) 14%, transparent); opacity: 0; transition: opacity .15s; }
+.card:hover .x, .card:focus-within .x { opacity: 1; }
+@media (hover: none) { .card .x { opacity: .8; } }
+.card .x.armed { opacity: 1; font-size: 12px; font-weight: 700; color: #fff; background: var(--warn); }
+.motto-card { padding-block: 9px; border-width: 1.5px; }
+.motto-card .t { font-family: var(--font-display); font-size: 16px; }
+.card.ghosted { opacity: .35; }
+.ghost { position: fixed; z-index: 50; pointer-events: none; margin: 0; box-shadow: 0 18px 40px -8px rgba(0,0,0,.35); transform: rotate(-2deg) scale(1.03); cursor: grabbing; }
+body.dragging, body.dragging * { cursor: grabbing !important; }
+
+/* ---- Shared map look ---- */
+.imap, .wxs-map { position: relative; overflow: hidden; border-radius: 16px; background:
+  radial-gradient(120% 90% at 20% 10%, color-mix(in srgb, var(--sea-hi) 70%, transparent), transparent 60%), var(--sea);
+  border: 1px solid color-mix(in srgb, var(--line) 70%, transparent); }
+.imap svg, .wxs-map svg { position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; display: block; }
+.isl { fill: var(--land); stroke: var(--land-line); stroke-width: 1.2; vector-effect: non-scaling-stroke; stroke-linejoin: round; }
+.town { position: absolute; transform: translate(-50%, -50%); font-size: 11px; font-weight: 700; letter-spacing: .04em; color: var(--muted); pointer-events: none; white-space: nowrap; text-shadow: 0 0 4px var(--land); }
+.town::before { content: ""; display: block; width: 4px; height: 4px; margin: 0 auto 2px; border-radius: 50%; background: var(--muted); }
+
+/* ---- Idea map ---- */
+.imap-wrap { display: grid; gap: 8px; }
+.imap-filter { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; padding-bottom: 2px; }
+.imap-filter::-webkit-scrollbar { display: none; }
+.imap-filter button { flex: none; font: inherit; font-size: 13px; font-weight: 700; padding: 5px 12px; border-radius: 999px; cursor: pointer; white-space: nowrap;
+  color: var(--fg); background: var(--surface); border: 1px solid var(--line); max-width: 260px; overflow: hidden; text-overflow: ellipsis; }
+.imap-filter button[aria-pressed="true"] { color: var(--surface); background: var(--accent); border-color: var(--accent); }
+.imap-filter small { font-weight: 400; opacity: .8; }
+.imap { height: clamp(260px, 42vw, 420px); }
+.imap-pins { position: absolute; inset: 0; }
+.pin { position: absolute; width: 24px; height: 24px; margin: -24px 0 0 -12px; padding: 0; border: 0; background: none; cursor: pointer; }
+.pin::before { content: ""; position: absolute; inset: 0; border-radius: 50% 50% 50% 0; transform: rotate(-45deg); background: var(--c);
+  border: 2px solid var(--surface); box-shadow: 0 3px 8px rgba(0,0,0,.3); transition: transform .15s; }
+.pin::after { content: ""; position: absolute; left: 8px; top: 7px; width: 8px; height: 8px; border-radius: 50%; background: var(--surface); }
+.pin:hover::before, .pin.on::before { transform: rotate(-45deg) scale(1.25); }
+.pin.home::before { background: var(--gold); border-radius: 6px; transform: none; }
+.pin.home::after { left: 7px; top: 6px; width: 10px; height: 10px; border-radius: 2px; clip-path: polygon(50% 0, 100% 45%, 100% 100%, 0 100%, 0 45%); }
+.imap-pop { position: absolute; z-index: 3; width: min(250px, 80%); padding: 10px 12px; border-radius: 12px; background: var(--surface); color: var(--fg);
+  border: 1px solid var(--line); box-shadow: 0 12px 30px -10px rgba(0,0,0,.45); display: grid; gap: 4px; }
+.imap-pop b { font-family: var(--font-display); font-size: 15px; line-height: 1.2; }
+.imap-pop span { font-size: 12px; color: var(--muted); }
+.imap-pop .row { display: flex; gap: 8px; margin-top: 4px; flex-wrap: wrap; }
+.imap-pop button { font: inherit; font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 999px; cursor: pointer; color: var(--accent); background: var(--bg); border: 1px solid var(--line); }
+.imap-pop .close { position: absolute; top: 4px; right: 4px; border: 0; background: none; color: var(--muted); font-size: 16px; padding: 2px 6px; }
+.imap-note { margin: 0; font-size: 11px; color: var(--muted); }
+.idea.flash { animation: flash 1.4s ease; }
+@keyframes flash { 0%, 60% { box-shadow: 0 0 0 3px var(--gold); } 100% { box-shadow: 0 0 0 0 transparent; } }
+.idea-map { font: inherit; font-size: 12px; font-weight: 700; padding: 0; border: 0; background: none; color: var(--muted); cursor: pointer; text-decoration: underline; text-underline-offset: 2px; }
+
+/* ---- Weather studio ---- */
+.wxs { display: grid; gap: 12px; padding: 16px; border-radius: 20px; border: 1px solid var(--line); box-shadow: var(--shadow);
+  background: color-mix(in srgb, var(--surface) 82%, transparent); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); }
+.wxs > * { min-width: 0; }
+.wxs-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 10px; }
+.wxs h2 { font-family: var(--font-display); font-size: 1.35rem; margin: 0; }
+.wxs-sub { margin: 2px 0 0; font-size: 13px; color: var(--muted); }
+.wxs-days { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; }
+.wxs-days::-webkit-scrollbar { display: none; }
+.wxs-days button { flex: none; font: inherit; font-size: 13px; font-weight: 700; padding: 6px 12px; border-radius: 999px; cursor: pointer; color: var(--fg); background: var(--surface); border: 1px solid var(--line); font-variant-numeric: tabular-nums; }
+.wxs-days button[aria-pressed="true"] { color: var(--surface); background: var(--accent); border-color: var(--accent); }
+.wxs-grid { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); gap: 12px; }
+.wxs-map { min-height: 300px; aspect-ratio: 16 / 10; max-width: 100%; }
+.wxs-map canvas { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+.wxs-overlay { position: absolute; inset: 0; pointer-events: none; }
+.wx-bubble { position: absolute; transform: translate(-50%, -100%); padding: 4px 9px; border-radius: 10px; background: var(--surface); color: var(--fg);
+  font-weight: 700; font-size: 14px; box-shadow: 0 6px 16px -6px rgba(0,0,0,.4); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.wx-bubble small { font-weight: 400; color: var(--muted); font-size: 11px; }
+.wx-bubble.home { background: var(--gold); color: #1c1a14; }
+.wxs-compass { position: absolute; right: 10px; bottom: 10px; width: 74px; height: 74px; border-radius: 50%; background: color-mix(in srgb, var(--surface) 80%, transparent);
+  -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); border: 1px solid var(--line); display: grid; place-items: center; }
+.wxs-compass svg { width: 100%; height: 100%; }
+.wxs-compass .needle { transform-origin: 37px 37px; transition: transform 1s cubic-bezier(.2,.7,.2,1); }
+.wxs-left { display: grid; gap: 8px; min-width: 0; align-content: start; }
+.wxs-mode { display: flex; gap: 4px; padding: 3px; border-radius: 999px; background: var(--surface); border: 1px solid var(--line); }
+.wxs-mode button { font: inherit; font-size: 13px; font-weight: 700; padding: 5px 12px; border-radius: 999px; border: 0; cursor: pointer; color: var(--muted); background: none; }
+.wxs-mode button[aria-pressed="true"] { color: var(--surface); background: var(--accent); }
+.wxs-time { display: flex; align-items: center; gap: 10px; padding: 6px 10px; border-radius: 999px; background: var(--surface); border: 1px solid var(--line); }
+.wxs-time input { flex: 1; min-width: 0; accent-color: var(--accent); }
+.wxs-time button { flex: none; font: inherit; font-size: 13px; font-weight: 700; height: 32px; min-width: 32px; padding: 0 10px; border-radius: 999px; cursor: pointer; color: var(--accent); background: var(--bg); border: 1px solid var(--line); }
+.wxs-time button[aria-pressed="true"] { color: var(--surface); background: var(--accent); border-color: var(--accent); }
+.wxs-time span { flex: none; font-size: 13px; font-weight: 700; font-variant-numeric: tabular-nums; min-width: 9.5em; text-align: right; }
+.wxs-legend { position: absolute; left: 10px; bottom: 10px; display: flex; gap: 8px; align-items: center; padding: 4px 9px; border-radius: 999px; font-size: 11px; color: var(--muted);
+  background: color-mix(in srgb, var(--surface) 82%, transparent); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); border: 1px solid var(--line); pointer-events: none; }
+.wxs-legend i { display: inline-block; width: 14px; height: 3px; border-radius: 2px; margin-right: 3px; vertical-align: middle; }
+@media (max-width: 720px) { .wxs-time { flex-wrap: wrap; border-radius: 16px; row-gap: 4px; } .wxs-time span { order: -1; width: 100%; min-width: 0; text-align: left; font-size: 13px; padding-left: 4px; } .wxs-legend { font-size: 10px; gap: 6px; } }
+.wxs-panel { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; align-content: start; }
+.wxs-big { grid-column: 1 / -1; display: flex; align-items: center; gap: 12px; padding: 12px; border-radius: 14px;
+  background: linear-gradient(135deg, color-mix(in srgb, var(--sky-wash) 70%, var(--surface)), var(--surface)); border: 1px solid color-mix(in srgb, var(--line) 60%, transparent); }
+.wxs-big svg { width: 56px; height: 56px; flex: none; }
+.wxs-big b { display: block; font-family: var(--font-display); font-size: 2rem; line-height: 1; font-variant-numeric: tabular-nums; }
+.wxs-big span { font-size: 13px; color: var(--muted); }
+.wxs-stat { padding: 9px 11px; border-radius: 12px; background: var(--surface); border: 1px solid color-mix(in srgb, var(--line) 60%, transparent); min-width: 0; }
+.wxs-stat .k { display: block; font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.wxs-stat .v { display: block; font-weight: 700; font-size: 15px; font-variant-numeric: tabular-nums; overflow-wrap: break-word; }
+.wxs-stat .s { display: block; font-size: 12px; color: var(--muted); line-height: 1.3; }
+.wxs-stat.wide { grid-column: 1 / -1; }
+.wxs-stat.warn .v { color: var(--warn); }
+.rainbar { height: 6px; border-radius: 3px; background: color-mix(in srgb, var(--stadt) 18%, transparent); margin-top: 5px; overflow: hidden; }
+.rainbar i { display: block; height: 100%; background: var(--stadt); border-radius: 3px; transition: width .8s cubic-bezier(.2,.7,.2,1); }
+.wxs-sun { padding: 10px 12px; border-radius: 14px; background: var(--surface); border: 1px solid color-mix(in srgb, var(--line) 60%, transparent); }
+.wxs-sun svg { width: 100%; height: 86px; display: block; }
+.wxs-live { display: grid; gap: 6px; }
+.wxs-links { display: flex; flex-wrap: wrap; gap: 6px; }
+.wxs-links a { font-size: 13px; font-weight: 700; text-decoration: none; padding: 6px 12px; border-radius: 999px; color: var(--accent); background: var(--surface); border: 1px solid var(--line); }
+.wxs-links a:hover { border-color: var(--accent); }
+.wxs-links a small { font-weight: 400; color: var(--muted); }
+@media (max-width: 860px) { .wxs-grid { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 720px) { .wxs { padding: 14px; } .wxs-map { min-height: 0; aspect-ratio: 4 / 3; } .imap { height: 300px; } }
+
+/* ---- Ideas near Alcúdia ---- */
+.ideas { display: grid; gap: 12px; padding: 16px; border-radius: 20px; border: 1px solid var(--line); box-shadow: var(--shadow);
+  background: color-mix(in srgb, var(--surface) 82%, transparent); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); }
+.ideas h2 { font-family: var(--font-display); font-size: 1.35rem; margin: 0; text-wrap: balance; }
+.ideas-sub { margin: 2px 0 0; color: var(--muted); font-size: 13px; }
+.ideas > * { min-width: 0; }
+.research { display: grid; grid-template-columns: minmax(0, 1fr); gap: 8px; padding: 12px; border-radius: 14px; background: color-mix(in srgb, var(--sky-wash) 45%, var(--surface));
+  border: 1px solid color-mix(in srgb, var(--accent) 25%, transparent); }
+.research label { font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.research-row { display: flex; gap: 8px; }
+.research-row input { flex: 1; min-width: 0; width: 100%; font: inherit; font-size: 16px; color: var(--fg); background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 9px 14px; }
+.research-row input:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.research-row .btn { flex: none; }
+.research-row .btn:disabled { opacity: .6; cursor: progress; }
+.research-status { margin: 0; font-size: 13px; color: var(--muted); }
+.research-status.err { color: var(--warn); }
+.pending { display: flex; flex-wrap: wrap; gap: 6px; }
+.pending span { font-size: 12px; padding: 3px 10px; border-radius: 999px; background: var(--surface); border: 1px dashed var(--accent); color: var(--accent); }
+.pending span.stale { border-color: var(--line); color: var(--muted); }
+.idea .q { font-weight: 400; text-transform: none; letter-spacing: 0; color: var(--muted); }
+.idea-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 10px; }
+.idea { position: relative; overflow: hidden; display: grid; gap: 4px; align-content: start; padding: 0 12px 12px; border-radius: 14px; background: var(--cb);
+  border: 1px solid color-mix(in srgb, var(--c) 28%, transparent); min-width: 0; }
+.idea-pic { position: relative; display: block; height: 140px; margin: 0 -12px 8px; overflow: hidden; color: var(--c); text-decoration: none;
+  background: radial-gradient(120% 90% at 85% 0%, color-mix(in srgb, var(--gold) 35%, transparent), transparent 60%),
+              linear-gradient(160deg, color-mix(in srgb, var(--c) 30%, var(--cb)), color-mix(in srgb, var(--c) 8%, var(--cb))); }
+.idea-pic img { width: 100%; height: 100%; max-width: none; object-fit: cover; display: block; }
+.idea-pic svg { position: absolute; inset: auto 0 0 0; width: 100%; height: 78%; }
+.idea-pic .look { position: absolute; right: 8px; bottom: 8px; font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 999px;
+  color: #fff; background: rgba(9, 22, 31, .55); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
+.idea-pic img { transition: transform .6s cubic-bezier(.2,.7,.2,1); }
+.idea-pic:hover img { transform: scale(1.04); }
+.idea-credit { position: absolute; left: 8px; top: 112px; max-width: calc(100% - 140px); font-size: 10px; line-height: 1.25; color: rgba(255,255,255,.9);
+  text-decoration: none; padding: 2px 6px; border-radius: 6px; background: rgba(9, 22, 31, .5); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.idea-credit:hover { text-decoration: underline; }
+.idea-pic:hover .look, .idea-pic:focus-visible .look { background: rgba(9, 22, 31, .78); }
+.idea-del { position: absolute; top: 8px; right: 8px; z-index: 1; min-width: 28px; height: 28px; padding: 0 8px; border-radius: 999px; border: 0; cursor: pointer;
+  font: inherit; font-size: 17px; line-height: 1; color: #fff; background: rgba(9, 22, 31, .5); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
+.idea-del.armed { font-size: 12px; font-weight: 700; background: var(--warn); }
+.idea .cat { justify-self: start; font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--c); }
+.idea h3 { margin: 0; font-family: var(--font-display); font-size: 16px; line-height: 1.2; color: var(--fg); overflow-wrap: break-word; hyphens: auto; }
+.idea .when { font-size: 12px; color: var(--c); font-weight: 700; }
+.idea p { margin: 0; font-size: 13px; color: var(--muted); line-height: 1.35; }
+.idea-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 6px; }
+.idea-add { font: inherit; font-size: 13px; font-weight: 700; padding: 5px 12px; border-radius: 999px; cursor: pointer; color: var(--c); background: var(--surface);
+  border: 1px solid color-mix(in srgb, var(--c) 45%, transparent); }
+.idea-add:hover { border-color: var(--c); }
+.idea-add.done { color: var(--muted); border-color: var(--line); cursor: default; }
+.idea a { font-size: 12px; color: var(--muted); }
+.removed { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-size: 13px; color: var(--muted); }
+.removed button { font: inherit; font-size: 13px; color: var(--accent); background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 4px 12px; cursor: pointer; }
+.removed button:hover { border-color: var(--accent); }
+.help { color: var(--muted); font-size: 13px; margin: 0; max-width: 72ch; }
+
+/* ---- Editor sheet ---- */
+.sheet { position: fixed; inset: 0; z-index: 60; display: flex; align-items: center; justify-content: center;
+  background: color-mix(in srgb, #08141b 45%, transparent); -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px);
+  padding: max(16px, env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px)) max(16px, env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); }
+.sheet-box { background: var(--surface); color: var(--fg); border: 1px solid var(--line); border-radius: 20px; width: min(460px, 100%); max-height: 100%; overflow: auto;
+  padding: 20px; display: grid; gap: 14px; box-shadow: 0 30px 60px -20px rgba(0,0,0,.45); animation: pop .22s cubic-bezier(.2,.7,.2,1); }
+@keyframes pop { from { transform: translateY(12px) scale(.98); opacity: .4; } }
+.sheet h2 { font-family: var(--font-display); font-size: 1.4rem; margin: 0; }
+.field { display: grid; gap: 4px; min-width: 0; }
+.field > span, fieldset legend { font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
+.sheet input[type="text"], .sheet input[type="number"], .sheet select {
+  font: inherit; font-size: 16px; color: var(--fg); background: var(--bg); border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; width: 100%; }
+.sheet input:focus-visible, .sheet select:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.len-row { display: flex; gap: 8px; }
+.len-row > * { flex: 1; min-width: 0; }
+fieldset { border: 0; padding: 0; margin: 0; display: grid; gap: 6px; }
+.swatches { display: flex; flex-wrap: wrap; gap: 6px; }
+.swatch { position: relative; }
+.swatch input { position: absolute; opacity: 0; inset: 0; margin: 0; }
+.swatch span { display: inline-block; padding: 5px 13px; border-radius: 999px; background: var(--cb); color: var(--c); font-weight: 700; font-size: 13px; border: 2px solid transparent; cursor: pointer; }
+.swatch input:checked + span { border-color: var(--c); }
+.swatch input:focus-visible + span { outline: 2px solid var(--accent); outline-offset: 2px; }
+.actions { display: flex; flex-wrap: wrap; gap: 8px; justify-content: flex-end; }
+.btn { font: inherit; font-weight: 700; font-size: 14px; border-radius: 999px; padding: 9px 16px; cursor: pointer; border: 1px solid var(--line); background: var(--bg); color: var(--fg); }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--surface); }
+.btn.del { color: var(--warn); margin-right: auto; }
+.btn.del.armed { background: var(--warn); border-color: var(--warn); color: var(--surface); }
+
+/* ---- Phone: swipeable day carousel with sticky day tabs ---- */
+@media (max-width: 720px), (orientation: landscape) and (max-height: 520px) {
+  body { padding-block: 12px 40px; }
+  .hero { border-radius: 20px; min-height: 260px; }
+  .pool { padding: 14px; border-radius: 18px; }
+  .pool .zone .card, .mpool .card { width: calc(50% - 4px); }
+  .tabs { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20;
+    margin-inline: -16px; padding: 8px 16px; background: color-mix(in srgb, var(--bg) 82%, transparent); -webkit-backdrop-filter: blur(14px); backdrop-filter: blur(14px); }
+  .tabs::-webkit-scrollbar { display: none; }
+  .tab { flex: 0 0 auto; display: grid; justify-items: center; gap: 0; min-width: 58px; padding: 6px 10px; border-radius: 14px; cursor: pointer;
+    font: inherit; color: var(--fg); background: var(--surface); border: 1px solid var(--line); transition: background-color .2s, color .2s, transform .15s; }
+  .tab b { font-family: var(--font-display); font-size: 15px; line-height: 1.1; }
+  .tab small { font-size: 11px; color: var(--muted); font-variant-numeric: tabular-nums; }
+  .tab.active { background: var(--accent); border-color: var(--accent); color: var(--surface); }
+  .tab.active small { color: color-mix(in srgb, var(--surface) 80%, transparent); }
+  .tab.today:not(.active) { border-color: var(--gold); }
+  .tab.over { transform: scale(1.08); background: var(--drop); }
+  .minis { display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; scroll-snap-type: x proximity; margin-inline: -16px; padding: 2px 16px; scroll-padding-inline: 16px; }
+  .minis::-webkit-scrollbar { display: none; }
+  .mini { flex: 0 0 calc((100% - 16px) / 3); }
+  .ideas { padding: 14px; }
+  .idea-grid { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; margin-inline: -14px; padding-inline: 14px; scroll-padding-inline: 14px; }
+  .idea-grid::-webkit-scrollbar { display: none; }
+  .idea { flex: 0 0 min(78%, 300px); scroll-snap-align: start; }
+  .days { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; margin-inline: -16px; padding: 4px 16px 8px; scroll-padding-inline: 16px; gap: 10px; }
+  .days::-webkit-scrollbar { display: none; }
+  body.dragging .days { scroll-snap-type: none; }
+  .day { flex: 0 0 min(88%, 380px); scroll-snap-align: center; }
+  .sheet { align-items: flex-end; padding: 0; }
+  .sheet-box { width: 100%; border-radius: 22px 22px 0 0; padding-bottom: calc(20px + env(safe-area-inset-bottom, 0px)); animation: sheetUp .26s cubic-bezier(.2,.7,.2,1); }
+  @keyframes sheetUp { from { transform: translateY(40%); opacity: .5; } }
+}
+/* Phone held sideways: compact, three days side by side */
+@media (orientation: landscape) and (max-height: 520px) {
+  body { padding-block: 8px 24px; }
+  .wrap { gap: 12px; }
+  .hero { min-height: 150px; border-radius: 18px; }
+  .hero-in { gap: 4px; padding: 14px 18px 34px; }
+  h1 { font-size: 1.7rem; }
+  .eyebrow { display: none; }
+  .stat { padding: 3px 10px; font-size: 12px; }
+  .pool { padding: 10px 12px; gap: 8px; }
+  .pool .zone .card, .mpool .card { width: calc(25% - 6px); }
+  .tabs { padding-block: 5px; }
+  .tab { padding: 3px 10px; min-width: 52px; }
+  .days { gap: 8px; }
+  .mini { flex-basis: calc((100% - 32px) / 5); min-height: 62px; padding: 6px 9px; }
+  .day { flex: 0 0 calc((100% - 16px) / 3); scroll-snap-align: start; padding: 9px; gap: 7px; border-radius: 16px; }
+  .day-name { font-size: 1.05rem; }
+  .day-remove { font-size: 11px; padding: 1px 6px; }
+  .day .mzone { min-height: 38px; margin-top: 4px; }
+  .motto-card .t { font-size: 14px; }
+  .wx { grid-template-columns: 28px 1fr; padding: 5px 8px 5px 5px; }
+  .wx svg { width: 28px; height: 28px; }
+  .wx-temp { font-size: 14px; }
+  .card { padding: 7px 9px 7px 6px; border-radius: 11px; font-size: 14px; }
+  .card .d { font-size: 12px; }
+  .day .zone { min-height: 80px; gap: 6px; }
+  .sheet-box { max-height: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .zone, .mzone, .card, .tab, .mini { transition: none; }
+  .ghost { transform: none; }
+  .hero img, h1 span, .sheet-box { animation: none; }
+  .day.today::before { animation: none; }
+}
+</style>
+
+<div class="wrap" lang="de">
+  <header class="hero">
+    <img src="/_blob/d06da55b01291c4067f84d704c03e779" alt="Felsbucht auf Mallorca mit Pinienhang im Abendlicht" width="1400" height="788">
+    <div class="hero-in">
+      <p class="eyebrow">Mallorca · Herbst 2026</p>
+      <h1><span>Herbstwoche</span> <span>Tagesplan</span></h1>
+      <p class="sub" id="sub">Mallorca · Montag, 26. bis Samstag, 31. Oktober · Karten einfach auf einen Tag ziehen</p>
+      <div class="stats" id="stats"></div>
+    </div>
+  </header>
+
+  <section class="pool" aria-labelledby="pool-label">
+    <div class="pool-head">
+      <span class="label" id="pool-label">Noch nicht verplant</span>
+      <div class="pool-actions">
+        <span id="save" aria-live="polite"></span>
+        <button class="add neutral" id="add-card" type="button">+ Neue Kachel</button>
+        <button class="add" id="add-spa" type="button">+ Spa 90 min</button>
+      </div>
+    </div>
+    <div class="zone" data-col="pool" id="zone-pool"></div>
+    <div class="pool-sep"></div>
+    <div class="pool-head">
+      <span class="label">Mottos · eins pro Tag</span>
+      <button class="add neutral" id="add-motto" type="button">+ Neues Motto</button>
+    </div>
+    <div class="mzone mpool" data-mcol="pool" id="mzone-pool"></div>
+  </section>
+
+  <nav class="tabs" id="tabs" aria-label="Tage"></nav>
+  <nav class="minis" id="minis" aria-label="Wochenüberblick mit Mottos"></nav>
+  <section class="days" id="days"></section>
+  <div class="removed" id="removed" hidden></div>
+
+  <section class="wxs" aria-labelledby="wxs-title">
+    <div class="wxs-head">
+      <div>
+        <h2 id="wxs-title">Mallorca-Wetter</h2>
+        <p class="wxs-sub">Stand <span id="wx-asof">–</span> · wird alle 3 Stunden aktualisiert (6:41–21:41 Uhr)</p>
+      </div>
+      <div class="wxs-mode" id="wxs-mode" aria-label="Ansicht"><button type="button" data-m="live">Live 48 h</button><button type="button" data-m="day">Tagesübersicht</button></div>
+      <div class="wxs-days" id="wxs-days" aria-label="Tag wählen"></div>
+    </div>
+    <div class="wxs-grid">
+      <div class="wxs-left">
+        <div class="wxs-map" id="wxs-map" role="img" aria-label="Animierte Karte von Mallorca mit Wind, Wolken und Regen">
+          <svg id="wxs-svg" aria-hidden="true"></svg>
+          <canvas id="wxs-fx" aria-hidden="true"></canvas>
+          <canvas id="wxs-canvas" aria-hidden="true"></canvas>
+          <div class="wxs-overlay" id="wxs-overlay"></div>
+          <div class="wxs-compass" id="wxs-compass"></div>
+          <div class="wxs-legend" id="wxs-legend" hidden><span><i style="background: var(--wind)"></i>ruhig</span><span><i style="background: var(--gold)"></i>mäßig</span><span><i style="background: var(--warn)"></i>stark</span><span><i style="background: var(--rain)"></i>Regen</span></div>
+        </div>
+        <div class="wxs-time" id="wxs-time" hidden>
+          <button type="button" id="wxs-play" aria-label="Pause">❚❚</button>
+          <input type="range" id="wxs-range" min="0" max="47" step="0.01" value="0" aria-label="Zeitpunkt der Vorhersage">
+          <span id="wxs-tlabel"></span>
+          <button type="button" id="wxs-radar" aria-pressed="false">Radar</button>
+        </div>
+      </div>
+      <div class="wxs-panel" id="wxs-panel"></div>
+    </div>
+    <div class="wxs-sun" id="wxs-sun"></div>
+    <div class="wxs-live">
+      <span class="label">Live-Karten · öffnen in einem neuen Tab</span>
+      <div class="wxs-links">
+        <a href="https://www.rainviewer.com/map.html?loc=39.62,2.95,8" target="_blank" rel="noopener">Regenradar <small>RainViewer</small></a>
+        <a href="https://www.windy.com/?39.62,2.95,9" target="_blank" rel="noopener">Wind &amp; Böen <small>Windy</small></a>
+        <a href="https://map.blitzortung.org/#8/39.6/2.95" target="_blank" rel="noopener">Blitze live <small>Blitzortung</small></a>
+        <a href="https://www.aemet.es/es/eltiempo/observacion/radar" target="_blank" rel="noopener">Radar <small>AEMET</small></a>
+        <a href="https://www.aemet.es/es/eltiempo/prediccion/avisos" target="_blank" rel="noopener">Warnungen <small>AEMET</small></a>
+        <a href="https://portus.puertos.es/" target="_blank" rel="noopener">Wellen &amp; Meer <small>Puertos del Estado</small></a>
+        <a href="https://www.ventusky.com/?p=39.6;2.95;8&amp;l=rain-3h" target="_blank" rel="noopener">Regen 3 h <small>Ventusky</small></a>
+      </div>
+    </div>
+    <p class="wx-src">Vorhersage für Palma, zusammengetragen aus <a href="https://www.wetter.com/wetter_aktuell/wettervorhersage/7_tagesvorhersage/spanien/palma-de-mallorca/ES0BA0043.html" target="_blank" rel="noopener">wetter.com</a>, <a href="https://www.timeanddate.com/weather/spain/palma/ext" target="_blank" rel="noopener">timeanddate.com</a> und <a href="https://www.aemet.es/es/eltiempo/prediccion/municipios/palma-id07040" target="_blank" rel="noopener">AEMET</a>. „Live 48 h“ zeigt stündliche Daten von <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a> (Wind, Böen, Regen, Wolken, Temperatur für ein Raster über Mallorca, Wellen und Meerestemperatur) und das Regenradar von <a href="https://www.rainviewer.com/" target="_blank" rel="noopener">RainViewer</a>, abgerufen alle 3 Stunden. Die Tagesübersicht zeigt die Tageswerte als Animation. Sonne und Mond werden für Alcúdia berechnet. Küstenlinie: © OpenStreetMap-Mitwirkende (ODbL), über geo-maps.</p>
+  </section>
+
+  <section class="ideas" aria-labelledby="ideas-title">
+    <div>
+      <h2 id="ideas-title">Ideen für Mallorca</h2>
+      <p class="ideas-sub">Recherchierte Orte, Ausflüge und Lokale. Tippt auf das Bild für Fotos, mit „+ Als Kachel“ landet eine Idee oben bei „Noch nicht verplant“, mit × verschwindet sie für alle. Zeiten bitte kurz vorher prüfen.</p>
+    </div>
+    <form class="research" id="research">
+      <label for="research-q">Recherche-Wunsch an den Agenten</label>
+      <div class="research-row">
+        <input type="text" id="research-q" maxlength="160" autocomplete="off" placeholder="z. B. Sóller, Kajak …">
+        <button type="submit" class="btn primary" id="research-go">Recherchieren</button>
+      </div>
+      <p class="research-status" id="research-status" aria-live="polite">Ein Ort, eine Tätigkeit oder ein paar Stichworte reichen. Ein Agent sucht im Web nach Passendem und Ähnlichem, die Treffer erscheinen nach ein paar Minuten hier von selbst.</p>
+      <div class="pending" id="pending"></div>
+    </form>
+    <div class="imap-wrap">
+      <div class="imap-filter" id="imap-filter" aria-label="Vorschläge filtern"></div>
+      <div class="imap" id="imap"><svg id="imap-svg" aria-hidden="true"></svg><div class="imap-pins" id="imap-pins"></div><div class="imap-pop" id="imap-pop" hidden></div></div>
+      <p class="imap-note">Pins zeigen die ungefähre Lage, das goldene Haus ist Alcúdia. Wählt oben eine Suche, die Karte zoomt dorthin.</p>
+    </div>
+    <div class="idea-grid" id="ideas"></div>
+  </section>
+
+
+  <p class="help">Motto-Kacheln zieht ihr in das gestrichelte Feld unter dem Datum, pro Tag passt genau eins. Liegt dort schon ein Motto, tauschen die beiden die Plätze. Antippen oder anklicken öffnet eine Kachel zum Bearbeiten: Titel, Beschreibung, Dauer, Farbe, Duplizieren oder Löschen. Verschieben mit der Maus an der ganzen Kachel, auf dem Handy am gepunkteten Griff links. Auf dem Handy wischt ihr zwischen den Tagen. Der Wochenüberblick mit den Mottos springt per Antippen zum Tag, und Kacheln oder Mottos lassen sich direkt auf einen Tag in der Leiste oder im Überblick ziehen. Mit der Tastatur: Kachel fokussieren, Enter bearbeitet, ← → wechselt den Tag, ↑ ↓ ändert die Reihenfolge. Einzelne Kacheln löscht ihr mit dem × oben rechts (zweimal tippen). Tage, die ihr nicht mehr braucht, entfernt ihr mit „Entfernen“ neben dem Wochentag (zweimal tippen). Dabei werden die Aktivitäten des Tages mitgelöscht, das Motto wandert zurück in die Ablage, und der leere Tag lässt sich unten wiederherstellen. Hält man das Handy quer, sind drei Tage nebeneinander zu sehen. Der Plan wird für alle gespeichert, die diese Seite öffnen.</p>
+</div>
+
+<div class="sheet" id="editor" hidden>
+  <form class="sheet-box" id="ed-form" role="dialog" aria-modal="true" aria-labelledby="ed-title" novalidate>
+    <h2 id="ed-title">Kachel bearbeiten</h2>
+    <label class="field"><span>Titel</span><input type="text" id="ed-t" maxlength="60" autocomplete="off" required></label>
+    <label class="field" id="ed-d-field"><span>Beschreibung</span><input type="text" id="ed-d" maxlength="140" autocomplete="off" placeholder="optional"></label>
+    <div class="field" id="ed-len-field">
+      <span>Dauer</span>
+      <div class="len-row">
+        <select id="ed-len" aria-label="Dauer">
+          <option value="full">Ganzer Tag</option>
+          <option value="half">Halber Tag</option>
+          <option value="30">30 min</option>
+          <option value="45">45 min</option>
+          <option value="60">60 min</option>
+          <option value="90">90 min</option>
+          <option value="120">2 Stunden</option>
+          <option value="180">3 Stunden</option>
+          <option value="custom">Andere Minuten …</option>
+        </select>
+        <input type="number" id="ed-min" min="5" max="720" step="5" aria-label="Minuten" hidden>
+      </div>
+    </div>
+    <fieldset>
+      <legend>Farbe</legend>
+      <div class="swatches" id="ed-colors"></div>
+    </fieldset>
+    <div class="actions">
+      <button class="btn del" type="button" id="ed-del">Löschen</button>
+      <button class="btn" type="button" id="ed-dup">Duplizieren</button>
+      <button class="btn" type="button" id="ed-cancel">Abbrechen</button>
+      <button class="btn primary" type="submit" id="ed-save">Übernehmen</button>
+    </div>
+  </form>
+</div>
+
+<script id="weather" type="application/json">{"asOf":"2026-10-28T12:00","days":{"2026-10-26":{"k":"sun","txt":"Mehr Sonne als Wolken","max":24,"min":16},"2026-10-27":{"k":"part","txt":"Teils sonnig","max":23,"min":16,"rain":0},"2026-10-28":{"k":"part","txt":"Wechselnd bewölkt, wenig Sonne","max":24,"min":17,"rain":0,"note":"Quellen uneinig: wetter.com 0 %, AEMET-Tabelle 0 %, AEMET-Sprecherin: schwacher Regen möglich, Worldmeteo 50 %","wind":{"dir":"N","kmh":25,"txt":"mäßig, Böen bis ca. 50 km/h"}},"2026-10-29":{"k":"part","txt":"Teils sonnig, vereinzelt leichter Regen","max":22,"min":15,"rain":50,"note":"Quellen uneinig: wetter.com 7-Tage 50 %, AEMET 20–30 %, 16-Tage-Trend 80 %, Meteored 70 %, Worldmeteo 10 %","wind":{"dir":"NO","kmh":22,"txt":"mäßig aus Nord bis Nordost"}},"2026-10-30":{"k":"cloud","txt":"Überwiegend wolkig, leichter Regen","max":20,"min":15,"rain":70,"note":"wetter.com 70 % (mittags, leicht), AEMET 65 % leichter Regen","wind":{"dir":"NO","kmh":22,"txt":"mäßig aus Nord bis Nordost"}},"2026-10-31":{"k":"part","txt":"Wechselnd bewölkt, vereinzelt leichter Regen","max":22,"min":15,"rain":50,"note":"Quellen uneinig: AEMET 50 %, El Tiempo 60 % (morgens leichte Schauer), wetter.com 0 %, Thomas Cook 0 mm; Höchstwert 21–23 °C","wind":{"dir":"NO","kmh":22,"txt":"mäßig, 14–29 km/h"}}},"sea":{"temp":23,"txt":"Bericht Mallorca Magazin (23.10.): 23 °C Cala Major, 24 °C Playa de Palma"},"warn":"Keine amtliche AEMET-Warnung gefunden (Stand 28.10.)"}</script>
+
+<script id="ideas-data" type="application/json">[{"cat":"Ort","type":"stadt","t":"Kartause von Valldemossa","when":"Zeiten vorher prüfen (ggf. Winterpause ab 10.11.) · ca. 1 h 10 ab Alcúdia","d":"Ehemaliges Kloster mit Chopins Zelle, Klostergarten und Apotheke, das Highlight von Valldemossa.","len":"half","src":"https://www.seemallorca.com/sights/religious/the-royal-carthusian-monastery-valledemossa","q":"Schöne Sachen in und um deia und valldemossa","lat":39.7107,"lon":2.6224,"img":"/_blob/8d4830fac1d7e0b0aa0e8adb5e7e0b4c","imgCredit":"Isiwal · CC BY-SA 4.0 · Wikimedia Commons","imgPage":"https://commons.wikimedia.org/wiki/File:Valldemossa_Cartoixa_Patio-3875.jpg"},{"cat":"Ort","type":"stadt","t":"Altstadt & Geburtshaus Santa Catalina Thomàs","when":"Jederzeit · ca. 1 h 10 ab Alcúdia","d":"Gassen mit Kachelbildern an den Hauswänden und das Geburtshaus der Inselheiligen in der Carrer Rectoría.","len":90,"src":"https://www.mallorca.com/en/guide/sights/casa-natal-de-santa-catalina-thomas","q":"Schöne Sachen in und um deia und valldemossa","lat":39.7096,"lon":2.6207,"img":"/_blob/3513a74b92c00360b456c26f42d529ef","imgCredit":"Abrget47j · CC BY-SA 3.0 · Wikimedia Commons","imgPage":"https://commons.wikimedia.org/wiki/File:Valldemossa_view.jpg"},{"cat":"Ort","type":"stadt","t":"Robert-Graves-Haus, Deià","when":"Mo–Fr 10–17, Sa 10–15 Uhr · ca. 1 h 15 ab Alcúdia","d":"Wohnhaus des Dichters mit kleiner Ausstellung und Garten, Besuch dauert etwa 40 Minuten.","len":60,"src":"https://www.seemallorca.com/sights/museums/robert-graves-museum-deia","q":"Schöne Sachen in und um deia und valldemossa","lat":39.7488,"lon":2.6503,"img":"/_blob/09ebf779f02b11dc2eb2bea8663863e2","imgCredit":"Gargola87 · CC BY-SA 2.0 · Wikimedia Commons","imgPage":"https://commons.wikimedia.org/wiki/File:Robert_Graves_home_in_Dei%C3%A0.jpg"},{"cat":"Ausflug","type":"ausflug","t":"Son Marroig bei Deià","when":"Mo–Sa, Zeiten vorher prüfen · ca. 1 h 15 ab Alcúdia","d":"Landgut des Erzherzogs Ludwig Salvator mit Sammlung und Blick auf die Küste, Eintritt per Ticket.","len":90,"src":"https://www.musement.com/es/majorque/billet-d-entree-pour-son-marroig-1-236213","q":"Schöne Sachen in und um deia und valldemossa","lat":39.7533,"lon":2.6223,"img":"/_blob/be7667ace6806478daa017469b05ebe5","imgCredit":"Son_Marroig_011.JPG: Gryffindor\nSon_Marroig_012.JPG: Gryffindor\nSon_Marroig_013. · CC BY-SA 3.0 · Wikimedia Commons","imgPage":"https://commons.wikimedia.org/wiki/File:Son_Marroig_panoramic.jpg"},{"cat":"Wandern","type":"wander","t":"Cala Deià & Camí des Pintors","when":"ca. 4 km · leicht bis mittel · ca. 1 h 15 ab Alcúdia","d":"Küstenweg ab Deià zur Felsbucht Cala Deià. Parken ist knapp, Sept–Okt gilt als beste Zeit.","len":"half","src":"https://www.alltrails.com/poi/spain/mallorca/deia/cala-deia","q":"Schöne Sachen in und um deia und valldemossa","lat":39.7656,"lon":2.6434,"img":"/_blob/096d3ba2ed1d3eb2a05bc59b0e7557c0","imgCredit":"Michal Osmenda from Brussels, Belgium · CC BY 2.0 · Wikimedia Commons","imgPage":"https://commons.wikimedia.org/wiki/File:Cala_de_Deya,_Mallorca_(13334179764).jpg"},{"cat":"Wandern","type":"wander","t":"Sa Foradada ab Son Marroig","when":"ca. 7 km hin & zurück · 2,5–3 h · mittel","d":"Weg zur Felsnase mit natürlichem Loch. Wegen möglicher Steinschlag-Sperrung vorher den Zustand prüfen.","len":"half","src":"https://www.alltrails.com/trail/spain/mallorca/sa-foradada","q":"Schöne Sachen in und um deia und valldemossa","lat":39.76,"lon":2.614,"img":"/_blob/f4697544a99c12d25bdd1ba88aa67296","imgCredit":"Antonio De Lorenzo -&gt; Kufoleto · CC BY 2.5 · Wikimedia Commons","imgPage":"https://commons.wikimedia.org/wiki/File:Foradada_sunset_marroig_1.JPG"},{"cat":"Essen","type":"mix","t":"Balm Tapas, Deià","when":"Mi–Sa (Mo/Di zu) · ca. 1 h 15 ab Alcúdia","d":"Kleine, schicke Tapas-Bar mit regionalen Zutaten und mallorquinischer Weinkarte. Reservieren, eher gehobene Preise.","len":120,"src":"https://villa-deia.com/eating-drinking/balm-tapas-in-deia/","q":"Gute lokale um tapas zu essen in deia oder waldemossa","lat":39.748,"lon":2.6475,"img":"/_blob/68ee6722e648c7bb45826d7319b65939","imgCredit":"Pom' from France, European Union · CC BY-SA 2.0 · Wikimedia Commons","imgPage":"https://commons.wikimedia.org/wiki/File:Dei%C3%A0,_Serra_de_Tramuntana,_Mallorca_-_Flickr_-_pom%27..jpg","imgNote":"Ortsbild Deià"},{"cat":"Essen","type":"mix","t":"El Barrigón Xelini, Deià","when":"Zeiten vorher prüfen · ca. 1 h 15 ab Alcúdia","d":"Klassische Tapas mitten im Dorf, über 60 Gerichte, dazu eine hübsche Terrasse.","len":120,"src":"https://www.tripadvisor.com/Restaurants-g580297-zfd10942-Deia_Majorca_Balearic_Islands-Tapas.html","q":"Gute lokale um tapas zu essen in deia oder waldemossa","lat":39.7484,"lon":2.649,"img":"/_blob/68ee6722e648c7bb45826d7319b65939","imgCredit":"Pom' from France, European Union · CC BY-SA 2.0 · Wikimedia Commons","imgPage":"https://commons.wikimedia.org/wiki/File:Dei%C3%A0,_Serra_de_Tramuntana,_Mallorca_-_Flickr_-_pom%27..jpg","imgNote":"Ortsbild Deià"},{"cat":"Essen","type":"mix","t":"Es Taller, Valldemossa","when":"Zeiten vorher prüfen · ca. 1 h 10 ab Alcúdia","d":"Moderne Tapas-Küche mit kreativen Gerichten, auf mehreren Listen weit vorn.","len":120,"src":"https://www.tripadvisor.com/Restaurants-g580319-zfd10942-Valldemossa_Majorca_Balearic_Islands-Tapas.html","q":"Gute lokale um tapas zu essen in deia oder waldemossa","lat":39.7103,"lon":2.6238,"img":"/_blob/b01712dbfdb3601daecc2012fe7b2bd6","imgCredit":"dronepicr · CC BY 2.0 · Wikimedia Commons","imgPage":"https://commons.wikimedia.org/wiki/File:The_village_of_Valldemossa_in_Mallorca,_Spain_(48001682373).jpg","imgNote":"Ortsbild Valldemossa"},{"cat":"Essen","type":"mix","t":"Tapas Bar an der Plaça Cartoixa","when":"Zeiten vorher prüfen · ca. 1 h 10 ab Alcúdia","d":"Lockere Außenplätze im Zentrum von Valldemossa, probiert Sobrassada oder Pa amb oli. Früh kommen.","len":90,"src":"https://mallorcaguide.com/en/places/5233/restaurante-tapas-bar/","q":"Gute lokale um tapas zu essen in deia oder waldemossa","lat":39.7111,"lon":2.6229,"img":"/_blob/f8243671d506f20224c011e362dc8a71","imgCredit":"Isiwal · CC BY-SA 4.0 · Wikimedia Commons","imgPage":"https://commons.wikimedia.org/wiki/File:Valldemossa_Pla%C3%A7a_de_la_Cartoixa-3863.jpg","imgNote":"Plaça de la Cartoixa"},{"cat":"Essen","type":"mix","t":"QuitaPenas, Valldemossa","when":"Eher mittags · ca. 1 h 10 ab Alcúdia","d":"Reine Tapas-Adresse in Valldemossa, laut Bewertungen eher fürs Mittagessen geeignet.","len":90,"src":"https://restaurantguru.com/tapas-Valldemossa-m9527","q":"Gute lokale um tapas zu essen in deia oder waldemossa","lat":39.7098,"lon":2.6219,"img":"/_blob/21b6154d341986e358c75cfb18fdba97","imgCredit":"dronepicr · CC BY 2.0 · Wikimedia Commons","imgPage":"https://commons.wikimedia.org/wiki/File:Aerial_view_of_Valldemossa_-_village_in_Mallorca,_Spain_(48001696993).jpg","imgNote":"Ortsbild Valldemossa"},{"cat":"Markt","type":"ausflug","t":"Wochenmarkt Alcúdia","when":"Di 27.10. · 9–13:30 Uhr","d":"Einer der größten Märkte der Insel, rund um die Altstadtmauern.","len":180,"src":"https://www.mallorca.com/en/events/markets/wochenmarkt-alcudia","lat":39.853,"lon":3.121,"img":"/_blob/98c5c9cbcd5d248854c8f9c868ba53fb","imgCredit":"Adam Jones from Kelowna, BC, Canada · CC BY-SA 2.0 · Wikimedia Commons","imgPage":"https://commons.wikimedia.org/wiki/File:Market_Scene_-_Alcudia_-_Mallorca_-_Spain_(14530588291).jpg"},{"cat":"Event","type":"ausflug","t":"Gastro-Abendmarkt","when":"Fr 30.10. · ab 19 Uhr","d":"Abendmarkt mit Essen und lokalen Produkten in Alcúdia.","len":120,"src":"https://www.mallorca.com/en/events/places/alcudia","lat":39.8536,"lon":3.1222,"img":"/_blob/c25cd8e2234c23d2f7676c31a7d1d6f4","imgCredit":"trolvag · CC BY-SA 3.0 · Wikimedia Commons","imgPage":"https://commons.wikimedia.org/wiki/File:07400_Alc%C3%BAdia,_Illes_Balears,_Spain_-_panoramio_(11).jpg","imgNote":"Ortsbild Alcúdia"},{"cat":"Event","type":"mix","t":"Festa de les Ànimes","when":"Sa 31.10.","d":"„Fest der Seelen“ am Vorabend von Allerheiligen. Programm vorher vor Ort erfragen.","len":"half","src":"https://www.mallorca.com/en/events/places/alcudia","lat":39.8526,"lon":3.1203,"img":"/_blob/70d553b5cd45fa595edd90585287d6c5","imgCredit":"Littlebrowny · CC BY-SA 3.0 · Wikimedia Commons","imgPage":"https://commons.wikimedia.org/wiki/File:Church_of_St_Jaume_Alcudia.jpg","imgNote":"Kirche Sant Jaume, Alcúdia"},{"cat":"Ort","type":"stadt","t":"Altstadt & Pollentia","when":"Jederzeit","d":"Stadtmauer, Gassen und die Ruinen der römischen Stadt Pollentia direkt daneben.","len":"half","src":"https://www.melia.com/en/blog/travel/what-to-see-alcudia","lat":39.8512,"lon":3.1192,"img":"/_blob/7d02f97fa2a706517840ff5ba1ace8a0","imgCredit":"Adam Jones from Kelowna, BC, Canada · CC BY-SA 2.0 · Wikimedia Commons","imgPage":"https://commons.wikimedia.org/wiki/File:View_over_Old_Town_from_City_Walls_-_Alcudia_-_Mallorca_-_Spain_(14533948805).jpg"},{"cat":"Ausflug","type":"ausflug","t":"Cap de Formentor","when":"Am schönsten zum Sonnenuntergang","d":"Nordspitze Mallorcas. Die Sommersperre für Autos endete laut Berichten Mitte Oktober, bitte vorher prüfen.","len":"half","src":"https://www.majorcadailybulletin.com/news/local/2026/06/02/142871/formentor-lighthouse-road-now-quiet-only-buses-cyclists-and-permit-holders-pass.html","lat":39.9622,"lon":3.2132,"img":"/_blob/62f27c33a8b4956a2b56a0aa7deed44d","imgCredit":"Isiwal · CC BY-SA 3.0 · Wikimedia Commons","imgPage":"https://commons.wikimedia.org/wiki/File:Mallorca_Cap_de_Formentor_Faro.jpg"},{"cat":"Wandern","type":"wander","t":"Talaia d'Alcúdia & Penya des Migdia","when":"ca. 12,7 km · schwer","d":"Rundweg auf den höchsten Punkt der Halbinsel, etwa 4,5 Stunden, weiter Blick.","len":"full","src":"https://www.komoot.com/guide/1541053/hiking-around-alcudia","lat":39.8742,"lon":3.1712,"img":"/_blob/54b3383c7977c70d1cb6f602b8dc6ad6","imgCredit":"Wasquewhat · CC BY-SA 4.0 · Wikimedia Commons","imgPage":"https://commons.wikimedia.org/wiki/File:Talaia_d%27Alcudia.jpg"},{"cat":"Wandern","type":"wander","t":"Ermita de la Victòria","when":"Kurz bis mittel","d":"Start an der Einsiedelei, bergauf mit Blick auf Formentor und die Bucht von Pollença.","len":180,"src":"https://www.komoot.com/guide/1541053/hiking-around-alcudia","lat":39.8652,"lon":3.187,"img":"/_blob/3d38f91f99a37df37e56e63f6e80f4a6","imgCredit":"Kritzolina · CC BY-SA 4.0 · Wikimedia Commons","imgPage":"https://commons.wikimedia.org/wiki/File:Ermita_de_la_Victoria_04.jpg"},{"cat":"Strand","type":"spa","t":"Coll Baix","when":"ca. 4 km hin & zurück · mittel","d":"Abgelegene Kiesbucht, nur zu Fuß über ein paar Auf- und Abstiege erreichbar.","len":"half","src":"https://www.alltrails.com/spain/mallorca/alcudia/beach","lat":39.879,"lon":3.192,"img":"/_blob/01b3b4ba58e60af09b90041974773fe0","imgCredit":"Olaf Tausch · CC BY 3.0 · Wikimedia Commons","imgPage":"https://commons.wikimedia.org/wiki/File:Coll_Baix_02.JPG"},{"cat":"Natur","type":"wander","t":"Naturpark S'Albufera","when":"Entspannt","d":"Größtes Feuchtgebiet Mallorcas, ideal für Vogelbeobachtung und eine Radtour.","len":180,"src":"https://www.komoot.com/guide/1541059/attractions-around-alcudia","lat":39.792,"lon":3.102,"img":"/_blob/10e2f059c53c0926f2478c74d07a44de","imgCredit":"Olaf Tausch · CC BY 3.0 · Wikimedia Commons","imgPage":"https://commons.wikimedia.org/wiki/File:Parc_natural_de_s%E2%80%99Albufera_de_Mallorca_10.jpg"},{"cat":"Strand","type":"spa","t":"Platja de Muro","when":"Jederzeit","d":"Fast 6 km heller Sandstrand mit flachem Wasser, gut für einen ruhigen Strandnachmittag.","len":180,"src":"https://www.grupoenjoy.es/en/blog/que-hacer-alcudia-mallorca","lat":39.81,"lon":3.115,"img":"/_blob/aeec7b718655d3f0e4fef9c986b63bed","imgCredit":"Marc Ryckaert · CC BY-SA 4.0 · Wikimedia Commons","imgPage":"https://commons.wikimedia.org/wiki/File:Platja_de_Muro_R13.jpg"}]</script>
+
+<script id="live-data" type="application/json">{"made":"2026-10-28T09:47+00:00","bbox":[2.3,39.25,3.5,40.0],"lons":[2.3,2.5,2.7,2.9,3.1,3.3,3.5],"lats":[40.0,39.812,39.625,39.438,39.25],"fc":{"t":["2026-10-28T10:00","2026-10-28T11:00","2026-10-28T12:00","2026-10-28T13:00","2026-10-28T14:00","2026-10-28T15:00","2026-10-28T16:00","2026-10-28T17:00","2026-10-28T18:00","2026-10-28T19:00","2026-10-28T20:00","2026-10-28T21:00","2026-10-28T22:00","2026-10-28T23:00","2026-10-29T00:00","2026-10-29T01:00","2026-10-29T02:00","2026-10-29T03:00","2026-10-29T04:00","2026-10-29T05:00","2026-10-29T06:00","2026-10-29T07:00","2026-10-29T08:00","2026-10-29T09:00","2026-10-29T10:00","2026-10-29T11:00","2026-10-29T12:00","2026-10-29T13:00","2026-10-29T14:00","2026-10-29T15:00","2026-10-29T16:00","2026-10-29T17:00","2026-10-29T18:00","2026-10-29T19:00","2026-10-29T20:00","2026-10-29T21:00","2026-10-29T22:00","2026-10-29T23:00","2026-10-30T00:00","2026-10-30T01:00","2026-10-30T02:00","2026-10-30T03:00","2026-10-30T04:00","2026-10-30T05:00","2026-10-30T06:00","2026-10-30T07:00","2026-10-30T08:00","2026-10-30T09:00"],"temp":[[21,21,21,21,21,21,22,22,22,22,21,21,21,21,21,21,21,21,21,21,21,21,21,21,20,20,20,21,20,20,20,20,20,21,21,21,20,20,20,20,20,20,20,20,20,20,20,20],[21,21,21,21,21,21,22,22,21,20,21,21,21,21,21,21,21,21,21,21,21,21,21,20,20,20,20,20,20,20,20,20,21,21,21,21,21,20,20,20,20,20,20,20,20,20,20,20],[21,21,21,21,21,21,21,20,20,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20],[21,21,21,21,21,20,20,20,21,21,21,21,21,21,21,21,21,21,21,20,20,20,21,21,21,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,19,19,20],[21,21,22,22,22,22,21,21,21,20,20,20,20,20,19,19,18,17,17,16,16,16,16,18,20,21,21,20,21,21,21,21,20,20,19,19,19,19,19,19,19,19,19,19,18,18,19,20],[21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,20,20,20,20,20,20,20,20,20,21,20,20,20,20,20,21,20,20,20,20,20,20,20,19,19,19,19,20,20,20],[21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,20,20,20,20,20,20,20,20,20,20,21,21,21,21,20,20,20,20,20,20,20,20,20,20,20,19,20,20,20,20,20],[22,22,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,20,21,20,20,21,21,21,21,20,20,20,20,20,20,20,21,20,20,20,20,20,20,20,20,20,20],[22,21,21,21,21,22,21,20,21,21,21,21,21,21,21,21,21,21,21,21,21,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,19,19,20,20,20,20],[22,22,22,22,22,22,21,20,20,20,20,19,19,19,19,19,19,19,19,19,19,19,19,19,20,20,20,20,21,20,20,20,20,19,19,19,19,19,19,19,19,18,18,18,18,18,18,19],[16,16,17,18,17,17,16,16,15,14,14,13,13,13,13,13,12,12,12,13,13,13,13,15,16,16,17,17,17,17,17,16,15,14,14,14,14,14,13,13,13,13,13,13,12,12,12,14],[21,22,22,22,22,22,21,21,21,20,20,20,19,19,18,17,16,15,15,15,15,15,16,17,18,20,21,21,21,22,21,21,20,20,19,19,19,19,18,18,19,19,19,19,18,18,18,19],[21,22,22,22,22,21,21,21,20,20,20,20,20,19,19,19,19,18,17,17,17,17,17,19,20,21,22,22,22,21,21,20,19,19,20,20,20,20,20,19,19,19,19,19,19,19,19,20],[21,22,22,22,22,22,21,20,20,20,19,19,19,19,19,18,19,19,18,18,17,16,16,18,20,21,22,22,22,21,21,20,19,19,19,20,19,19,19,19,19,19,18,18,18,18,18,20],[22,22,22,23,23,23,22,21,20,20,20,19,19,19,18,18,18,18,18,19,19,19,19,19,20,21,21,22,22,22,21,21,20,20,19,19,19,19,19,19,19,19,19,18,18,18,19,19],[19,20,20,20,21,20,20,18,17,16,15,15,14,14,14,14,14,15,15,15,14,14,14,16,17,18,19,19,19,19,19,18,17,16,15,15,14,14,14,14,14,14,14,14,14,14,14,16],[20,22,23,24,24,23,23,22,20,19,18,16,15,14,14,13,13,13,12,12,13,13,14,16,18,20,22,23,23,22,22,21,20,19,18,17,16,16,15,14,14,14,14,14,14,14,14,16],[20,21,22,22,22,22,21,20,18,17,16,16,16,15,15,14,14,14,13,13,13,13,13,15,19,20,21,22,22,22,22,21,19,18,17,16,16,16,16,16,15,15,15,15,14,14,14,16],[21,21,22,22,22,22,21,20,19,18,17,16,16,14,14,13,13,13,13,12,12,12,12,15,19,21,22,22,23,22,22,20,19,19,18,17,16,16,16,15,15,15,15,15,15,14,14,16],[20,21,22,21,22,21,20,20,18,18,17,16,14,13,13,12,12,12,12,12,12,12,12,15,19,21,21,22,23,22,21,20,19,18,18,17,16,16,14,14,14,14,14,14,14,13,13,16],[21,22,22,22,22,22,21,20,19,19,19,18,17,16,15,15,15,14,14,14,14,13,14,17,20,21,22,23,23,22,21,20,19,18,18,17,17,17,16,16,16,16,17,17,16,16,16,19],[22,22,22,22,23,22,23,22,22,22,21,21,21,21,21,21,21,21,20,20,20,20,20,20,20,20,20,22,22,22,22,21,21,21,21,21,21,21,21,20,20,20,20,19,19,19,19,19],[21,22,23,24,24,24,24,23,22,21,20,20,20,19,18,18,18,18,18,17,18,18,18,19,20,21,22,21,22,22,22,22,21,20,19,19,19,19,19,18,18,18,18,18,18,18,18,19],[21,22,23,23,23,23,22,21,20,19,18,18,16,15,14,13,13,13,13,13,12,13,14,16,19,21,22,21,22,22,22,22,20,20,19,17,16,16,15,15,14,14,14,15,16,16,16,18],[20,21,22,22,22,22,21,20,19,18,18,16,16,15,14,14,14,14,14,14,14,14,15,17,19,20,21,21,21,21,21,21,19,18,16,16,16,16,15,15,15,15,15,16,15,15,15,17],[20,22,22,22,22,22,21,20,19,18,17,16,15,14,13,13,12,12,12,12,12,12,13,15,19,20,21,22,22,22,21,21,20,18,18,17,16,16,15,15,14,15,15,15,15,14,14,16],[21,22,22,22,22,22,21,20,19,18,17,16,15,15,14,14,14,14,14,14,14,13,14,17,20,21,22,22,23,22,22,21,20,19,19,18,17,16,16,16,15,15,15,15,15,15,15,18],[22,22,22,22,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,20,20,20,20,20,20,21,20,20,20,20,20,20],[21,21,22,22,22,22,22,22,23,22,22,22,22,22,22,21,21,21,21,21,21,20,20,20,20,21,22,22,22,22,22,21,21,22,22,21,21,21,21,21,20,20,20,20,20,20,19,20],[21,22,22,22,22,22,22,22,22,21,21,21,21,21,21,21,21,21,21,21,21,21,20,20,20,21,21,21,22,22,22,22,22,21,21,21,21,21,21,20,20,20,20,19,19,20,20,20],[21,22,22,22,22,22,22,22,22,21,21,21,21,21,21,21,20,20,20,20,20,20,20,21,21,21,21,21,22,22,22,22,22,21,21,21,21,21,20,20,20,20,20,20,19,19,19,19],[21,22,22,22,22,22,22,22,21,21,20,20,20,20,20,20,19,19,19,19,19,19,19,19,20,20,21,21,21,22,22,22,22,22,21,21,20,20,20,20,20,19,19,19,19,18,18,19],[21,22,23,23,23,22,22,21,19,18,17,16,15,14,14,13,13,13,12,12,12,12,12,15,19,21,22,22,22,22,22,22,20,19,18,17,17,16,16,15,14,14,14,15,14,15,15,17],[22,22,22,22,22,22,22,21,21,21,21,21,21,21,20,20,20,20,20,20,20,21,21,20,21,21,21,21,21,21,21,22,22,21,21,21,21,20,20,20,20,20,20,20,20,20,20,20],[22,22,22,22,22,22,22,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,21,20,20,20,20,20,21,20,20,20,20,20]],"rain":[[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,0.1,0.2,0.2,0.2,0.0,0.0,0.2,0.1,0.1,0.0,0.1,0.1,0.1,0.1,0.0,0.1,0.1,0.2,0.2,0.1,0.0,0.0,0.0,0.0,0.0],[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,0.2,0.3,0.3,0.3,0.2,0.1,0.1,0.0,0.0,0.1,0.1,0.0,0.0,0.1,0.0,0.1,0.0,0.0,0.0,0.0,0.0,0.0,0.0],[0.0,0.0,0.0,0.0,0.1,0.1,0.0,0.1,0.4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,0.2,0.3,0.3,0.2,0.2,0.1,0.1,0.1,0.2,0.2,0.1,0.2,0.0,0.2,0.2,0.0,0.0,0.0,0.0,0.0,0.0,0.0],[0.0,0.0,0.0,0.0,0.0,0.0,0.1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,0.1,0.3,0.3,0.1,0.1,0.1,0.2,0.4,0.2,0.1,0.0,0.0,0.0,0.1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.3,0.3,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,0.1,0.2,0.1,0.2,0.1,0.1,0.1,0.1,0.2,0.2,0.1,0.0,0.0,0.0,0.0,0.1,0.1,0.1,0.2,0.2,0.2,0.1,0.0,0.0,0.0],[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,0.1,0.3,0.2,0.1,0.2,0.1,0.2,0.1,0.1,0.1,0.2,0.1,0.0,0.0,0.0,0.0,0.1,0.2,0.1,0.2,0.2,0.2,0.1,0.0,0.0,0.0],[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,0.0,0.0,0.0,0.0,0.0,0.0],[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,0.2,0.2,0.1,0.1,0.0,0.0,0.1,0.1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,0.1,0.1,0.1,0.3,0.2,0.1,0.1,0.2,0.0],[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,0.1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,0.1,0.0,0.0,0.0,0.0,0.0,0.0,0.1,0.1,0.2,0.0,0.0,0.0,0.0,0.0,0.0,0.0],[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,0.0,0.0,0.1,0.1,0.3,0.3,0.2,0.2,0.2,0.3,0.4],[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,0.1,0.1,0.1,0.2,0.4,0.3,0.2,0.2,0.3,0.0],[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,0.1,0.1,0.1,0.0,0.0,0.1,0.3,0.1,0.0,0.0,0.0],[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,0.1,0.2,0.1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,0.0,0.0,0.0,0.0,0.1,0.1,0.0,0.0,0.0,0.1,0.1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.1,0.1,0.1,0.1,0.1,0.1,0.0,0.0,0.0,0.0,0.0,0.0,0.0]],"cloud":[[87,65,100,96,78,60,52,63,65,56,74,18,19,15,0,0,40,48,45,54,51,77,73,92,65,75,68,69,80,88,67,42,58,95,95,89,100,100,100,100,94,95,88,84,83,100,98,100],[84,84,100,100,86,73,55,65,65,51,28,5,3,0,2,8,20,56,40,65,59,37,80,83,97,75,80,80,81,75,67,79,34,82,95,80,98,100,100,100,61,90,56,48,98,100,99,97],[93,76,93,100,100,79,64,75,61,53,7,12,1,0,6,10,15,46,54,57,65,53,60,53,78,91,82,82,78,63,56,72,55,62,93,73,94,99,81,72,61,89,86,38,100,100,99,72],[89,87,85,100,100,92,64,79,82,59,16,3,4,5,5,7,27,53,65,56,61,55,41,56,61,87,91,77,73,45,58,49,71,83,92,94,88,71,53,49,70,87,38,30,100,100,50,55],[93,100,72,80,92,85,88,82,62,56,0,0,3,10,10,25,39,49,61,60,56,69,42,42,63,69,97,89,59,28,0,4,29,51,66,94,72,77,63,64,65,89,52,39,87,95,56,67],[89,100,71,100,80,75,50,67,63,2,0,0,11,1,2,11,8,19,54,53,42,53,37,36,59,69,75,76,82,84,61,60,69,60,52,85,53,63,57,58,52,46,27,8,29,25,38,38],[99,100,95,100,49,77,73,72,56,11,0,2,10,2,11,7,4,20,42,42,58,40,44,42,61,76,69,77,75,73,73,60,52,64,74,65,59,61,43,55,45,21,1,4,13,27,38,52],[95,87,32,56,96,94,84,52,51,64,22,27,8,0,0,3,28,32,53,95,83,78,90,90,85,79,87,84,84,81,78,85,74,58,96,89,89,100,100,100,100,94,97,97,85,100,100,100],[87,84,71,30,49,93,87,47,51,34,22,20,5,0,0,2,15,33,19,49,86,74,84,90,85,67,68,64,75,75,70,78,82,72,77,89,78,93,100,90,92,88,96,88,93,100,100,100],[84,100,81,41,59,100,94,66,49,25,39,28,8,13,23,11,6,50,44,37,70,57,58,83,87,83,77,77,75,73,72,59,64,54,81,87,46,92,51,35,42,78,89,59,97,100,100,100],[95,100,88,66,93,100,86,88,68,61,50,11,29,33,37,37,41,51,69,61,65,74,64,70,87,90,93,83,79,66,64,56,62,76,74,92,76,78,67,75,70,81,92,70,98,100,96,23],[96,100,74,56,88,71,64,92,52,64,39,0,6,26,25,32,53,61,60,54,38,67,45,48,51,65,81,79,71,77,46,36,38,56,76,92,73,62,67,66,69,88,66,39,61,99,59,67],[100,92,85,72,70,80,57,51,89,49,22,4,15,26,12,37,42,31,39,45,30,32,58,39,42,57,67,66,57,63,69,66,66,63,68,71,69,54,56,55,65,66,66,58,41,65,61,80],[100,100,78,72,84,55,47,77,64,28,3,19,25,17,21,39,34,25,35,50,44,33,55,44,49,63,75,84,78,63,69,82,57,65,64,58,62,54,64,69,67,62,53,46,28,46,50,60],[89,88,58,30,36,44,59,85,41,41,23,32,13,0,18,0,24,49,54,72,77,84,85,82,81,84,75,71,71,86,65,68,54,52,95,97,83,71,100,97,97,71,96,100,90,100,100,100],[87,97,80,54,40,27,87,87,42,52,46,42,32,0,0,0,0,40,45,64,70,75,67,74,66,89,87,93,94,83,90,79,57,47,90,96,86,50,100,100,100,76,93,98,94,100,100,100],[87,82,81,48,77,61,85,81,39,52,44,43,49,39,37,31,0,19,33,47,66,55,60,73,60,62,84,74,68,79,60,4,21,24,50,89,85,75,74,89,66,74,95,84,93,100,100,100],[82,83,89,65,67,45,72,78,50,68,35,22,0,0,3,6,0,5,40,34,34,58,47,52,55,69,79,58,76,67,48,41,39,48,58,90,91,75,81,88,96,93,97,69,89,100,100,73],[100,65,100,63,57,52,83,82,64,86,46,3,0,0,4,0,12,17,26,32,10,24,27,22,26,87,90,70,64,66,88,80,81,67,79,63,95,71,82,74,69,95,98,96,76,100,95,33],[90,100,88,75,71,79,81,26,82,82,4,0,4,16,14,26,36,29,26,41,27,12,36,32,32,42,90,90,82,80,61,56,58,66,68,58,94,85,67,62,67,72,72,62,52,32,41,56],[99,100,81,78,70,67,51,48,62,79,0,7,32,34,17,41,39,31,30,47,36,26,53,42,48,58,84,85,65,65,73,70,57,58,62,56,65,52,65,68,75,70,61,51,26,35,52,50],[95,96,50,53,63,51,60,42,80,87,88,48,10,6,6,29,50,66,60,60,82,82,83,86,73,67,79,31,13,53,58,77,72,55,92,97,59,59,100,100,99,98,99,100,92,99,97,97],[86,64,86,84,76,53,52,96,83,39,35,41,30,26,4,0,0,32,44,49,76,82,85,81,75,81,86,77,55,53,47,84,19,32,48,96,88,57,98,100,100,71,89,100,91,100,100,100],[98,66,67,51,38,38,82,53,62,79,86,39,40,39,0,0,0,21,45,34,52,69,77,77,88,64,70,72,64,63,59,30,34,41,61,91,86,79,83,78,90,62,79,100,84,100,100,100],[97,73,92,54,40,53,70,51,50,85,85,27,16,0,0,0,0,0,38,39,36,60,61,68,88,53,78,80,48,32,77,23,29,32,48,92,95,84,84,76,81,70,73,93,81,100,100,100],[90,99,93,53,45,62,64,43,80,83,85,10,0,0,0,7,13,22,31,48,27,32,36,33,34,47,85,85,81,84,79,91,93,71,68,79,100,56,84,82,77,74,94,94,82,100,100,1],[86,100,77,73,63,64,97,57,78,69,80,4,0,0,0,0,0,0,0,29,25,10,35,35,35,43,97,87,87,90,81,80,78,66,75,86,100,88,79,81,76,64,91,74,68,100,100,11],[100,94,100,100,95,98,100,100,78,89,53,49,30,15,35,59,58,43,19,12,12,4,6,9,27,34,47,58,97,69,71,76,74,75,60,62,95,92,83,71,75,60,62,74,60,37,13,35],[69,89,35,17,50,57,87,91,99,91,88,91,54,45,38,44,46,55,73,60,61,72,67,63,55,58,51,40,31,19,73,83,66,43,92,94,90,89,100,100,100,95,100,96,100,99,98,97],[82,49,31,34,28,65,68,100,69,71,35,83,37,27,11,2,13,8,41,66,62,65,74,77,71,60,48,50,48,45,84,48,23,67,67,80,88,91,96,100,100,94,95,99,100,97,100,100],[90,64,89,46,54,71,68,88,81,80,58,64,45,15,8,0,0,0,41,34,64,60,80,88,78,68,69,25,49,49,9,45,49,45,42,89,90,96,71,83,93,50,72,99,92,99,100,100],[91,98,100,89,96,100,100,84,77,91,67,83,14,0,0,0,0,0,5,68,25,54,63,87,87,69,41,56,54,35,23,56,75,49,67,50,94,94,92,86,90,45,59,97,88,98,100,100],[85,100,70,69,77,100,100,74,49,68,65,69,0,0,0,0,0,0,11,53,42,39,42,48,62,77,54,68,73,61,43,58,70,64,70,86,98,95,93,86,74,68,59,75,79,100,100,14],[100,100,100,81,92,100,100,100,83,86,81,72,42,22,13,0,0,0,0,9,47,2,28,34,41,64,61,71,77,64,57,61,71,78,64,94,80,94,55,91,58,66,48,83,57,78,100,2],[100,98,100,100,99,100,100,100,82,80,86,60,54,12,11,59,59,44,42,29,24,6,4,22,32,47,44,67,72,67,72,82,81,59,74,90,89,92,87,89,55,65,63,70,54,79,27,33]],"ws":[[16,13,10,10,14,13,11,9,8,9,10,8,6,5,5,6,3,1,1,3,6,8,10,14,15,14,14,15,15,13,12,10,9,7,5,3,3,3,4,6,10,15,20,22,21,21,21,22],[22,16,13,12,13,14,8,6,11,13,12,11,9,6,6,7,7,3,4,2,4,5,8,12,14,14,13,13,14,14,13,12,10,9,6,3,2,4,5,7,12,19,20,19,20,21,20,21],[24,20,19,16,16,14,8,10,12,13,14,13,10,8,9,9,8,6,4,3,2,4,4,7,13,13,13,13,14,15,16,15,13,10,7,4,2,3,3,7,14,18,18,17,19,19,20,19],[21,20,18,15,15,17,12,10,14,14,11,10,9,10,10,10,8,7,4,4,4,3,4,5,9,16,16,16,18,20,20,18,16,11,6,3,2,2,2,7,13,15,14,14,14,15,14,16],[21,20,20,20,20,20,18,14,14,11,8,5,3,3,3,2,2,2,2,4,5,5,4,3,3,1,8,10,10,10,10,9,7,5,3,2,2,2,1,4,8,10,8,8,7,7,8,12],[32,32,31,30,31,33,32,29,24,21,18,16,16,16,16,15,12,11,8,5,3,2,2,2,4,6,4,4,10,13,12,8,6,6,9,10,8,7,10,14,17,15,15,17,18,18,18,19],[38,37,37,36,38,37,35,30,24,21,19,18,18,18,19,18,16,14,11,7,5,4,4,3,5,6,6,3,4,4,6,7,8,10,11,11,8,8,11,15,17,15,16,18,19,19,19,19],[32,28,25,24,21,17,12,9,10,13,13,8,5,4,5,5,1,1,3,10,10,12,15,15,13,10,11,15,15,14,13,11,8,5,1,1,2,1,3,4,5,7,10,13,17,22,22,20],[31,29,26,25,24,23,20,15,13,14,10,7,4,2,2,5,2,2,2,4,10,14,14,12,11,9,7,8,11,10,8,6,4,2,2,3,2,1,3,3,4,6,8,9,14,16,16,16],[19,17,16,17,17,17,13,8,9,8,6,6,6,3,2,3,5,3,3,4,4,6,8,7,8,7,5,4,6,6,4,4,3,3,4,4,3,3,3,3,4,7,7,8,9,9,9,9],[15,16,14,19,14,14,11,7,8,7,5,4,3,4,3,2,2,2,4,3,4,5,4,6,9,10,9,10,10,9,9,7,6,4,4,3,3,4,4,4,4,3,4,5,5,5,5,7],[21,21,22,22,20,21,19,17,15,12,10,7,4,4,3,3,4,5,4,4,4,4,4,4,3,3,2,6,9,9,10,10,9,7,5,4,4,4,4,4,4,7,8,8,7,7,7,9],[31,31,31,30,29,29,27,23,20,16,12,8,6,4,4,2,2,3,5,6,6,5,6,6,5,5,5,9,10,10,9,9,7,5,3,3,3,3,3,4,6,8,10,10,10,9,10,14],[26,25,27,27,26,26,24,20,17,13,11,8,7,6,6,5,5,4,4,4,5,6,6,4,4,4,5,8,8,8,8,8,6,3,2,3,3,3,3,4,6,8,8,8,8,8,8,13],[6,14,18,18,18,18,17,13,10,8,7,5,5,5,5,5,3,3,2,1,4,3,3,3,4,7,8,12,10,9,8,7,5,4,5,5,4,4,4,4,4,4,4,4,5,6,6,5],[2,6,11,13,13,12,11,10,6,5,5,4,4,4,4,4,2,2,2,2,4,4,3,4,6,8,9,10,10,10,8,8,6,4,5,4,4,4,4,4,5,5,4,3,4,4,4,3],[1,5,11,12,14,12,9,7,4,2,3,3,4,4,4,4,5,5,5,4,4,4,3,0,3,4,6,8,8,9,8,7,6,4,4,4,4,4,4,4,3,4,4,4,4,4,4,2],[28,28,27,27,28,27,23,20,13,8,5,2,1,1,2,2,2,1,1,2,1,2,2,3,9,13,14,14,15,14,13,10,2,4,5,4,4,2,2,1,2,3,4,3,4,5,4,4],[29,30,30,28,28,27,24,20,13,10,6,4,3,4,3,3,2,2,3,4,3,4,4,4,6,9,10,10,9,8,8,10,8,5,4,2,2,2,2,2,2,2,2,2,3,3,3,3],[24,26,26,26,26,25,22,19,13,10,7,5,6,6,6,7,7,7,7,7,7,7,6,6,4,6,5,5,5,9,11,9,6,5,4,4,4,5,5,6,6,6,5,6,6,6,6,5],[24,25,26,26,26,25,22,19,15,12,10,6,5,5,4,5,5,5,6,6,6,6,5,4,4,5,4,3,6,8,9,8,6,4,3,4,3,3,3,4,4,5,6,6,7,6,6,9],[6,2,5,4,5,3,6,13,15,12,8,6,4,3,4,4,3,4,4,2,6,8,6,3,1,5,7,10,14,14,14,13,12,8,6,5,5,3,2,3,3,4,5,5,6,8,10,9],[2,2,9,13,15,15,12,8,7,6,4,4,4,4,4,5,5,4,4,4,3,2,1,1,2,5,12,13,12,14,13,12,9,6,4,4,5,6,6,4,5,5,5,5,6,6,6,6],[23,25,26,25,25,24,22,19,15,13,9,6,6,6,6,6,6,5,6,5,5,5,4,0,3,6,12,14,15,14,14,13,11,8,5,5,6,6,5,5,5,6,5,5,6,7,8,7],[25,26,26,26,26,25,23,20,14,9,6,6,5,6,6,6,6,6,6,5,5,4,3,2,7,10,15,17,17,18,17,14,9,5,4,5,5,6,4,4,5,5,5,5,6,6,7,7],[26,28,27,26,26,25,23,18,13,8,4,3,2,3,4,4,5,5,4,4,4,3,4,2,4,11,12,17,18,17,15,10,4,5,4,5,4,3,3,3,4,4,5,5,6,6,5,6],[27,28,27,26,26,25,23,19,14,10,8,6,6,6,6,6,6,6,6,7,5,6,6,4,5,10,12,13,14,14,12,7,7,5,5,5,4,4,5,5,6,6,7,7,7,7,7,7],[38,38,36,36,37,35,34,32,29,27,24,21,18,15,12,13,11,12,12,11,9,6,8,5,6,7,9,8,11,14,13,7,6,10,11,11,11,10,9,10,14,14,16,17,18,19,18,18],[18,17,12,8,4,4,8,12,11,11,8,6,4,3,2,0,1,1,2,5,5,7,5,3,3,5,10,14,13,12,11,12,11,8,7,4,3,2,4,4,6,7,8,9,9,8,11,13],[23,26,25,22,26,28,27,27,26,24,20,16,12,10,8,6,6,6,8,4,2,2,7,5,3,3,6,10,14,14,14,14,15,12,9,8,8,6,4,4,4,6,7,8,9,12,16,17],[22,30,30,29,28,27,27,28,27,26,23,20,18,15,13,12,11,11,10,10,6,3,0,5,6,7,8,10,13,15,16,17,17,17,14,12,9,6,5,4,4,6,8,9,11,17,19,17],[22,26,26,26,26,25,24,25,21,18,14,13,13,12,10,9,9,9,8,8,6,6,5,3,4,6,11,14,15,17,18,17,18,18,15,10,7,5,6,5,6,9,9,11,13,15,15,13],[21,24,24,25,24,23,21,18,12,7,5,5,5,5,5,6,6,6,6,5,5,5,5,4,5,8,12,16,18,17,16,13,8,4,2,2,4,5,4,4,5,6,6,6,7,6,6,7],[39,36,35,34,36,35,34,32,30,26,21,17,14,13,11,10,11,11,11,10,8,5,6,5,5,7,9,12,13,15,16,16,15,10,6,4,5,6,6,5,7,11,14,15,18,18,18,18],[39,36,36,34,35,35,34,33,30,27,23,20,18,15,12,13,14,12,12,12,10,6,6,6,4,7,8,9,15,14,16,17,14,11,8,7,9,9,9,8,11,13,15,17,17,19,18,18]],"wd":[[43,35,28,6,340,340,340,351,13,69,96,113,117,117,127,114,130,146,214,252,242,245,262,283,281,276,271,269,267,268,272,274,270,257,258,277,344,50,68,66,63,67,66,64,62,61,56,51],[44,39,36,17,344,337,339,356,72,93,93,94,92,97,109,114,106,126,114,166,209,212,263,279,281,282,276,272,267,266,265,263,258,254,266,300,11,79,90,72,69,65,63,61,58,57,51,53],[50,46,47,38,16,6,45,73,70,72,72,81,86,85,92,106,103,101,90,113,191,197,225,264,268,276,272,262,254,251,250,250,246,245,250,246,143,139,108,70,68,63,58,56,56,54,51,52],[41,38,45,41,25,18,24,38,43,50,59,71,75,77,86,99,105,108,99,121,151,194,200,257,256,258,266,262,255,254,252,254,261,270,277,263,180,153,72,51,54,50,49,46,47,47,46,44],[26,20,17,30,17,18,9,10,13,15,22,20,30,40,74,112,153,202,194,218,207,207,185,167,153,252,300,318,315,312,311,328,345,352,354,329,281,252,342,27,37,34,23,16,11,14,13,22],[26,18,18,21,18,17,13,13,17,30,38,39,39,36,36,36,33,27,22,12,27,346,297,248,221,215,228,260,282,297,315,332,11,43,58,62,71,54,33,27,23,16,10,13,16,18,22,30],[24,18,19,16,16,14,12,10,21,22,31,33,31,30,28,26,27,27,28,21,4,336,343,300,293,260,263,270,304,325,346,33,47,51,57,60,56,35,15,16,14,7,3,8,10,13,23,33],[54,54,53,50,46,34,18,35,46,59,70,75,74,59,74,98,207,304,288,278,276,268,271,274,272,253,253,258,266,266,273,283,288,291,326,162,166,45,16,34,36,39,52,66,63,61,59,57],[47,44,44,44,41,35,34,50,45,52,63,72,76,90,82,98,135,225,180,225,257,248,244,256,261,254,249,245,260,262,270,273,265,231,211,210,202,34,40,23,37,38,53,59,60,58,57,55],[34,24,24,27,20,14,11,15,22,36,55,94,120,135,127,120,117,148,144,142,171,191,209,238,267,281,286,279,281,277,279,285,263,220,186,160,117,69,76,76,59,77,87,80,72,72,72,42],[37,31,26,31,28,21,13,6,3,360,356,343,319,331,346,351,360,333,299,283,279,274,265,270,292,304,304,297,298,302,303,303,285,260,246,276,310,294,299,331,360,13,20,8,9,9,360,9],[25,22,18,24,25,20,15,13,12,14,13,6,346,322,302,264,250,247,243,232,221,225,218,214,187,174,315,353,358,358,358,4,24,33,30,350,311,287,294,319,360,12,10,5,354,351,344,360],[30,26,21,23,23,23,19,19,21,24,28,31,33,29,24,8,329,257,225,216,207,217,197,215,228,234,278,341,360,10,17,16,20,34,18,14,360,346,346,5,14,23,20,10,6,4,8,12],[27,21,18,20,19,17,14,15,18,20,21,20,16,14,15,20,18,349,318,287,262,259,248,243,239,239,286,344,10,10,2,357,345,339,342,7,32,32,27,10,17,17,5,360,358,357,5,16],[25,32,30,32,27,24,17,20,24,29,35,42,42,54,74,90,90,83,90,270,285,283,291,284,270,254,250,266,276,286,302,311,330,360,30,45,56,45,38,29,11,350,15,35,51,60,63,53],[329,17,28,31,29,26,11,351,344,340,343,340,351,360,360,24,27,342,360,297,294,308,319,294,274,272,277,276,280,283,295,305,320,336,351,360,17,20,20,5,360,347,360,18,27,35,31,14],[90,48,45,47,50,45,29,33,41,11,337,347,346,340,346,351,352,348,356,340,355,354,353,45,157,197,263,277,282,288,304,319,330,331,355,360,360,355,349,343,347,354,355,350,355,345,345,342],[39,37,36,38,42,40,42,46,52,54,58,45,360,27,45,45,45,18,297,127,243,202,211,221,233,239,254,260,259,257,265,274,301,75,67,59,61,45,37,56,68,83,66,58,55,56,52,49],[30,27,25,25,27,28,25,21,20,18,360,323,277,259,257,256,262,262,263,246,225,239,225,207,207,236,268,289,317,344,29,58,70,70,52,27,329,297,301,309,333,288,297,323,337,320,310,319],[28,25,22,22,24,23,21,20,19,15,3,335,317,310,304,299,298,303,309,307,309,303,308,288,255,223,233,254,351,47,55,58,40,28,360,331,325,321,326,330,327,325,332,333,325,320,315,307],[26,21,19,20,20,19,16,15,17,16,13,3,340,328,312,309,302,295,292,285,281,281,274,265,233,222,241,320,34,47,35,27,11,349,319,315,330,342,342,333,336,352,356,353,347,343,337,2],[155,135,351,17,81,108,349,346,349,353,5,21,31,49,90,121,108,70,81,45,317,313,317,333,90,198,200,228,253,258,267,280,300,319,327,4,18,360,351,360,347,346,343,16,50,69,82,86],[68,18,57,66,63,64,61,32,43,57,48,41,42,27,15,27,27,29,48,37,21,11,18,180,169,238,252,251,251,260,270,282,291,310,331,350,17,35,45,42,39,42,51,53,50,47,47,52],[41,37,38,40,42,46,48,52,55,53,53,56,65,67,67,67,68,62,60,74,67,67,56,315,264,251,260,260,262,263,268,276,280,298,337,32,54,65,69,67,62,63,62,54,52,60,56,45],[40,36,35,36,40,42,41,45,41,34,27,15,8,11,11,11,14,7,356,12,360,355,347,315,252,252,263,264,262,264,276,276,279,318,5,16,28,32,14,9,12,20,21,28,31,34,29,30],[34,32,28,26,29,30,30,29,31,31,24,13,8,23,37,38,45,42,35,34,61,36,45,51,243,237,253,274,273,274,281,295,360,65,63,51,42,41,36,32,29,24,21,23,33,27,27,18],[32,33,29,27,31,31,30,27,24,17,360,339,317,313,315,320,322,324,322,315,318,306,313,299,261,240,259,272,282,285,296,342,41,51,48,45,10,331,324,326,333,326,331,330,340,342,335,348],[28,29,23,23,20,21,20,21,23,29,31,26,25,19,12,2,360,346,344,349,341,332,325,318,277,261,252,234,248,226,243,279,7,37,33,17,12,10,360,6,17,13,10,7,5,1,2,360],[71,67,57,45,24,49,61,63,63,67,65,31,14,353,349,270,180,297,338,312,321,339,360,60,150,197,228,240,237,232,247,266,270,272,306,325,315,278,287,308,333,333,341,360,22,40,67,82],[48,43,43,44,57,59,63,70,75,70,64,59,55,63,66,74,80,71,59,66,99,292,302,315,304,234,232,242,252,257,263,279,280,287,307,319,305,292,325,350,360,342,354,17,40,62,73,74],[42,42,41,41,43,47,51,53,59,59,57,54,54,55,59,65,69,62,56,66,75,84,315,282,277,261,251,248,259,267,269,279,292,292,299,308,320,317,328,343,6,33,47,53,59,60,61,59],[39,41,39,35,38,39,43,43,46,45,42,35,31,39,42,40,40,36,23,24,50,15,28,14,304,260,257,259,262,271,277,281,286,294,297,309,325,356,23,39,40,42,39,35,37,41,42,39],[31,35,31,29,32,33,35,29,30,23,8,347,342,356,8,11,17,13,4,356,23,356,360,360,288,257,254,262,262,265,274,281,288,343,27,45,38,36,31,20,12,7,7,360,12,13,13,9],[36,36,33,27,27,31,29,29,30,30,30,24,14,3,360,2,10,15,14,2,358,17,328,321,286,270,254,251,264,267,275,285,298,327,349,6,27,33,27,21,9,13,13,14,17,16,15,14],[31,31,33,25,24,25,22,23,26,30,33,29,26,23,22,15,11,5,3,3,360,353,342,335,299,276,263,258,276,268,269,279,295,307,338,14,24,23,14,7,4,10,16,18,15,9,7,10]],"gust":[[25,22,17,14,18,19,18,15,13,13,16,14,12,8,8,9,9,4,2,5,9,12,14,19,24,24,21,20,20,23,20,18,14,12,9,8,4,4,12,15,17,20,27,29,28,28,28,28],[30,28,22,18,18,19,18,11,15,18,17,17,15,12,9,10,10,9,5,5,5,7,11,16,18,24,22,20,20,22,22,18,16,14,13,8,4,5,14,16,17,25,27,27,26,27,27,28],[35,32,27,25,22,22,19,14,17,17,19,19,18,14,13,13,12,11,8,5,4,6,6,10,18,23,23,21,21,22,24,24,19,18,14,10,5,13,5,10,18,23,24,24,24,25,26,26],[31,27,26,23,20,23,23,17,19,19,18,16,14,13,14,13,13,11,10,6,6,5,6,7,12,20,26,26,26,28,30,30,24,21,14,8,4,4,4,10,17,20,20,19,19,20,20,22],[35,32,33,31,32,32,33,28,23,22,17,12,8,4,4,4,3,2,2,6,7,7,8,7,7,7,13,17,17,17,17,17,16,12,8,5,3,3,3,6,12,15,15,13,13,12,13,18],[48,43,42,41,42,44,44,43,38,31,27,23,22,22,22,21,20,17,15,11,8,5,2,3,5,8,8,6,14,17,24,16,12,9,12,14,13,10,13,19,22,22,20,23,24,24,24,25],[55,51,50,50,50,51,50,47,38,31,28,26,24,24,24,25,24,22,19,16,10,7,5,5,6,9,9,9,5,6,9,10,12,13,15,16,15,11,15,20,22,22,22,25,25,25,25,26],[44,43,36,33,32,28,22,17,14,18,19,17,12,7,8,8,7,2,5,14,15,16,20,20,21,20,16,20,22,20,20,19,17,13,12,7,2,6,9,12,14,16,18,18,23,30,30,29],[41,43,38,34,33,31,30,27,20,19,19,14,9,6,4,7,7,4,3,6,13,18,19,23,23,19,15,12,16,16,14,14,12,9,8,4,4,8,12,13,14,16,16,16,18,22,22,22],[38,39,35,34,35,36,33,25,17,18,15,12,12,11,6,5,9,9,7,8,8,10,16,16,17,18,19,13,14,14,14,11,10,7,6,7,7,5,5,5,6,11,12,14,16,17,18,18],[58,52,52,45,48,48,46,35,29,28,26,22,18,17,16,15,14,12,15,16,17,19,19,22,26,29,29,31,31,30,27,26,23,19,15,13,13,14,15,14,14,13,15,19,20,22,22,24],[40,37,38,39,38,37,36,34,29,26,21,17,12,7,6,5,7,8,8,8,7,7,7,8,7,8,7,13,18,18,18,18,18,16,17,14,13,6,6,6,8,12,15,14,14,12,12,16],[56,55,55,54,53,50,50,46,39,34,31,29,21,16,13,8,9,10,12,12,10,10,10,11,12,13,13,16,18,18,18,26,20,20,17,14,10,9,8,9,12,14,17,17,18,18,18,24],[54,53,55,56,55,54,53,48,39,33,26,22,20,16,14,13,13,10,9,9,10,10,12,11,10,10,13,17,19,19,18,20,20,15,10,7,7,6,8,10,15,18,19,19,19,20,19,26],[16,27,35,35,35,36,34,36,31,26,21,18,14,13,11,10,8,6,7,7,11,11,13,13,16,17,19,23,23,21,20,18,17,13,11,10,10,9,9,8,8,16,16,9,10,14,16,17],[17,20,27,30,30,31,29,29,25,22,19,18,17,16,16,14,11,11,10,10,14,17,18,17,24,28,28,30,32,32,30,26,23,20,18,17,14,13,14,14,15,15,14,12,10,13,14,16],[8,12,24,28,32,32,27,20,16,8,4,6,9,9,9,9,10,11,10,9,8,8,7,5,7,10,15,20,20,21,21,19,15,12,10,8,8,9,8,8,8,7,8,8,9,9,9,9],[49,49,48,47,48,48,46,40,33,21,13,8,2,1,2,2,2,2,1,2,2,2,3,6,16,22,24,24,27,27,26,23,18,6,8,8,7,6,4,2,2,5,5,6,7,8,8,6],[49,52,52,51,49,48,46,41,34,22,17,10,6,6,6,5,5,4,5,6,6,7,7,7,10,17,17,18,17,16,14,18,17,14,9,6,4,4,4,4,4,4,4,4,5,5,5,6],[45,50,51,51,51,50,47,41,35,25,20,15,12,12,12,12,13,13,13,13,13,13,13,12,10,13,14,13,11,19,21,21,17,12,11,8,9,10,10,11,11,11,12,12,12,12,12,12],[48,50,53,54,54,53,51,45,37,29,27,22,17,13,11,12,12,12,12,12,12,10,10,9,9,12,12,11,14,18,19,19,17,14,9,8,9,8,8,9,11,12,14,16,17,17,15,20],[10,8,7,7,6,7,8,18,20,20,16,12,9,6,6,6,6,6,7,14,17,18,17,14,5,7,11,13,18,19,20,19,17,16,11,8,7,6,8,9,9,11,13,13,15,17,18,14],[5,6,17,24,27,28,26,21,14,13,10,7,7,7,6,8,8,8,8,7,5,5,2,1,4,10,23,24,24,25,26,24,22,16,9,7,8,10,10,9,8,8,9,10,10,11,11,11],[40,45,47,48,46,45,43,38,33,28,24,18,13,12,12,10,11,11,10,10,9,9,8,6,8,13,23,26,27,27,26,24,23,18,15,9,11,12,12,10,9,10,10,11,13,15,16,16],[46,49,49,50,49,48,46,42,36,26,18,14,12,11,11,12,12,12,12,11,9,8,7,6,13,19,28,32,33,33,33,31,25,18,11,9,11,11,11,9,9,11,12,12,13,14,15,15],[46,49,49,48,46,46,44,40,32,21,13,8,6,5,6,7,8,9,9,8,7,7,6,6,8,19,22,30,32,32,30,26,17,9,9,8,8,8,6,6,8,9,9,9,12,11,11,10],[52,55,55,53,52,50,48,45,36,30,23,19,16,15,13,13,13,13,13,13,14,12,12,11,12,20,23,25,28,28,27,23,14,15,12,12,12,10,11,12,13,14,15,16,18,18,19,19],[51,52,51,49,50,50,48,46,42,39,36,31,28,24,20,17,17,16,16,16,15,12,10,11,9,10,12,12,15,20,27,24,18,19,15,15,15,15,13,14,18,19,22,22,24,25,25,24],[27,24,23,17,10,6,12,16,16,16,16,12,9,6,4,2,1,1,3,7,8,10,10,6,4,7,13,18,19,18,16,16,16,15,12,9,7,7,5,9,9,12,13,16,16,16,20,21],[31,35,34,32,34,37,37,36,35,34,31,26,22,16,13,11,9,9,11,10,6,3,10,10,7,5,8,13,18,19,19,19,20,20,16,13,12,12,11,11,10,10,13,15,18,22,24,23],[28,40,41,40,38,37,36,37,37,35,35,30,27,24,20,17,16,16,16,14,13,8,5,7,8,10,10,14,18,20,22,22,23,23,22,18,16,14,13,12,11,14,17,19,20,23,25,25],[29,34,34,34,35,34,33,32,32,28,23,20,18,17,16,14,13,13,13,12,11,8,8,8,6,9,15,18,20,23,24,24,24,25,24,20,14,13,13,8,8,12,13,15,18,20,20,20],[36,42,43,44,44,43,41,36,30,19,12,9,8,8,9,10,10,11,11,10,9,10,9,8,9,15,21,29,31,31,30,27,23,13,6,4,7,9,9,7,9,10,11,11,12,12,12,12],[53,53,49,48,48,48,47,45,43,39,34,28,23,19,17,15,15,16,16,15,14,11,8,8,7,10,12,17,19,20,21,21,22,19,13,9,13,16,18,18,10,16,19,20,23,24,24,23],[52,53,49,48,46,49,48,46,43,39,35,31,26,23,20,17,18,18,17,17,16,14,8,9,8,10,12,13,20,25,21,23,23,20,17,16,17,19,19,19,15,19,19,23,23,25,25,26]],"code":[[3,2,3,3,2,2,2,2,2,2,2,1,1,1,0,0,1,2,2,2,2,2,2,3,2,2,2,2,2,3,2,1,2,3,3,3,3,3,3,3,3,80,3,3,3,3,3,3],[3,3,3,3,3,2,2,2,2,2,1,0,0,0,0,1,1,2,1,2,2,1,2,3,3,2,80,80,80,80,2,2,1,3,3,2,3,3,3,3,2,3,2,2,3,3,3,3],[3,2,3,3,3,2,2,2,80,2,1,1,0,0,0,1,1,2,2,2,2,2,2,2,2,3,80,80,80,80,80,2,2,2,80,2,3,3,2,2,80,3,3,1,3,3,3,2],[3,3,3,3,3,3,2,2,3,2,1,0,0,0,0,1,1,2,2,2,2,2,1,2,2,3,3,80,80,2,2,2,80,80,80,3,3,2,2,2,2,3,1,1,3,3,2,2],[3,3,2,2,3,3,3,3,2,2,0,0,0,1,1,1,1,2,2,2,2,2,1,1,2,2,3,3,2,1,0,0,1,2,2,3,2,2,2,2,2,3,2,1,3,3,2,2],[3,3,2,3,2,2,2,2,2,0,0,0,1,0,0,1,1,1,2,2,1,2,1,1,2,2,2,2,3,80,80,2,2,2,2,3,2,2,2,2,2,2,1,1,1,1,1,1],[3,3,3,3,2,2,2,2,2,1,0,0,1,0,1,1,0,1,1,1,2,1,2,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1,2,2,1,0,0,1,1,1,2],[3,3,1,2,3,3,3,2,2,2,1,1,1,0,0,0,1,1,2,3,3,2,3,3,3,2,80,3,3,2,2,3,2,2,3,3,3,3,3,3,3,80,80,80,3,3,3,3],[3,3,2,1,2,3,3,2,2,1,1,1,0,0,0,0,1,1,1,2,3,2,3,80,3,2,2,2,2,2,2,2,80,2,2,3,2,3,3,3,3,3,80,3,3,3,3,3],[3,3,3,1,2,3,3,2,2,1,1,1,1,1,1,1,0,2,2,1,2,2,2,3,3,3,2,2,2,2,2,2,2,2,3,3,2,3,2,1,1,2,3,2,3,3,3,3],[3,3,3,2,3,3,3,3,2,2,2,1,1,1,1,1,1,2,2,2,2,2,2,2,3,3,3,3,2,2,2,2,2,2,45,45,45,45,45,45,45,45,45,45,3,3,3,1],[3,3,2,2,3,2,2,3,2,2,1,0,0,1,1,1,45,45,2,2,1,2,2,2,2,2,2,2,2,2,2,1,1,2,2,3,2,2,2,2,2,3,2,1,2,3,2,2],[3,3,3,2,2,2,2,2,3,2,1,0,1,1,1,1,1,1,1,2,1,1,2,1,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1,2,2,2],[3,3,2,2,3,2,2,2,2,1,0,1,1,1,1,1,1,1,1,2,2,1,2,2,2,2,2,3,2,2,2,3,2,2,2,2,2,2,2,2,2,2,2,2,1,2,2,2],[3,3,2,1,1,1,2,3,1,1,1,1,1,0,1,0,1,2,2,2,2,3,3,3,2,3,2,2,2,3,2,2,2,2,3,3,3,2,3,3,3,2,3,3,3,3,3,3],[3,3,2,2,1,1,3,3,1,2,2,1,1,0,0,0,0,1,2,2,2,2,2,2,2,3,3,3,3,3,3,2,2,2,3,3,3,2,3,45,45,45,45,45,45,45,45,3],[3,3,2,2,2,2,3,2,1,2,1,1,2,1,1,1,0,1,1,2,2,2,2,2,2,2,3,2,2,2,2,0,1,1,2,3,3,2,45,45,45,45,45,45,45,3,3,3],[3,3,3,2,2,2,2,2,2,2,1,1,0,0,0,0,0,0,1,1,1,2,2,2,2,2,2,2,2,2,2,1,1,2,2,3,45,45,45,45,45,45,45,45,3,3,3,2],[3,2,3,2,2,2,3,3,2,3,2,0,0,0,0,0,1,1,1,1,1,1,1,1,1,3,3,2,2,2,3,2,2,2,2,45,45,45,45,45,45,45,45,45,2,3,3,1],[3,3,3,2,2,2,2,1,3,3,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1,1,3,3,3,2,2,2,2,2,2,2,3,45,45,45,45,45,2,2,2,1,1,2],[3,3,2,2,2,2,2,2,2,2,0,1,1,1,1,1,1,1,1,2,1,1,2,1,2,2,3,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1,1,2,2],[3,3,2,2,2,2,2,1,2,3,3,2,1,0,0,1,2,2,2,2,3,80,3,3,2,2,2,1,1,2,2,2,2,2,3,3,2,2,3,3,3,3,80,3,3,3,3,3],[3,2,3,3,2,2,2,3,3,1,1,1,1,1,0,0,0,1,2,2,2,3,3,3,2,2,3,2,2,2,2,3,1,1,2,3,3,2,3,3,3,2,3,3,3,3,3,3],[3,2,2,2,1,1,3,2,2,2,3,1,1,1,0,0,0,1,2,1,2,2,2,2,3,2,2,2,2,2,2,1,1,1,2,3,3,2,3,45,45,45,45,45,3,3,3,3],[3,2,3,2,1,2,2,2,2,3,3,1,1,0,0,0,0,0,1,1,1,2,2,2,3,2,2,2,2,1,2,1,1,1,2,3,3,3,3,45,45,45,45,3,2,3,3,3],[3,3,3,2,2,2,2,1,2,3,3,1,0,0,0,1,1,1,1,2,1,1,1,1,1,2,3,3,2,3,2,3,3,2,2,2,3,45,45,45,45,45,45,45,3,3,3,0],[3,3,2,2,2,2,3,2,2,2,2,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,3,3,3,3,2,2,2,2,2,3,3,45,45,45,45,45,45,45,2,3,3,1],[3,3,3,3,3,3,3,3,2,3,2,2,1,1,1,2,2,1,1,1,1,0,0,1,1,1,2,2,3,2,2,2,2,2,2,2,3,3,3,2,2,2,2,2,2,1,1,1],[2,3,1,1,2,2,3,3,3,3,3,3,2,2,1,2,2,2,2,2,2,2,2,2,2,2,2,1,1,1,2,3,2,1,3,3,3,3,3,3,3,80,80,80,80,80,80,80],[3,2,1,1,1,2,2,3,2,2,1,3,1,1,1,0,1,1,1,2,2,2,2,2,2,2,2,2,2,2,3,2,1,2,2,2,3,3,3,3,3,80,80,80,80,80,80,3],[3,2,3,2,2,2,2,3,2,2,2,2,2,1,1,0,0,0,1,1,2,2,2,3,2,2,2,1,2,2,1,2,2,2,1,3,3,3,2,3,3,2,2,80,3,3,3,3],[3,3,3,3,3,3,3,3,2,3,2,3,1,0,0,0,0,0,0,2,1,2,2,3,3,2,1,2,2,1,1,2,2,2,2,2,3,3,3,3,3,2,2,3,3,3,3,3],[3,3,2,2,2,3,3,2,2,2,2,2,0,0,0,0,0,0,1,2,1,1,1,2,2,2,2,2,2,2,1,2,2,2,2,3,3,3,3,3,2,2,2,2,2,3,3,1],[3,3,3,2,3,3,3,3,3,3,2,2,1,1,1,0,0,0,0,1,2,0,1,1,1,2,2,2,2,2,2,2,2,2,2,3,2,3,2,3,2,2,2,3,2,2,3,0],[3,3,3,3,3,3,3,3,3,2,3,2,2,1,1,2,2,2,1,1,1,1,0,1,1,2,1,2,2,2,2,3,2,2,2,3,3,3,3,3,2,2,2,2,2,2,1,1]]},"sea":[{"n":"Bucht von Alc\u00fadia","lat":39.83,"lon":3.18,"wave":[1.0,1.0,1.1,1.1,1.1,1.1,1.1,1.1,1.0,1.0,1.0,0.9,0.9,0.9,0.8,0.8,0.8,0.8,0.8,0.8,0.7,0.7,0.7,0.7,0.7,0.7,0.6,0.6,0.6,0.6,0.6,0.6,0.6,0.6,0.5,0.5,0.5,0.5,0.4,0.4,0.4,0.4,0.4,0.3,0.3,0.3,0.3,0.3],"sst":[23.3,23.3,23.3,23.3,23.3,23.3,23.3,23.2,23.2,23.2,23.2,23.2,23.2,23.2,23.2,23.2,23.2,23.2,23.1,23.1,23.1,23.1,23.1,23.2,23.2,23.2,23.2,23.2,23.2,23.2,23.2,23.2,23.1,23.1,23.1,23.1,23.1,23.1,23.1,23.1,23.1,23.1,23.1,23.1,23.1,23.1,23.1,23.1]},{"n":"Bucht von Palma","lat":39.5,"lon":2.68,"wave":[0.3,0.4,0.4,0.4,0.4,0.3,0.3,0.3,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.2,0.2,0.3,0.2,0.2,0.2,0.2,0.2,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1],"sst":[23.5,23.5,23.5,23.5,23.5,23.5,23.5,23.5,23.5,23.5,23.5,23.5,23.5,23.4,23.4,23.4,23.4,23.4,23.4,23.4,23.4,23.4,23.4,23.4,23.4,23.5,23.5,23.5,23.5,23.5,23.4,23.4,23.4,23.4,23.4,23.4,23.3,23.3,23.3,23.3,23.3,23.3,23.3,23.3,23.3,23.3,23.3,23.3]},{"n":"Nordk\u00fcste (S\u00f3ller)","lat":39.83,"lon":2.62,"wave":[0.8,0.8,0.9,0.9,0.9,0.9,0.9,0.9,0.9,0.9,0.9,0.9,0.8,0.8,0.8,0.8,0.7,0.7,0.7,0.7,0.6,0.6,0.6,0.6,0.6,0.6,0.6,0.6,0.6,0.6,0.6,0.6,0.6,0.6,0.6,0.6,0.5,0.5,0.5,0.5,0.4,0.4,0.4,0.4,0.4,0.3,0.3,0.3],"sst":[23.2,23.2,23.2,23.2,23.2,23.2,23.1,23.1,23.1,23.1,23.1,23.1,23.0,23.0,23.0,23.0,23.0,23.0,23.0,23.0,23.0,23.0,23.0,23.0,23.0,23.0,23.0,23.0,23.0,23.0,23.0,23.0,23.0,23.0,23.0,23.0,23.0,22.9,22.9,22.9,22.9,22.9,22.9,22.9,22.9,22.9,22.9,22.9]},{"n":"S\u00fcdostk\u00fcste","lat":39.4,"lon":3.3,"wave":[1.0,1.0,1.0,1.0,1.0,0.9,0.9,0.8,0.7,0.7,0.6,0.6,0.6,0.5,0.5,0.5,0.5,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.4,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.3,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2,0.2],"sst":[23.3,23.3,23.3,23.3,23.3,23.3,23.3,23.3,23.3,23.3,23.3,23.3,23.3,23.2,23.2,23.2,23.2,23.2,23.2,23.1,23.1,23.1,23.1,23.2,23.2,23.2,23.3,23.3,23.3,23.2,23.2,23.1,23.1,23.1,23.1,23.0,23.0,23.0,23.0,23.0,23.0,23.0,23.0,22.9,22.9,22.9,22.9,22.9]}],"radar":[{"t":"2026-10-28T08:30:00+00:00","png":"iVBORw0KGgoAAAANSUhEUgAAAG4AAABZCAYAAADfJBHuAAAAPUlEQVR42u3BgQAAAADDoPlTH+ECVQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHAOZUQAB4+1hXgAAAABJRU5ErkJggg==","any":false},{"t":"2026-10-28T08:40:00+00:00","png":"iVBORw0KGgoAAAANSUhEUgAAAG4AAABZCAYAAADfJBHuAAABQklEQVR42u3YsW7UQBRA0bFnbULSUNDQ8F+gNChSJL4IKVJEg8J/0dBQbLO7yYzfmCaOEFJQqLxRzqksuRn5asbPTgkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAjkLnEfyfi08f3o5DPi019tdfv/8S7pkEG4d8llJKpcZuzXgbSZ4ebIm2iGh1rXUJ9w+XFx/fvT4Z3oxDPsu5HzZ9N6SU0tTmmmqsujbhHvH58vz9Em3Td0PO/bjcm1rUiFajzXbcsUZ7db/blqMxopVSYxdtLmsOJ71MT4t2H67c1diXMu2/XH374ag8Irnvxtx34/I+WwaQJdrhtm4Pd9N27XUK95doc4k2l6nNw9SiPhyRbS6H27pde6cJ94hSY5/7bvxz1I9otdTYXV3f/PTn5Bl8vy3Xaw4hAAAAAPBC/AYWIJpqmTvFiAAAAABJRU5ErkJggg==","any":true},{"t":"2026-10-28T08:50:00+00:00","png":"iVBORw0KGgoAAAANSUhEUgAAAG4AAABZCAYAAADfJBHuAAABYklEQVR42u3XT2oUQRQH4Op60z3OxMUs9BpuxMO4FA8lBKMbMcfRhSdwI4jIiMyfVE31uEgGBBFMdEKE71t2LfpRP169qpQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACA3+pswd95/uzpg6GPeeRuOHxr4768OH3zUXB3NLDZdLKIyP3Qx0lE7lNKqbWxltpWm21dnp69/XSs/09EcPPQZvf6xbSPeUQeInLf2lhb7kpKKZXaVsesQXA3CO3+fHh4FdpJRO4jd/3lak6tjeU26siiuJ7ZdLIY+jj5NbTLY3I37mupbVVqW+u4O9RtEbk/zLOfLiO1tbFeXM22zbYuz16ffzlmLSGOP/fu/Yf1k8ePFhF5yF2XU0pdG/d1W3bfNxe75WZbv6239evLV+efj12LjrumUtsqIvdt3JfI3dDGfSllty61rY55i/Qc+Idvt8Ncu83AAAAAAAAA+K/8AHFsiddtCHiBAAAAAElFTkSuQmCC","any":true},{"t":"2026-10-28T09:00:00+00:00","png":"iVBORw0KGgoAAAANSUhEUgAAAG4AAABZCAYAAADfJBHuAAABI0lEQVR42u3XsW7bMBQFUIo0lbhePHTpp7VbESAfVSDo1n5alw5eGqekHpUhBpq5tgEP5yzaJOBdXD0yJQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAC5iM4PoeH758KiXXkqc5xtoiRv/29OOX4G7Uw9fPH7d3m/08bz6UPM2l5Boxeuvx5/jSD+eEtzHe67Vse1/32/u63+SplpLnlFKKPLUYa5tr2Z3zfsFdObS7Wnan32SNsfaI0VJKKcbazvlGNubLm2vZzbXsTk17H1pfTs+I0TXuxvZaKbmWkmtKKb2FlHrEaMtY+/GlH87db4K7kn+NymkZ8dawsbbWlufj3+Xw9P3nb9eBG91x7w8fMdbWejxfIjAAAAAAAAAAAPhfry5mik/nIPLNAAAAAElFTkSuQmCC","any":true},{"t":"2026-10-28T09:10:00+00:00","png":"iVBORw0KGgoAAAANSUhEUgAAAG4AAABZCAYAAADfJBHuAAABJ0lEQVR42u3XMU4cMRQGYO94PLvsShFSaLgC4kJJh5BypUhIKE1EjpMUnICGhoJmIRrneSjIRhSQdgB9Xzt6zfv1256UAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAt2phBa/D6cmng9wtSkopRZvq+bcfN4J75YHtLfv9nLuSc/cYXLQ61th+Pft+9dJctrr5fDn9fLjZGz6ulv2H9arsl75blb5b7Qp1fHyUfv66vHtutre++Zo2lLwZSt4sS14PQ7/ZtS23qeY2ld3R+ZzOCucxPIa1/ntEDk+/RbQa0Wq0qb40r3Ezimg1ukWNbjFGtDGllP60qY41tve/6+3/HiiCm8lY49/dFW0anzZtrLE9O7+49qp8R78BAAAAAAAAAAAAAPAuPACZD2lgYu16/AAAAABJRU5ErkJggg==","any":true},{"t":"2026-10-28T09:20:00+00:00","png":"iVBORw0KGgoAAAANSUhEUgAAAG4AAABZCAYAAADfJBHuAAAB+klEQVR42u3bwYrUQBDG8UpXujOTucxhL3vxCQR9nV28LAMLPpGwsHgRfRrx4Bt48eJB0IxO91S3h5leFlTw2DH/HwRCcko+KqkkFREAAAAAAAAAAAAAAAAAAAAAAP5Jt9QD391cXajrvOWS7l+/+0JwjbvdXV8GrxtV5+u2mGx6dffmE8E1WmHrod+G0I/qulCDM8spJpt+/Exf7+7ffp7L8fRLCy143QxeN3XfQWTSXPzjCpwDt4TggtdR1fkamqr7LSiznAiuQX+rKLOczHKyXGYV3CIulWY5xXjcq+vCQWTqLXsRkWMuyXKJMdk0t85SlxDc+w8fvz9/9nQopWTpOsml5HjMU0y2P8Tjt7l1lIt7HNjdXF0Er+PjSpxTJwkAAAAAAAD8xzpOwXzc7q4v6+cpgpuBP41d9JyW9q2Hfrte+e3gdQyh34gs5EPqnL28ffFkvfLbceW35xGMoK6j4lq/RJ7nZMZwWh7GCgmuYTWsEPqNqjvd29QFgms/uM3gdVTXeXXdaU7GciS4mbT+VR0htFwSwTVK1flz6x9qWOfwYky2J7jGmeUYRUSS7UVEDskms0zFNR1aLvGQTDSXOrQbYzzuY7KJ4NqttNMQr7okyR5+TqnjhLzyavw5rq7P8R8+AAAAAAAAAAAAAAAAAAAAAACAxfkF/fjWP5+H+tkAAAAASUVORK5CYII=","any":true},{"t":"2026-10-28T09:30:00+00:00","png":"iVBORw0KGgoAAAANSUhEUgAAAG4AAABZCAYAAADfJBHuAAABcUlEQVR42u3YwUrDQBDG8clON40NSA+9+ApS0Nept1LwocTam30aqaDvIEhvNcVmOxsPTXqoRfRkCv/faZO5DPkYdjciAAAAAAAAAAAAAAAAwN8kfIKf3U5uLkRELFZhOpsvCe4EAku95qrOi4iYxVAGK+6mj29t6E+J6HhoZ5nvZ93OeS/z/a7XPHGJOpfocHgpi+fX9X/32CGm71Kveeo172W+30ycqkvrWtGGHgnuwGQ8Gqg63/XaU3VeXeJ3FSeqzqde8zb06YjqYO9wid9P2W6dNtPWqUOcjEcDJq5lLFbBLIZmLRL3tW1da8Ppkok7MJ3Nl2YxNCFZrILFKpTltqifS/a4liqDFWWwnohIx6IXEdkEW9fv123okevAEU+Ll4/rq2G3qqposQrB4udms11tyu3q/mH+zgX8BO5zzUGlDLZu058TAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAL/xBdXaj1SBV8JqAAAAAElFTkSuQmCC","any":true},{"t":"2026-10-28T09:40:00+00:00","png":"iVBORw0KGgoAAAANSUhEUgAAAG4AAABZCAYAAADfJBHuAAAAPUlEQVR42u3BgQAAAADDoPlTH+ECVQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHAOZUQAB4+1hXgAAAABJRU5ErkJggg==","any":false}]}</script>
+
+<script id="board-state" type="application/json">{"days":["2026-10-28","2026-10-29","2026-10-30","2026-10-31"],"cards":{"s1":{"type":"spa","t":"Spa","d":"Sauna, Dampfbad oder Behandlung","len":90},"s2":{"type":"spa","t":"Spa","d":"Sauna, Dampfbad oder Behandlung","len":90},"s3":{"type":"spa","t":"Spa","d":"Sauna, Dampfbad oder Behandlung","len":90},"s5":{"type":"spa","t":"Spa","d":"Sauna, Dampfbad oder Behandlung","len":90},"k7":{"type":"spa","t":"Fußmassage","d":"","len":45},"k9":{"type":"wander","t":"Schnorcheln","d":"","len":90},"k10":{"type":"wander","t":"Alcudia","d":"","len":120},"k11":{"type":"well","t":"Pool","d":"","len":60},"k12":{"type":"mix","t":"Ganzkörper Massage","d":"","len":90},"m19":{"kind":"motto","type":"mix","t":"Wandertag"},"m22":{"kind":"motto","type":"ausflug","t":"Ausflug Tag"},"m23":{"kind":"motto","type":"stadt","t":"Bergstadt-Tag"},"m24":{"kind":"motto","type":"ausflug","t":"Freestyle Tag"},"m25":{"kind":"motto","type":"spa","t":"Großer Wellness Tag"},"m26":{"kind":"motto","type":"mix","t":"Palma de Mallorca Tag"}},"cols":{"pool":["k11","k10","k9","s2"],"2026-10-28":["s1"],"2026-10-29":["k7","s3"],"2026-10-30":["k12","s5"],"2026-10-31":[]},"next":27,"mottoPool":["m24","m23"],"dayMotto":{"2026-10-28":"m22","2026-10-29":"m19","2026-10-30":"m25","2026-10-31":"m26"},"mottoSeeded":true}</script>
+
+<script>
+(() => {
+  // Pristine page source, captured before rendering, for republishing.
+  const TEMPLATE = (() => { const h = document.body.innerHTML; const i = h.indexOf("<title"); return i >= 0 ? h.slice(i) : h; })();
+  const RESET = document.head.querySelector("style")?.textContent || "";
+
+  // Colour presets; also the defaults for cards saved before cards were editable.
+  const TYPES = {
+    wander:  { name: "Pinie",   t: "Wandertag",            d: "Tagestour, Gipfel oder Hütte",    len: "full" },
+    ausflug: { name: "Sandstein",  t: "Ausflugstag",          d: "See, Burg oder Nachbarort",       len: "full" },
+    stadt:   { name: "Himmel",   t: "Stadttag",             d: "Bummeln, Café, Museum",           len: "full" },
+    well:    { name: "Fels",   t: "Großer Wellnesstag",   d: "Sauna, Pool, Massage, Ruhe",      len: "full" },
+    mix:     { name: "Treibholz",   t: "Wellness / Freestyle", d: "Halb Wellness, halb was anderes", len: "full" },
+    spa:     { name: "Bucht", t: "Spa",                  d: "Sauna, Dampfbad oder Behandlung", len: 90 }
+  };
+  const lenText = (len) => len === "full" ? "Ganzer Tag" : len === "half" ? "Halber Tag" : `${len} min`;
+  const dayShare = (len) => len === "full" ? 1 : len === "half" ? 0.5 : 0;
+  const mins = (len) => typeof len === "number" ? len : 0;
+  const WD = ["Sonntag","Montag","Dienstag","Mittwoch","Donnerstag","Freitag","Samstag"];
+  const WX = (() => { try { return JSON.parse(document.getElementById("weather").textContent); } catch { return {}; } })();
+  const WEATHER = WX.days || WX;
+  const SUN = (cx, cy, r) => `<circle cx="${cx}" cy="${cy}" r="${r}" fill="var(--sun)"/>` +
+    [0,45,90,135,180,225,270,315].map(a => { const t = a * Math.PI / 180, r1 = r + 3, r2 = r + 6;
+      return `<line x1="${cx + r1 * Math.cos(t)}" y1="${cy + r1 * Math.sin(t)}" x2="${cx + r2 * Math.cos(t)}" y2="${cy + r2 * Math.sin(t)}" stroke="var(--sun)" stroke-width="2" stroke-linecap="round"/>`; }).join("");
+  const CLOUD = (dx, dy) => `<path transform="translate(${dx} ${dy})" d="M8 26h18a6 6 0 0 0 0-12 8 8 0 0 0-15-2A6 6 0 0 0 8 26z" fill="var(--cloud)"/>`;
+  const ICONS = { sun: SUN(17, 17, 7), part: SUN(13, 12, 6) + CLOUD(4, 6), cloud: CLOUD(0, 2),
+    rain: CLOUD(0, -3) + [10, 17, 24].map(x => `<line x1="${x}" y1="26" x2="${x - 2}" y2="31" stroke="var(--stadt)" stroke-width="2" stroke-linecap="round"/>`).join("") };
+  const ALL_DAYS = ["2026-10-26","2026-10-27","2026-10-28","2026-10-29","2026-10-30","2026-10-31"];
+  const MON = ["Jan","Feb","März","Apr","Mai","Juni","Juli","Aug","Sep","Okt","Nov","Dez"];
+
+  let state = migrate(JSON.parse(document.getElementById("board-state").textContent));
+  let artifact = null, mode = "pending", saveTimer = null, dragging = false, justDragged = false;
+
+  function migrate(s) {
+    s.mottoPool ||= []; s.dayMotto ||= {};
+    if (!s.mottoSeeded) {
+      [["wander", "Gipfelglück"], ["ausflug", "Dolce Vita"], ["stadt", "Tapas & Kultur"], ["well", "Tiefenentspannung"], ["mix", "Treiben lassen"]]
+        .forEach(([type, t]) => { const id = "m" + (s.next++); s.cards[id] = { kind: "motto", type, t }; s.mottoPool.push(id); });
+      s.mottoSeeded = true;
+    }
+    for (const [iso, t] of Object.entries(s.mottos || {})) {
+      const id = "m" + (s.next++); s.cards[id] = { kind: "motto", type: "mix", t };
+      if (s.dayMotto[iso]) s.mottoPool.push(id); else s.dayMotto[iso] = id;
+    }
+    delete s.mottos;
+    for (const c of Object.values(s.cards)) {
+      if (!TYPES[c.type]) c.type = "mix";
+      if (c.kind === "motto") continue;
+      const T = TYPES[c.type];
+      if (c.t == null) c.t = T.t;
+      if (c.d == null) c.d = T.d;
+      if (c.len == null) c.len = T.len;
+    }
+    return s;
+  }
+
+  const $ = (s, r = document) => r.querySelector(s);
+  const parse = (iso) => { const [y, m, d] = iso.split("-").map(Number); return new Date(y, m - 1, d); };
+  const todayIso = (() => { const n = new Date(); return `${n.getFullYear()}-${String(n.getMonth()+1).padStart(2,"0")}-${String(n.getDate()).padStart(2,"0")}`; })();
+
+  function cardEl(id) {
+    const c = state.cards[id];
+    const el = document.createElement("div");
+    el.className = "card"; el.dataset.id = id; el.dataset.type = c.type; el.tabIndex = 0;
+    el.setAttribute("role", "button");
+    el.setAttribute("aria-label", `${c.t}, ${lenText(c.len)}. Enter zum Bearbeiten`);
+    el.innerHTML = `<span class="grip" aria-hidden="true"></span><span class="t"></span><span class="dur"></span>` + (c.d ? `<span class="d"></span>` : "") + `<button type="button" class="x">×</button>`;
+    $(".x", el).setAttribute("aria-label", `${c.t} löschen`);
+    $(".t", el).textContent = c.t;
+    $(".dur", el).textContent = lenText(c.len);
+    if (c.d) $(".d", el).textContent = c.d;
+    return el;
+  }
+
+  function mottoEl(id) {
+    const c = state.cards[id];
+    const el = document.createElement("div");
+    el.className = "card motto-card"; el.dataset.id = id; el.dataset.type = c.type; el.tabIndex = 0;
+    el.setAttribute("role", "button");
+    el.setAttribute("aria-label", `Motto ${c.t}. Enter zum Bearbeiten`);
+    el.innerHTML = `<span class="grip" aria-hidden="true"></span><span class="t"></span><button type="button" class="x">×</button>`;
+    $(".x", el).setAttribute("aria-label", `Motto ${c.t} löschen`);
+    $(".t", el).textContent = c.t;
+    return el;
+  }
+
+  function render() {
+    const pool = $("#zone-pool"); pool.replaceChildren();
+    (state.cols.pool || []).forEach(id => pool.append(cardEl(id)));
+    if (!(state.cols.pool || []).length) { const s = document.createElement("span"); s.className = "empty-hint"; s.textContent = "Alles verplant. Mit „+ Neue Kachel“ oder „+ Spa 90 min“ kommt etwas dazu."; pool.append(s); }
+
+    const mpool = $("#mzone-pool"); mpool.replaceChildren();
+    state.mottoPool.forEach(id => mpool.append(mottoEl(id)));
+    if (!state.mottoPool.length) { const s = document.createElement("span"); s.className = "empty-hint"; s.textContent = "Alle Mottos sind verteilt. Mit „+ Neues Motto“ kommt eins dazu."; mpool.append(s); }
+
+    const days = $("#days"), keepX = days.scrollLeft; days.replaceChildren();
+    const tabs = $("#tabs"); tabs.replaceChildren();
+    const minis = $("#minis"), keepMini = minis.scrollLeft; minis.replaceChildren();
+    for (const iso of state.days) {
+      const dt = parse(iso), ids = state.cols[iso] || [];
+      const col = document.createElement("div");
+      col.className = "day" + (iso === todayIso ? " today" : "");
+      const cs = ids.map(id => state.cards[id]);
+      const spaMin = cs.filter(c => c.type === "spa").reduce((n, c) => n + mins(c.len), 0);
+      const otherMin = cs.filter(c => c.type !== "spa").reduce((n, c) => n + mins(c.len), 0);
+      const share = cs.reduce((n, c) => n + dayShare(c.len), 0);
+      col.innerHTML = `<div class="day-head"><div class="day-name"><span></span>${iso === todayIso ? '<span class="today-tag">Heute</span>' : ""}<button type="button" class="day-remove">Entfernen</button></div><div class="day-date"></div><div class="mzone"></div></div><div class="wx-slot"></div><div class="day-meta"></div><div class="zone"></div>`;
+      $(".day-name span", col).textContent = WD[dt.getDay()];
+      const rm = $(".day-remove", col);
+      rm.setAttribute("aria-label", `${WD[dt.getDay()]}, ${dt.getDate()}. ${MON[dt.getMonth()]} entfernen`);
+      rm.addEventListener("click", () => {
+        if (!rm.classList.contains("armed")) {
+          const n = (state.cols[iso] || []).length;
+          rm.classList.add("armed"); rm.textContent = n ? `Tag + ${n} ${n === 1 ? "Aktivität" : "Aktivitäten"} löschen?` : "Wirklich entfernen?"; return;
+        }
+        removeDay(iso);
+      });
+      $(".day-date", col).textContent = `${dt.getDate()}. ${MON[dt.getMonth()]}`;
+      const mz = $(".mzone", col); mz.dataset.mcol = iso;
+      const mid = state.dayMotto[iso];
+      if (mid && state.cards[mid]) mz.append(mottoEl(mid));
+      else { const e = document.createElement("span"); e.className = "motto-empty"; e.textContent = "Motto hierher ziehen"; mz.append(e); }
+      const w = WEATHER[iso], slot = $(".wx-slot", col);
+      if (w) {
+        slot.className = "wx";
+        slot.innerHTML = `<svg viewBox="0 0 34 34" aria-hidden="true">${ICONS[w.k] || ICONS.part}</svg><div class="wx-temp"></div><div class="wx-txt"></div>` + (w.note ? `<div class="wx-note"></div>` : "");
+        $(".wx-temp", slot).innerHTML = `${w.max}° <small>/ ${w.min}°</small>`;
+        $(".wx-txt", slot).textContent = w.txt + (w.rain != null ? ` · Regen ${w.rain} %` : "");
+        if (w.note) $(".wx-note", slot).textContent = w.note;
+      } else slot.remove();
+      const meta = $(".day-meta", col);
+      const chip = (cls, txt) => { const c = document.createElement("span"); c.className = "chip " + cls; c.textContent = txt; meta.append(c); };
+      if (spaMin) chip("spa", `Spa ${spaMin} min`);
+      if (otherMin) chip("", `+ ${otherMin} min`);
+      if (share > 1) chip("warn", "Mehr als ein Tag verplant");
+      if (!ids.length) chip("free", "frei");
+      const zone = $(".zone", col); zone.dataset.col = iso;
+      ids.forEach(id => zone.append(cardEl(id)));
+      days.append(col);
+      const tab = document.createElement("button");
+      tab.type = "button"; tab.className = "tab" + (iso === todayIso ? " today" : ""); tab.dataset.day = iso;
+      tab.innerHTML = `<b></b><small></small>`;
+      $("b", tab).textContent = WD[dt.getDay()].slice(0, 2);
+      $("small", tab).textContent = `${dt.getDate()}.` + (w ? ` · ${w.max}°` : "");
+      tab.setAttribute("aria-label", `${WD[dt.getDay()]}, ${dt.getDate()}. ${MON[dt.getMonth()]} anzeigen`);
+      tab.addEventListener("click", () => showDay(iso, true));
+      tabs.append(tab);
+      const mm = state.cards[state.dayMotto[iso]], mini = document.createElement("button");
+      mini.type = "button"; mini.className = "mini" + (iso === todayIso ? " today" : "") + (mm ? "" : " empty"); mini.dataset.day = iso;
+      if (mm) mini.dataset.type = mm.type;
+      mini.innerHTML = `<span class="wd"><span></span><span class="dt"></span></span><span class="mt"></span>`;
+      $(".wd span", mini).textContent = WD[dt.getDay()].slice(0, 2);
+      $(".dt", mini).textContent = `${dt.getDate()}.${dt.getMonth() + 1}.`;
+      $(".mt", mini).textContent = mm ? mm.t : "Noch kein Motto";
+      mini.setAttribute("aria-label", `${WD[dt.getDay()]}, ${dt.getDate()}. ${MON[dt.getMonth()]}: ${mm ? mm.t : "noch kein Motto"}`);
+      mini.addEventListener("click", () => showDay(iso, true));
+      minis.append(mini);
+    }
+    minis.scrollLeft = keepMini;
+    days.scrollLeft = keepX; markTab();
+
+    if (state.days.length) {
+      const f = parse(state.days[0]), l = parse(state.days[state.days.length - 1]);
+      $("#sub").textContent = `${WD[f.getDay()]}, ${f.getDate()}. bis ${WD[l.getDay()]}, ${l.getDate()}. Oktober · Karten einfach auf einen Tag ziehen`;
+    }
+    if (WX.asOf) { const a = parse(WX.asOf.slice(0, 10)), tm = WX.asOf.slice(11, 16); $("#wx-asof").textContent = `${WD[a.getDay()]}, ${a.getDate()}. ${MON[a.getMonth()]}` + (tm ? `, ${tm} Uhr` : ""); }
+    const gone = ALL_DAYS.filter(d => !state.days.includes(d)), bar = $("#removed");
+    bar.hidden = !gone.length; bar.replaceChildren();
+    if (gone.length) {
+      const l = document.createElement("span"); l.textContent = "Entfernte Tage:"; bar.append(l);
+      gone.forEach(d => { const dt = parse(d), b = document.createElement("button"); b.type = "button";
+        b.textContent = `${WD[dt.getDay()]}, ${dt.getDate()}. ${MON[dt.getMonth()]} wiederherstellen`;
+        b.addEventListener("click", () => restoreDay(d)); bar.append(b); });
+    }
+
+    const spaN = Object.values(state.cards).filter(c => c.kind !== "motto" && c.type === "spa").length;
+    const plannedSpa = state.days.flatMap(d => state.cols[d] || []).map(id => state.cards[id]).filter(c => c.type === "spa");
+    const spaH = plannedSpa.reduce((n, c) => n + mins(c.len), 0) / 60;
+    const openDays = (state.cols.pool || []).filter(id => dayShare(state.cards[id].len) > 0).length;
+    $("#stats").innerHTML = "";
+    [["Spa-Slots verplant", `${plannedSpa.length} / ${spaN}`], ["Spa-Zeit", `${spaH.toLocaleString("de-DE", { maximumFractionDigits: 1 })} h`], ["Tagespläne offen", String(openDays)]]
+      .forEach(([k, v]) => { const s = document.createElement("span"); s.className = "stat"; s.innerHTML = `${k} <b></b>`; $("b", s).textContent = v; $("#stats").append(s); });
+  }
+
+  // ---- Day mottos: one per day, dropping onto a taken day swaps ----
+  const mottoAt = (id) => state.mottoPool.includes(id) ? "pool" : Object.keys(state.dayMotto).find(k => state.dayMotto[k] === id);
+  function detachMotto(id) {
+    state.mottoPool = state.mottoPool.filter(x => x !== id);
+    for (const k of Object.keys(state.dayMotto)) if (state.dayMotto[k] === id) delete state.dayMotto[k];
+  }
+  function moveMotto(id, to) {
+    const from = mottoAt(id);
+    if (!to || from === to) { render(); return; }
+    detachMotto(id);
+    if (to === "pool") state.mottoPool.push(id);
+    else {
+      const prev = state.dayMotto[to];
+      state.dayMotto[to] = id;
+      if (prev) { if (from && from !== "pool") state.dayMotto[from] = prev; else state.mottoPool.push(prev); }
+    }
+    changed();
+  }
+
+  function readDom() {
+    const cols = {};
+    document.querySelectorAll(".zone[data-col]").forEach(z => { cols[z.dataset.col] = [...z.querySelectorAll(".card")].map(c => c.dataset.id); });
+    state.cols = cols;
+  }
+
+  // ---- Phone carousel: active tab follows the swiped day ----
+  const daysEl = $("#days"), carousel = () => getComputedStyle(daysEl).display === "flex";
+  function showDay(iso, smooth) {
+    const col = daysEl.querySelector(`.zone[data-col="${iso}"]`)?.closest(".day");
+    if (col && carousel()) daysEl.scrollTo({ left: col.offsetLeft - daysEl.offsetLeft - 16, behavior: smooth ? "smooth" : "auto" });
+  }
+  function markTab() {
+    if (!carousel()) return;
+    const mid = daysEl.scrollLeft + daysEl.clientWidth / 2;
+    let best = null, dist = Infinity;
+    daysEl.querySelectorAll(".day").forEach(d => { const c = d.offsetLeft - daysEl.offsetLeft + d.offsetWidth / 2, k = Math.abs(c - mid); if (k < dist) { dist = k; best = d; } });
+    const iso = best?.querySelector(".zone[data-col]")?.dataset.col;
+    document.querySelectorAll(".tab, .mini").forEach(t => { const on = t.dataset.day === iso; t.classList.toggle("active", on); if (on && !dragging) { const bar = t.parentElement; bar.scrollLeft = t.offsetLeft - bar.offsetLeft - (bar.clientWidth - t.offsetWidth) / 2; } });
+    try { if (iso) sessionStorage.setItem("herbstwoche-day", iso); } catch {}
+  }
+  let markRaf = 0;
+  daysEl.addEventListener("scroll", () => { cancelAnimationFrame(markRaf); markRaf = requestAnimationFrame(markTab); }, { passive: true });
+
+  // ---- Removing / restoring days: a removed day's activities are deleted, its motto goes back to the pool ----
+  function removeDay(iso) {
+    readDom();
+    (state.cols[iso] || []).forEach(id => delete state.cards[id]);
+    delete state.cols[iso];
+    if (state.dayMotto[iso]) { state.mottoPool.push(state.dayMotto[iso]); delete state.dayMotto[iso]; }
+    state.days = state.days.filter(d => d !== iso);
+    changed(true);
+  }
+  function restoreDay(iso) {
+    readDom();
+    state.days = ALL_DAYS.filter(d => d === iso || state.days.includes(d));
+    state.cols[iso] ||= [];
+    changed(true);
+  }
+
+  // ---- Saving ----
+  function setStatus(txt, cls = "") { const s = $("#save"); s.textContent = txt; s.className = cls; }
+  function serialize() {
+    const json = JSON.stringify(state).replace(/</g, "\\u003c");
+    const body = TEMPLATE.replace(/(<script id="board-state" type="application\/json">)[\s\S]*?(<\/script>)/, (_, a, b) => a + json + b);
+    return `<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>${RESET}</style></head><body>${body}</body></html>`;
+  }
+  function changed(skipRead) {
+    if (!skipRead) readDom();
+    render();
+    if (mode === "local") { try { localStorage.setItem("herbstwoche", JSON.stringify(state)); } catch {} setStatus("Nur in diesem Browser gespeichert"); return; }
+    if (mode === "readonly") { setStatus("Nur Ansicht: Änderungen werden nicht gespeichert", "err"); return; }
+    setStatus("Ungespeichert …");
+    clearTimeout(saveTimer); saveTimer = setTimeout(save, 1500);
+  }
+  async function save() {
+    if (dragging) { saveTimer = setTimeout(save, 800); return; }
+    if (!artifact) { setStatus("Speichern nicht verfügbar", "err"); return; }
+    setStatus("Speichert …");
+    try { await artifact.publish(serialize()); setStatus("Gespeichert", "ok"); }
+    catch (e) {
+      const code = e && e.code;
+      if (code === "conflict") setStatus("Jemand anderes hat gerade gespeichert, Seite lädt neu", "err");
+      else if (code === "not_granted" || code === "not_writer") { mode = "readonly"; setStatus("Nur Ansicht: Änderungen werden nicht gespeichert", "err"); }
+      else setStatus("Speichern fehlgeschlagen, bitte nochmal verschieben", "err");
+    }
+  }
+
+  // ---- Drag & drop (pointer based, works with mouse and touch) ----
+  let drag = null;
+  document.addEventListener("pointerdown", e => {
+    const card = e.target.closest(".card");
+    if (!card || e.target.closest("button") || e.button > 0) return;
+    if (e.pointerType !== "mouse" && !e.target.closest(".grip")) return;
+    e.preventDefault();
+    drag = { card, id: card.dataset.id, sx: e.clientX, sy: e.clientY, x: e.clientX, y: e.clientY, started: false, ghost: null, ox: 0, oy: 0 };
+  });
+  document.addEventListener("pointermove", e => {
+    if (!drag) return;
+    drag.x = e.clientX; drag.y = e.clientY;
+    if (!drag.started) {
+      if (Math.hypot(e.clientX - drag.sx, e.clientY - drag.sy) < 5) return;
+      drag.started = true; dragging = true; document.body.classList.add("dragging");
+      const r = drag.card.getBoundingClientRect();
+      drag.ox = drag.sx - r.left; drag.oy = drag.sy - r.top;
+      const g = drag.card.cloneNode(true); g.classList.add("ghost"); g.style.width = r.width + "px"; g.removeAttribute("tabindex");
+      document.body.append(g); drag.ghost = g; drag.card.classList.add("ghosted");
+      requestAnimationFrame(autoScroll);
+    }
+    e.preventDefault();
+    drag.ghost.style.left = (e.clientX - drag.ox) + "px"; drag.ghost.style.top = (e.clientY - drag.oy) + "px";
+    place(e.clientX, e.clientY);
+  }, { passive: false });
+  function place(x, y) {
+    const under = document.elementFromPoint(x, y);
+    const tab = under && under.closest(".tab[data-day], .mini[data-day]");
+    document.querySelectorAll(".tab.over, .mini.over").forEach(t => t !== tab && t.classList.remove("over"));
+    if (tab) tab.classList.add("over");
+    if (drag.card.classList.contains("motto-card")) {
+      const z = tab ? document.querySelector(`.mzone[data-mcol="${tab.dataset.day}"]`) : under && (under.closest("[data-mcol]") || under.closest(".day")?.querySelector("[data-mcol]") || under.closest(".pool")?.querySelector("#mzone-pool"));
+      document.querySelectorAll(".mzone.over").forEach(m => m !== z && m.classList.remove("over"));
+      if (z) z.classList.add("over");
+      drag.target = z || null;
+      return;
+    }
+    const zone = tab ? document.querySelector(`.zone[data-col="${tab.dataset.day}"]`) : under && (under.closest(".zone[data-col]") || under.closest(".day, .pool")?.querySelector(".zone[data-col]"));
+    if (tab && zone) { document.querySelectorAll(".zone.over").forEach(z => z.classList.remove("over")); if (drag.card.parentElement !== zone) zone.append(drag.card); return; }
+    document.querySelectorAll(".zone.over").forEach(z => z !== zone && z.classList.remove("over"));
+    if (!zone) return;
+    zone.classList.add("over");
+    zone.querySelector(".empty-hint")?.remove();
+    const others = [...zone.querySelectorAll(".card")].filter(c => c !== drag.card);
+    const before = others.find(c => { const r = c.getBoundingClientRect(); return y < r.top || (y <= r.bottom && x < r.left + r.width / 2 && zone.dataset.col === "pool") || (y <= r.top + r.height / 2 && zone.dataset.col !== "pool"); });
+    if (before) { if (drag.card.nextElementSibling !== before) zone.insertBefore(drag.card, before); }
+    else if (zone.lastElementChild !== drag.card) zone.append(drag.card);
+  }
+  function autoScroll() {
+    if (!drag || !drag.started) return;
+    const edge = 70, h = window.innerHeight;
+    let dy = 0;
+    if (drag.y < edge) dy = -Math.ceil((edge - drag.y) / 5);
+    else if (drag.y > h - edge) dy = Math.ceil((drag.y - (h - edge)) / 5);
+    if (dy) { window.scrollBy(0, dy); place(drag.x, drag.y); }
+    const r = daysEl.getBoundingClientRect();
+    if (carousel() && drag.y > r.top && drag.y < r.bottom) {
+      const dx = drag.x < r.left + 40 ? -10 : drag.x > r.right - 40 ? 10 : 0;
+      if (dx) { daysEl.scrollLeft += dx; place(drag.x, drag.y); }
+    }
+    requestAnimationFrame(autoScroll);
+  }
+  function endDrag() {
+    if (!drag) return;
+    const d = drag; drag = null;
+    if (!d.started) return;
+    d.ghost.remove(); dragging = false; document.body.classList.remove("dragging");
+    justDragged = true; setTimeout(() => { justDragged = false; }, 0);
+    document.querySelectorAll(".zone.over, .mzone.over, .tab.over, .mini.over").forEach(z => z.classList.remove("over"));
+    if (d.card.classList.contains("motto-card")) moveMotto(d.id, d.target?.dataset.mcol);
+    else changed();
+    document.querySelector(`.card[data-id="${d.id}"]`)?.focus({ preventScroll: true });
+  }
+  document.addEventListener("pointerup", endDrag);
+  document.addEventListener("pointercancel", endDrag);
+
+  // ---- Keyboard moves ----
+  document.addEventListener("keydown", e => {
+    if (e.key === "Escape" && !editor.hidden) { closeEditor(); return; }
+    if (e.target.closest && e.target.closest("button, input, select")) return;
+    const card = e.target.closest && e.target.closest(".card");
+    if (card && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); openEditor(card.dataset.id); return; }
+    if (!card || !["ArrowLeft","ArrowRight","ArrowUp","ArrowDown"].includes(e.key)) return;
+    e.preventDefault();
+    if (card.classList.contains("motto-card")) {
+      if (e.key === "ArrowUp" || e.key === "ArrowDown") return;
+      const mid = card.dataset.id, order = ["pool", ...state.days];
+      const k = order.indexOf(mottoAt(mid)) + (e.key === "ArrowLeft" ? -1 : 1);
+      if (k < 0 || k >= order.length) return;
+      moveMotto(mid, order[k]);
+      document.querySelector(`.card[data-id="${mid}"]`)?.focus();
+      return;
+    }
+    const order = ["pool", ...state.days], id = card.dataset.id;
+    const from = order.find(c => (state.cols[c] || []).includes(id));
+    const list = state.cols[from], i = list.indexOf(id);
+    if (e.key === "ArrowUp" || e.key === "ArrowDown") {
+      const j = i + (e.key === "ArrowUp" ? -1 : 1);
+      if (j < 0 || j >= list.length) return;
+      [list[i], list[j]] = [list[j], list[i]];
+    } else {
+      const k = order.indexOf(from) + (e.key === "ArrowLeft" ? -1 : 1);
+      if (k < 0 || k >= order.length) return;
+      list.splice(i, 1); (state.cols[order[k]] ||= []).push(id);
+    }
+    render(); changed();
+    document.querySelector(`.card[data-id="${id}"]`)?.focus();
+  });
+
+  // ---- Add cards ----
+  function addCard(card, afterId) {
+    const id = "k" + (state.next++);
+    state.cards[id] = card;
+    readDom();
+    const col = afterId ? Object.keys(state.cols).find(k => state.cols[k].includes(afterId)) : "pool";
+    const list = (state.cols[col] ||= []);
+    afterId ? list.splice(list.indexOf(afterId) + 1, 0, id) : list.push(id);
+    render(); changed();
+    return id;
+  }
+  $("#add-spa").addEventListener("click", () => addCard({ type: "spa", t: TYPES.spa.t, d: TYPES.spa.d, len: 90 }));
+  $("#add-card").addEventListener("click", () => openEditor(null));
+  $("#add-motto").addEventListener("click", () => openEditor(null, "motto"));
+  function addMotto(c, afterId) {
+    const id = "m" + (state.next++);
+    state.cards[id] = c;
+    const i = afterId ? state.mottoPool.indexOf(afterId) : -1;
+    i >= 0 ? state.mottoPool.splice(i + 1, 0, id) : state.mottoPool.push(id);
+    changed();
+    return id;
+  }
+
+  // ---- Editor ----
+  const editor = $("#editor"), form = $("#ed-form"), edLen = $("#ed-len"), edMin = $("#ed-min"), edDel = $("#ed-del");
+  let editing = null, returnFocus = null;
+  $("#ed-colors").innerHTML = Object.entries(TYPES).map(([k, T]) =>
+    `<label class="swatch" data-type="${k}"><input type="radio" name="ed-color" id="ed-color-${k}" value="${k}"><span>${T.name}</span></label>`).join("");
+
+  let editKind = "card";
+  function openEditor(id, kind = "card") {
+    editing = id; returnFocus = document.activeElement;
+    const c = id ? state.cards[id] : kind === "motto" ? { kind: "motto", type: "mix", t: "" } : { type: "mix", t: "", d: "", len: "half" };
+    editKind = c.kind === "motto" ? "motto" : "card";
+    const m = editKind === "motto";
+    $("#ed-d-field").hidden = m; $("#ed-len-field").hidden = m;
+    $("#ed-t").placeholder = m ? "z. B. Faul sein am Pool" : "";
+    $("#ed-title").textContent = m ? (id ? "Motto bearbeiten" : "Neues Motto") : (id ? "Kachel bearbeiten" : "Neue Kachel");
+    $("#ed-save").textContent = id ? "Übernehmen" : "Hinzufügen";
+    $("#ed-t").value = c.t; $("#ed-d").value = c.d || "";
+    const opt = [...edLen.options].some(o => o.value === String(c.len ?? "half"));
+    edLen.value = opt ? String(c.len) : "custom";
+    edMin.value = typeof c.len === "number" ? c.len : 90;
+    edMin.hidden = edLen.value !== "custom";
+    form.querySelector(`input[value="${c.type}"]`).checked = true;
+    edDel.hidden = !id; $("#ed-dup").hidden = !id;
+    edDel.classList.remove("armed"); edDel.textContent = "Löschen";
+    editor.hidden = false;
+    $("#ed-t").focus();
+  }
+  function closeEditor() {
+    editor.hidden = true; editing = null;
+    returnFocus?.focus?.({ preventScroll: true });
+  }
+  function readForm() {
+    const t = $("#ed-t").value.trim();
+    if (!t) { $("#ed-t").focus(); $("#ed-t").placeholder = "Bitte einen Titel eintragen"; return null; }
+    const type = form.querySelector('input[name="ed-color"]:checked')?.value || "mix";
+    if (editKind === "motto") return { kind: "motto", type, t };
+    let len = edLen.value;
+    if (len === "custom") len = Math.max(5, Math.min(720, Math.round(Number(edMin.value) || 90)));
+    else if (len !== "full" && len !== "half") len = Number(len);
+    return { type, t, d: $("#ed-d").value.trim(), len };
+  }
+  edLen.addEventListener("change", () => { edMin.hidden = edLen.value !== "custom"; if (!edMin.hidden) edMin.focus(); });
+  form.addEventListener("submit", e => {
+    e.preventDefault();
+    const c = readForm(); if (!c) return;
+    if (editing) { state.cards[editing] = c; const id = editing; closeEditor(); changed(); document.querySelector(`.card[data-id="${id}"]`)?.focus({ preventScroll: true }); }
+    else { closeEditor(); const id = c.kind === "motto" ? addMotto(c) : addCard(c); document.querySelector(`.card[data-id="${id}"]`)?.focus(); }
+  });
+  $("#ed-dup").addEventListener("click", () => {
+    const c = readForm(); if (!c) return;
+    const src = editing; state.cards[src] = c; closeEditor();
+    const id = c.kind === "motto" ? addMotto({ ...c }, src) : addCard({ ...c }, src);
+    document.querySelector(`.card[data-id="${id}"]`)?.focus();
+  });
+  function deleteCard(id) {
+    document.querySelector(`.card[data-id="${id}"]`)?.remove();
+    if (state.cards[id]?.kind === "motto") detachMotto(id);
+    delete state.cards[id];
+    changed();
+  }
+  edDel.addEventListener("click", () => {
+    if (!edDel.classList.contains("armed")) { edDel.classList.add("armed"); edDel.textContent = "Wirklich löschen?"; return; }
+    const id = editing; closeEditor(); deleteCard(id);
+  });
+  $("#ed-cancel").addEventListener("click", closeEditor);
+  editor.addEventListener("click", e => { if (e.target === editor) closeEditor(); });
+  document.addEventListener("click", e => {
+    const card = e.target.closest(".card");
+    if (!card || justDragged || card.classList.contains("ghost")) return;
+    const x = e.target.closest(".x");
+    if (x) {
+      if (!x.classList.contains("armed")) { x.classList.add("armed"); x.textContent = "Löschen?"; setTimeout(() => { if (x.isConnected) { x.classList.remove("armed"); x.textContent = "×"; } }, 3500); return; }
+      deleteCard(card.dataset.id); return;
+    }
+    openEditor(card.dataset.id);
+  });
+
+  const ISLANDS = [[[2.9633,39.1756],[2.9557,39.1836],[2.9611,39.1846],[2.9616,39.1897],[2.9701,39.1902],[2.973,39.1866],[2.9633,39.1756]],[[2.9366,39.1439],[2.9364,39.1487],[2.9282,39.1543],[2.9353,39.1573],[2.942,39.1484],[2.9467,39.1505],[2.9496,39.1484],[2.9516,39.1561],[2.9459,39.1607],[2.9506,39.1656],[2.9596,39.1653],[2.971,39.1604],[2.9702,39.1579],[2.9765,39.158],[2.9694,39.1477],[2.9655,39.1512],[2.9567,39.1478],[2.9564,39.1423],[2.9619,39.141],[2.9593,39.1358],[2.9539,39.1347],[2.9579,39.1269],[2.947,39.1252],[2.9337,39.1281],[2.931,39.1316],[2.9195,39.129],[2.9269,39.1318],[2.9227,39.136],[2.9261,39.1386],[2.9149,39.1393],[2.9145,39.1446],[2.9199,39.1489],[2.917,39.1525],[2.9212,39.1513],[2.9171,39.1616],[2.924,39.1561],[2.9261,39.1462],[2.9366,39.1439]],[[4.2947,39.7994],[4.2855,39.7993],[4.2821,39.8017],[4.2919,39.8033],[4.2947,39.7994]],[[4.2798,39.9564],[4.2727,39.9569],[4.2737,39.9647],[4.278,39.9669],[4.2798,39.9614],[4.2843,39.9609],[4.2798,39.9564]],[[2.3064,39.5722],[2.3031,39.573],[2.3079,39.5821],[2.3389,39.5982],[2.3339,39.5891],[2.3286,39.5879],[2.3187,39.5767],[2.308,39.5752],[2.3064,39.5722]],[[3.2263,39.7372],[3.2534,39.7292],[3.2604,39.7353],[3.2661,39.7335],[3.2762,39.7395],[3.2858,39.7401],[3.2883,39.7447],[3.3007,39.7478],[3.3074,39.7544],[3.33,39.7604],[3.3361,39.7701],[3.3319,39.7752],[3.335,39.784],[3.3479,39.7894],[3.3594,39.7789],[3.3715,39.7745],[3.3737,39.7684],[3.3851,39.7639],[3.4041,39.764],[3.4043,39.759],[3.4099,39.759],[3.4136,39.7525],[3.4269,39.7515],[3.4329,39.7448],[3.451,39.7434],[3.4613,39.7481],[3.4574,39.7441],[3.4619,39.7382],[3.4528,39.7294],[3.4525,39.7257],[3.4567,39.728],[3.4527,39.7223],[3.4612,39.7199],[3.4716,39.7218],[3.4788,39.7158],[3.4745,39.7093],[3.4697,39.7129],[3.4567,39.7057],[3.4534,39.6931],[3.458,39.6845],[3.4524,39.6821],[3.4568,39.6797],[3.4528,39.6744],[3.4571,39.6708],[3.4525,39.6695],[3.4559,39.6564],[3.4409,39.6563],[3.4361,39.6341],[3.4267,39.6322],[3.4095,39.6377],[3.3971,39.6286],[3.3851,39.5918],[3.3942,39.5835],[3.4027,39.5835],[3.4036,39.5792],[3.395,39.5757],[3.3795,39.5763],[3.3731,39.5668],[3.3736,39.557],[3.3671,39.5562],[3.3685,39.5509],[3.3532,39.5483],[3.3557,39.5465],[3.3412,39.5412],[3.3407,39.5378],[3.3381,39.5418],[3.3319,39.5404],[3.3403,39.5349],[3.332,39.5327],[3.322,39.5221],[3.3145,39.5209],[3.3168,39.5178],[3.3111,39.5168],[3.3128,39.5143],[3.3,39.5038],[3.3016,39.5006],[3.2962,39.4998],[3.2993,39.4973],[3.2921,39.4943],[3.2943,39.487],[3.2927,39.4846],[3.2873,39.4863],[3.2904,39.483],[3.2866,39.4825],[3.2913,39.481],[3.2834,39.4671],[3.2796,39.4667],[3.2827,39.4649],[3.2776,39.457],[3.2771,39.4354],[3.2727,39.4291],[3.2769,39.4255],[3.2749,39.4161],[3.2702,39.4141],[3.2661,39.4279],[3.2589,39.4162],[3.2682,39.4159],[3.2586,39.4101],[3.2634,39.4093],[3.2587,39.404],[3.2542,39.4037],[3.2543,39.3944],[3.2477,39.3931],[3.2527,39.3919],[3.2505,39.3873],[3.2465,39.3882],[3.249,39.385],[3.2445,39.3776],[3.2421,39.376],[3.2394,39.3795],[3.2387,39.3707],[3.2329,39.373],[3.2302,39.368],[3.2221,39.3729],[3.2289,39.3661],[3.2349,39.3674],[3.2321,39.3616],[3.227,39.3584],[3.2243,39.361],[3.225,39.3577],[3.22,39.3569],[3.211,39.3647],[3.2093,39.3556],[3.2154,39.3549],[3.2017,39.3507],[3.1879,39.352],[3.1854,39.3501],[3.1923,39.3462],[3.189,39.3377],[3.1798,39.3346],[3.177,39.3293],[3.1693,39.3335],[3.1674,39.3318],[3.1739,39.328],[3.171,39.3265],[3.1503,39.3268],[3.1465,39.3301],[3.1459,39.3263],[3.1392,39.3243],[3.1424,39.3204],[3.1314,39.3139],[3.1246,39.316],[3.1181,39.3131],[3.11,39.3022],[3.0902,39.2891],[3.0802,39.2749],[3.0651,39.2655],[3.05,39.2655],[3.0415,39.2749],[3.0422,39.2796],[3.0302,39.2825],[3.0275,39.2855],[3.0307,39.2895],[3.0257,39.2877],[3.0181,39.2949],[3.0199,39.304],[3.0134,39.3106],[3.0048,39.3122],[3.0038,39.3169],[2.9988,39.3176],[2.9933,39.3122],[2.9938,39.3148],[2.986,39.316],[2.9839,39.3234],[2.9899,39.3267],[2.9902,39.3379],[2.9591,39.362],[2.9531,39.3604],[2.9552,39.3631],[2.9525,39.3598],[2.9289,39.3642],[2.9142,39.3585],[2.9136,39.3523],[2.8818,39.3662],[2.8746,39.3627],[2.8442,39.3659],[2.835,39.361],[2.8352,39.3636],[2.8289,39.3561],[2.8174,39.3587],[2.8053,39.3671],[2.7873,39.363],[2.7707,39.3836],[2.7537,39.3927],[2.7419,39.4063],[2.7394,39.4157],[2.7472,39.4413],[2.7219,39.4761],[2.734,39.4825],[2.7372,39.4926],[2.7477,39.4983],[2.7454,39.5003],[2.7468,39.5026],[2.7456,39.5004],[2.7512,39.4995],[2.7492,39.5095],[2.7269,39.5308],[2.7195,39.5344],[2.7161,39.5321],[2.7152,39.5342],[2.7162,39.5314],[2.7112,39.5336],[2.6965,39.5439],[2.6961,39.548],[2.6892,39.5483],[2.6871,39.5537],[2.6692,39.5588],[2.6694,39.5626],[2.6683,39.5587],[2.6454,39.5657],[2.6342,39.559],[2.635,39.5635],[2.6441,39.5671],[2.6414,39.5688],[2.6394,39.566],[2.6387,39.5685],[2.634,39.5646],[2.6334,39.5673],[2.639,39.5687],[2.6323,39.5683],[2.6271,39.5599],[2.6298,39.56],[2.6299,39.5568],[2.6297,39.5593],[2.6271,39.5598],[2.626,39.5571],[2.6286,39.5574],[2.6285,39.5558],[2.6259,39.5569],[2.6245,39.5546],[2.6352,39.5542],[2.6199,39.5496],[2.6297,39.5457],[2.6393,39.5527],[2.6324,39.5451],[2.619,39.5449],[2.608,39.552],[2.6007,39.5511],[2.5904,39.531],[2.5762,39.5338],[2.5757,39.5312],[2.572,39.5317],[2.571,39.5297],[2.5647,39.5281],[2.5712,39.5311],[2.5654,39.5294],[2.5616,39.532],[2.5522,39.5247],[2.5519,39.5271],[2.541,39.5248],[2.5374,39.5169],[2.5395,39.5128],[2.5473,39.5112],[2.534,39.5048],[2.5366,39.4879],[2.5256,39.479],[2.526,39.4744],[2.5201,39.475],[2.524,39.4719],[2.5192,39.4626],[2.5244,39.4607],[2.5218,39.4566],[2.5099,39.4583],[2.506,39.4623],[2.5012,39.4612],[2.5002,39.4677],[2.4905,39.4729],[2.4857,39.4726],[2.4761,39.4663],[2.4821,39.4761],[2.4779,39.4777],[2.4741,39.491],[2.4783,39.4877],[2.479,39.4922],[2.4728,39.4937],[2.468,39.4903],[2.467,39.4958],[2.4595,39.4989],[2.4608,39.5044],[2.4562,39.5047],[2.4653,39.5137],[2.4676,39.5093],[2.4701,39.5098],[2.4659,39.513],[2.4789,39.5137],[2.4797,39.5178],[2.4668,39.5189],[2.4684,39.5223],[2.4567,39.5344],[2.4495,39.537],[2.438,39.5325],[2.4404,39.5288],[2.4308,39.5291],[2.4194,39.5229],[2.4238,39.5369],[2.4136,39.5391],[2.4053,39.5364],[2.4045,39.5268],[2.3875,39.5208],[2.3886,39.5337],[2.3795,39.533],[2.377,39.5375],[2.3713,39.5314],[2.363,39.5328],[2.3682,39.538],[2.3787,39.5393],[2.3905,39.5462],[2.3856,39.5481],[2.379,39.5461],[2.379,39.5428],[2.3722,39.5442],[2.3662,39.5551],[2.3541,39.5575],[2.3553,39.5632],[2.3465,39.5647],[2.3546,39.5767],[2.3447,39.5872],[2.3471,39.5948],[2.3551,39.5963],[2.356,39.6056],[2.3688,39.6141],[2.3852,39.6137],[2.3953,39.6174],[2.4116,39.628],[2.422,39.63],[2.4233,39.6386],[2.4619,39.6518],[2.4795,39.6663],[2.4819,39.6724],[2.4886,39.6717],[2.4981,39.6845],[2.5077,39.6904],[2.5163,39.6906],[2.5278,39.7015],[2.5419,39.6986],[2.5555,39.7],[2.5874,39.7173],[2.5997,39.7329],[2.6228,39.748],[2.6199,39.7561],[2.6239,39.7565],[2.6255,39.7524],[2.6357,39.7652],[2.6414,39.7601],[2.6633,39.7725],[2.6695,39.7923],[2.6799,39.7986],[2.6836,39.7938],[2.6949,39.7917],[2.6956,39.7972],[2.6916,39.7952],[2.6891,39.798],[2.6995,39.8108],[2.7041,39.8086],[2.7148,39.8181],[2.7285,39.8228],[2.728,39.8256],[2.7418,39.8326],[2.7461,39.8328],[2.7479,39.8277],[2.7625,39.8325],[2.7673,39.843],[2.7758,39.8399],[2.7742,39.8511],[2.7794,39.8559],[2.7868,39.8526],[2.7924,39.8565],[2.8003,39.851],[2.8057,39.8525],[2.8018,39.8582],[2.8044,39.8625],[2.8155,39.8569],[2.8227,39.8576],[2.824,39.8611],[2.8271,39.8574],[2.8384,39.8653],[2.845,39.8618],[2.8532,39.8743],[2.8749,39.878],[2.8954,39.8949],[2.9055,39.8978],[2.9085,39.8952],[2.9176,39.8966],[2.92,39.902],[2.9251,39.9],[2.9362,39.9042],[2.9503,39.9201],[2.9637,39.9145],[2.9661,39.9101],[2.9879,39.9092],[3.0014,39.9239],[3.0286,39.9348],[3.0345,39.9345],[3.0334,39.9302],[3.0419,39.9377],[3.0378,39.9301],[3.061,39.9325],[3.0547,39.9218],[3.0606,39.9194],[3.0661,39.9231],[3.0812,39.9249],[3.0963,39.9358],[3.1017,39.9351],[3.0946,39.9291],[3.0976,39.9278],[3.1063,39.9322],[3.1138,39.9311],[3.1181,39.935],[3.1219,39.9319],[3.1317,39.9385],[3.1326,39.9447],[3.1475,39.9541],[3.1599,39.9557],[3.1656,39.9599],[3.1715,39.9581],[3.1796,39.9612],[3.1732,39.9521],[3.1796,39.9511],[3.1902,39.9575],[3.1961,39.9547],[3.214,39.9622],[3.2131,39.9552],[3.2022,39.9439],[3.1928,39.9398],[3.1894,39.944],[3.1882,39.9402],[3.1803,39.9405],[3.1838,39.9377],[3.1544,39.9231],[3.1386,39.928],[3.1315,39.9269],[3.1275,39.9168],[3.1158,39.9107],[3.11,39.9113],[3.1108,39.8993],[3.1076,39.9058],[3.0873,39.9104],[3.0832,39.9064],[3.0885,39.9047],[3.0874,39.9028],[3.0856,39.9019],[3.0879,39.9046],[3.0832,39.9061],[3.0855,39.9035],[3.08,39.9023],[3.0785,39.889],[3.0899,39.8668],[3.1065,39.8576],[3.116,39.8646],[3.1202,39.8615],[3.1225,39.8646],[3.1253,39.8631],[3.1316,39.8692],[3.1411,39.8647],[3.1524,39.8721],[3.1592,39.8714],[3.1665,39.8776],[3.1706,39.8762],[3.1889,39.8861],[3.1903,39.8925],[3.2035,39.8903],[3.1882,39.8816],[3.1905,39.8772],[3.1842,39.871],[3.1866,39.8634],[3.1972,39.8618],[3.1815,39.8434],[3.1735,39.838],[3.1574,39.8377],[3.1407,39.832],[3.1431,39.8341],[3.1352,39.8379],[3.1369,39.8404],[3.1333,39.841],[3.1348,39.8358],[3.1301,39.8387],[3.1322,39.8408],[3.1285,39.84],[3.1191,39.8291],[3.117,39.816],[3.1072,39.8085],[3.1146,39.8085],[3.1201,39.8044],[3.1213,39.8052],[3.1265,39.7927],[3.1507,39.7694],[3.2263,39.7372]],[[4.3032,39.8816],[4.3059,39.8788],[4.307,39.8713],[4.3017,39.876],[4.3032,39.8816]],[[4.2804,39.8129],[4.2695,39.809],[4.2459,39.8167],[4.2397,39.8162],[4.2402,39.8132],[4.2293,39.823],[4.2242,39.8213],[4.219,39.8291],[4.2179,39.8266],[4.211,39.8293],[4.2082,39.8248],[4.2031,39.8335],[4.2016,39.8309],[4.1829,39.8385],[4.1717,39.8454],[4.1685,39.8525],[4.1657,39.849],[4.1452,39.8604],[4.147,39.8648],[4.1414,39.8623],[4.1325,39.8656],[4.1327,39.8708],[4.1303,39.8676],[4.1242,39.8678],[4.0978,39.8787],[4.08,39.8905],[4.0786,39.8959],[4.058,39.9063],[4.0257,39.9203],[4.0095,39.9208],[4.0041,39.9254],[3.9943,39.9258],[3.99,39.931],[3.9804,39.9295],[3.9718,39.9343],[3.9611,39.9325],[3.9576,39.9349],[3.9595,39.9384],[3.9475,39.9333],[3.9366,39.9383],[3.9369,39.9346],[3.9313,39.9317],[3.9164,39.9292],[3.9145,39.9322],[3.9113,39.9251],[3.9023,39.9265],[3.9001,39.9224],[3.8962,39.9225],[3.8954,39.9277],[3.884,39.9219],[3.8542,39.9213],[3.8427,39.9258],[3.8393,39.9224],[3.834,39.9291],[3.8341,39.9254],[3.824,39.9219],[3.82,39.9282],[3.8259,39.9405],[3.8248,39.952],[3.8342,39.9604],[3.8323,39.9657],[3.8357,39.9675],[3.8321,39.967],[3.83,39.9725],[3.8332,39.9793],[3.8394,39.9785],[3.8338,39.9814],[3.8313,39.9795],[3.8259,39.9891],[3.8287,39.9884],[3.8274,39.9928],[3.8354,39.9943],[3.8252,39.9962],[3.836,40.0025],[3.8217,39.9955],[3.8131,39.9959],[3.8132,40.0006],[3.8114,39.9956],[3.806,40.0014],[3.8049,39.998],[3.7991,39.9978],[3.7946,40],[3.7981,40.0034],[3.7943,40.0039],[3.792,40.0199],[3.8012,40.0205],[3.8026,40.0247],[3.8105,40.0268],[3.8064,40.0317],[3.8188,40.0397],[3.8224,40.0511],[3.829,40.0528],[3.8306,40.0496],[3.8315,40.0526],[3.8352,40.0489],[3.8422,40.0539],[3.8652,40.0542],[3.8675,40.0581],[3.8787,40.0523],[3.8848,40.0553],[3.8822,40.058],[3.8898,40.0564],[3.8985,40.0598],[3.9044,40.0573],[3.9095,40.0484],[3.9132,40.0515],[3.9141,40.0466],[3.9169,40.0485],[3.9207,40.0454],[3.9243,40.0501],[3.9199,40.057],[3.9309,40.0581],[3.929,40.0604],[3.9333,40.0625],[3.9417,40.0563],[3.9623,40.0608],[3.9692,40.0537],[3.9788,40.0509],[3.9872,40.0522],[3.9876,40.0562],[3.9944,40.059],[4.0103,40.0595],[4.0163,40.0556],[4.0173,40.06],[4.0321,40.0655],[4.041,40.056],[4.0538,40.0519],[4.0575,40.0584],[4.0638,40.0595],[4.0666,40.0563],[4.0763,40.0595],[4.0755,40.0667],[4.0779,40.0708],[4.079,40.0667],[4.0824,40.0679],[4.0843,40.075],[4.0894,40.069],[4.0871,40.0749],[4.091,40.0762],[4.0903,40.0823],[4.0821,40.0894],[4.0931,40.0894],[4.0953,40.0844],[4.099,40.086],[4.0925,40.0748],[4.0964,40.0683],[4.0925,40.0633],[4.095,40.0573],[4.0993,40.058],[4.1031,40.0447],[4.1079,40.0452],[4.1098,40.0545],[4.1251,40.0551],[4.1264,40.0626],[4.1334,40.0633],[4.1339,40.0577],[4.1201,40.0357],[4.1268,40.0257],[4.1336,40.0298],[4.1303,40.031],[4.1343,40.0353],[4.137,40.036],[4.1335,40.0325],[4.1374,40.0346],[4.1376,40.032],[4.1409,40.036],[4.1426,40.0488],[4.1388,40.0541],[4.1429,40.0555],[4.1366,40.067],[4.1417,40.0696],[4.1455,40.0661],[4.155,40.068],[4.16,40.0632],[4.1726,40.0607],[4.17,40.0575],[4.1644,40.0578],[4.1667,40.0506],[4.1627,40.0475],[4.1664,40.0443],[4.1584,40.0448],[4.1628,40.0399],[4.1607,40.0337],[4.1711,40.0362],[4.174,40.0332],[4.1689,40.0268],[4.1754,40.024],[4.1799,40.0257],[4.1821,40.0219],[4.1873,40.0333],[4.1914,40.035],[4.1953,40.0323],[4.1932,40.0237],[4.1981,40.025],[4.1975,40.0213],[4.202,40.0228],[4.203,40.0187],[4.1937,40.0097],[4.2022,40.0138],[4.1976,40.0069],[4.2053,39.9929],[4.2073,39.9952],[4.2005,40.0058],[4.2033,40.0095],[4.2059,40.0055],[4.2086,40.0072],[4.2074,40.0131],[4.2128,40.0066],[4.2092,40.003],[4.2199,40.0021],[4.2167,39.9998],[4.2206,39.9966],[4.2295,39.9955],[4.2315,39.9989],[4.2502,40.0015],[4.2514,39.9983],[4.2695,39.9967],[4.255,39.993],[4.2594,39.9815],[4.2662,39.9819],[4.2591,39.9789],[4.2547,39.9638],[4.2656,39.9631],[4.2635,39.958],[4.27,39.9596],[4.2723,39.9541],[4.2644,39.9527],[4.265,39.9503],[4.2807,39.9497],[4.2783,39.9455],[4.2834,39.9446],[4.2753,39.9391],[4.2744,39.9334],[4.2855,39.9249],[4.2854,39.9179],[4.29,39.917],[4.2855,39.9121],[4.2926,39.9103],[4.2984,39.8975],[4.3084,39.8991],[4.3064,39.8927],[4.3102,39.8879],[4.3123,39.8893],[4.3096,39.88],[4.3279,39.8772],[4.3105,39.8699],[4.3071,39.8758],[4.3105,39.8779],[4.2967,39.8852],[4.2961,39.8919],[4.2905,39.8884],[4.2782,39.8952],[4.2778,39.8926],[4.2706,39.894],[4.2703,39.8918],[4.2565,39.897],[4.2627,39.8912],[4.2764,39.8907],[4.2748,39.8845],[4.2784,39.8867],[4.2939,39.8814],[4.2953,39.8749],[4.3007,39.8741],[4.3075,39.8652],[4.2986,39.8639],[4.3058,39.8632],[4.3088,39.8498],[4.2982,39.8409],[4.3038,39.8318],[4.2998,39.8331],[4.2963,39.8279],[4.2929,39.829],[4.2962,39.8232],[4.2804,39.8129]]];
+  // ---- Shared map geometry (coastline: geo-maps earth-lands 100 m, from OpenStreetMap data, ODbL) ----
+  const KX = Math.cos(39.6 * Math.PI / 180);
+  const proj = (lon, lat) => [lon * KX * 100, -lat * 100];
+  const islandPath = ISLANDS.map(r => "M" + r.map(([x, y]) => proj(x, y).map(n => n.toFixed(2)).join(" ")).join("L") + "Z").join("");
+  const TOWNS = [["Palma", 2.650, 39.570], ["Alcúdia", 3.121, 39.853], ["Sóller", 2.715, 39.766], ["Pollença", 3.016, 39.877],
+    ["Manacor", 3.209, 39.570], ["Valldemossa", 2.622, 39.710], ["Deià", 2.648, 39.748], ["Inca", 2.912, 39.721], ["Santanyí", 3.128, 39.354]];
+  const HOME = { t: "Alcúdia (Unterkunft)", lon: 3.121, lat: 39.853 };
+  // Fit a lon/lat box into a container's aspect; returns a viewBox in projected units.
+  function fitBox(lon0, lat0, lon1, lat1, aspect) {
+    const [x0, y1] = proj(lon0, lat0), [x1, y0] = proj(lon1, lat1);
+    let w = x1 - x0, h = y1 - y0, cx = (x0 + x1) / 2, cy = (y0 + y1) / 2;
+    if (w / h > aspect) h = w / aspect; else w = h * aspect;
+    return { x: cx - w / 2, y: cy - h / 2, w, h };
+  }
+  const toScreen = (vb, W, H, lon, lat) => { const [x, y] = proj(lon, lat); return [(x - vb.x) / vb.w * W, (y - vb.y) / vb.h * H]; };
+  const ease = t => t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+  const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  function mapSvg(svg) { svg.setAttribute("preserveAspectRatio", "none"); svg.innerHTML = `<path class="isl" d="${islandPath}"/>`; }
+
+  // ---- Weather studio: animated wind, rain and clouds over a Mallorca map, sun and moon computed locally ----
+  {
+    const LAT = 39.85, LON = 3.12, TZ = "Europe/Madrid";
+    const DIRS = { N: 0, NNO: 22.5, NO: 45, ONO: 67.5, O: 90, OSO: 112.5, SO: 135, SSO: 157.5, S: 180, SSW: 202.5, SW: 225, WSW: 247.5, W: 270, WNW: 292.5, NW: 315, NNW: 337.5, NE: 45, E: 90, SE: 135, NNE: 22.5, ENE: 67.5, ESE: 112.5, SSE: 157.5 };
+    const DIRNAME = { 0: "Nord", 45: "Nordost", 90: "Ost", 135: "Südost", 180: "Süd", 225: "Südwest", 270: "West", 315: "Nordwest" };
+    const tfmt = d => d.toLocaleTimeString("de-DE", { timeZone: TZ, hour: "2-digit", minute: "2-digit" });
+    function sunTimes(iso) {
+      const rad = Math.PI / 180, d0 = Date.UTC(+iso.slice(0, 4), +iso.slice(5, 7) - 1, +iso.slice(8, 10), 12);
+      const n = Math.round(d0 / 864e5 + 2440587.5 - 2451545 + .0008), js = n - LON / 360;
+      const M = (357.5291 + .98560028 * js) % 360, C = 1.9148 * Math.sin(M * rad) + .02 * Math.sin(2 * M * rad) + .0003 * Math.sin(3 * M * rad);
+      const lam = (M + C + 180 + 102.9372) % 360, jt = 2451545 + js + .0053 * Math.sin(M * rad) - .0069 * Math.sin(2 * lam * rad);
+      const dec = Math.asin(Math.sin(lam * rad) * Math.sin(23.44 * rad));
+      const w = Math.acos((Math.sin(-.833 * rad) - Math.sin(LAT * rad) * Math.sin(dec)) / (Math.cos(LAT * rad) * Math.cos(dec))) / rad;
+      const toDate = j => new Date((j - 2440587.5) * 864e5);
+      return { rise: toDate(jt - w / 360), set: toDate(jt + w / 360) };
+    }
+    function moon(date) {
+      const age = (((date - Date.UTC(2000, 0, 6, 18, 14)) / 864e5) % 29.530588 + 29.530588) % 29.530588;
+      const names = ["Neumond", "zunehmende Sichel", "erstes Viertel", "zunehmender Mond", "Vollmond", "abnehmender Mond", "letztes Viertel", "abnehmende Sichel"];
+      return { name: names[Math.round(age / 29.530588 * 8) % 8], lit: Math.round((1 - Math.cos(age / 29.530588 * 2 * Math.PI)) / 2 * 100) };
+    }
+    const daysEl = $("#wxs-days"), svg = $("#wxs-svg"), cv = $("#wxs-canvas"), ov = $("#wxs-overlay"), panel = $("#wxs-panel"), comp = $("#wxs-compass"), sunBox = $("#wxs-sun"), mapBox = $("#wxs-map");
+    mapSvg(svg);
+    const avail = () => Object.keys(WEATHER).filter(d => d >= todayIso).sort();
+    let day = avail()[0] || Object.keys(WEATHER).sort().pop(), vb = null, W = 0, H = 0;
+    const ctx = cv.getContext("2d"), fx = $("#wxs-fx"), fctx = fx.getContext("2d");
+    let parts = [], drops = [], clouds = [], running = false, raf = 0, visible = true;
+    const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+    function windOf(w) {
+      const wd = w && w.wind; if (!wd || DIRS[wd.dir] == null) return null;
+      return { deg: DIRS[wd.dir], kmh: wd.kmh || 15, txt: wd.txt || "", dir: wd.dir };
+    }
+    function layout() {
+      const dpr = Math.min(2, devicePixelRatio || 1);
+      W = mapBox.clientWidth; H = mapBox.clientHeight;
+      cv.width = W * dpr; cv.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      fx.width = W * dpr; fx.height = H * dpr; fctx.setTransform(dpr, 0, 0, dpr, 0, 0); lastBase = -9; lastHour = -1;
+      vb = fitBox(2.28, 39.22, 3.52, 40.0, W / H);
+      svg.setAttribute("viewBox", `${vb.x} ${vb.y} ${vb.w} ${vb.h}`);
+      drawOverlay();
+    }
+    function drawOverlay() {
+      if (mode === "live") return liveOverlay();
+      const w = WEATHER[day] || {};
+      ov.replaceChildren();
+      const bubble = (lon, lat, html, cls) => { const [x, y] = toScreen(vb, W, H, lon, lat); const b = document.createElement("div"); b.className = "wx-bubble" + (cls ? " " + cls : ""); b.innerHTML = html; b.style.left = x + "px"; b.style.top = y + "px"; ov.append(b); };
+      if (w.max != null) bubble(2.65, 39.57, `${w.max}° <small>/ ${w.min}° · Palma</small>`);
+      bubble(3.121, 39.853, `Unterkunft`, "home");
+    }
+    function seed() {
+      const w = WEATHER[day] || {}, wind = windOf(w), n = Math.round(W * H / 2600);
+      parts = Array.from({ length: n }, () => ({ x: Math.random() * W, y: Math.random() * H, a: Math.random() * 80 }));
+      const r = w.rain || (w.k === "rain" ? 60 : 0);
+      drops = Array.from({ length: Math.round(r / 100 * W * H / 900) }, () => ({ x: Math.random() * W, y: Math.random() * H, v: 4 + Math.random() * 3 }));
+      const cl = w.k === "cloud" || w.k === "rain" ? 5 : w.k === "part" ? 2 : 0;
+      clouds = Array.from({ length: cl }, () => ({ x: Math.random() * W, y: Math.random() * H * .8, r: 60 + Math.random() * 90 }));
+      const deg = wind ? wind.deg : null;
+      comp.innerHTML = `<svg viewBox="0 0 74 74" aria-hidden="true"><circle cx="37" cy="37" r="30" fill="none" stroke="var(--line)"/><text x="37" y="13" text-anchor="middle" font-size="9" font-weight="700" fill="var(--muted)">N</text>` +
+        (deg == null ? `<text x="37" y="41" text-anchor="middle" font-size="9" fill="var(--muted)">k. A.</text>` :
+        `<g class="needle" style="transform: rotate(${deg + 180}deg)"><path d="M37 14 44 40 37 35 30 40z" fill="var(--accent)"/><circle cx="37" cy="37" r="3" fill="var(--accent)"/></g>`) + `</svg>`;
+      comp.title = wind ? `Wind aus ${wind.dir}` : "Keine Windangabe";
+      if (mode === "live") liveCompass();
+    }
+    function frame() {
+      if (mode === "live") { liveFrame(); if (running) raf = requestAnimationFrame(frame); return; }
+      const w = WEATHER[day] || {}, wind = windOf(w);
+      const to = wind ? (wind.deg + 180) * Math.PI / 180 : Math.PI * .75, sp = wind ? .6 + wind.kmh / 14 : .5;
+      const vx = Math.sin(to) * sp, vy = -Math.cos(to) * sp;
+      ctx.globalCompositeOperation = "destination-out"; ctx.fillStyle = "rgba(0,0,0,.09)"; ctx.fillRect(0, 0, W, H);
+      ctx.globalCompositeOperation = "source-over";
+      ctx.strokeStyle = css("--wind") || "rgba(255,255,255,.7)"; ctx.lineWidth = 1.4; ctx.lineCap = "round";
+      ctx.beginPath();
+      parts.forEach(p => {
+        const wob = Math.sin((p.y + p.a) / 40) * .35;
+        const nx = p.x + vx + wob * vy, ny = p.y + vy - wob * vx;
+        ctx.moveTo(p.x, p.y); ctx.lineTo(nx, ny); p.x = nx; p.y = ny; p.a += 1;
+        if (p.a > 90 || p.x < -5 || p.y < -5 || p.x > W + 5 || p.y > H + 5) { p.x = Math.random() * W; p.y = Math.random() * H; p.a = 0; }
+      });
+      ctx.stroke();
+      if (drops.length) {
+        ctx.strokeStyle = css("--rain") || "rgba(80,140,220,.6)"; ctx.lineWidth = 1.2; ctx.beginPath();
+        drops.forEach(d => { ctx.moveTo(d.x, d.y); d.x += vx * .6; d.y += d.v; ctx.lineTo(d.x - vx, d.y + 7); if (d.y > H) { d.y = -10; d.x = Math.random() * W; } });
+        ctx.stroke();
+      }
+      clouds.forEach(c => {
+        c.x += vx * .25; c.y += vy * .25;
+        if (c.x - c.r > W) c.x = -c.r; if (c.x + c.r < 0) c.x = W + c.r; if (c.y - c.r > H) c.y = -c.r; if (c.y + c.r < 0) c.y = H + c.r;
+        const g = ctx.createRadialGradient(c.x, c.y, 0, c.x, c.y, c.r); g.addColorStop(0, css("--cloudfx") || "rgba(255,255,255,.06)"); g.addColorStop(1, "rgba(255,255,255,0)");
+        ctx.fillStyle = g; ctx.beginPath(); ctx.arc(c.x, c.y, c.r, 0, Math.PI * 2); ctx.fill();
+      });
+      if (running) raf = requestAnimationFrame(frame);
+    }
+    function start() { if (running || reduceMotion || !visible) return; running = true; raf = requestAnimationFrame(frame); }
+    function stop() { running = false; cancelAnimationFrame(raf); }
+    function stat(k, v, s, cls) { return `<div class="wxs-stat${cls ? " " + cls : ""}"><span class="k">${k}</span><span class="v">${v}</span>${s ? `<span class="s">${s}</span>` : ""}</div>`; }
+    const esc = t => String(t).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+    function renderPanel() {
+      if (mode === "live") return livePanel();
+      const w = WEATHER[day] || {}, wind = windOf(w), st = sunTimes(day), mo = moon(new Date(day + "T20:00:00Z"));
+      const len = (st.set - st.rise) / 36e5, dt = parse(day);
+      const icon = `<svg viewBox="0 0 34 34" aria-hidden="true">${ICONS[w.k] || ICONS.part}</svg>`;
+      panel.innerHTML =
+        `<div class="wxs-big">${icon}<div><b>${w.max != null ? w.max + "°" : "–"}</b><span>${esc(w.txt || "Keine Vorhersage")} · ${WD[dt.getDay()]}, ${dt.getDate()}. ${MON[dt.getMonth()]}</span></div></div>` +
+        stat("Tief", w.min != null ? w.min + "°" : "–", "nachts, Palma") +
+        `<div class="wxs-stat"><span class="k">Regen</span><span class="v">${w.rain != null ? w.rain + " %" : "k. A."}</span><div class="rainbar"><i style="width:${w.rain || 0}%"></i></div></div>` +
+        stat("Wind", wind ? `${DIRNAME[Math.round(wind.deg / 45) * 45 % 360] || wind.dir}` : "k. A.", wind ? esc(wind.txt) : "Für diesen Tag keine Windangabe") +
+        stat("Meer", WX.sea && WX.sea.temp ? `ca. ${WX.sea.temp}°` : "k. A.", WX.sea ? esc(WX.sea.txt || "") : "") +
+        stat("Sonne", `${tfmt(st.rise)} – ${tfmt(st.set)}`, `${Math.floor(len)} h ${Math.round(len % 1 * 60)} min Tageslicht`) +
+        stat("Mond", mo.name, `${mo.lit} % beleuchtet`) +
+        (w.note ? stat("Hinweis", "Quellen uneinig", esc(w.note), "wide") : "") +
+        (WX.warn ? stat("Warnungen", esc(WX.warn), "", "wide" + (/kein/i.test(WX.warn) ? "" : " warn")) : "");
+      renderSun(st);
+    }
+    function renderSun(st, iso = day) {
+      const Wd = 600, Hd = 86, x0 = 30, x1 = Wd - 30, base = 70, top = 14;
+      const now = new Date(), isToday = iso === todayIso, f = Math.max(0, Math.min(1, (now - st.rise) / (st.set - st.rise)));
+      const cy = 2 * top - base, px = x0 + (x1 - x0) * f, py = (1 - f) * (1 - f) * base + 2 * (1 - f) * f * cy + f * f * base;
+      const up = isToday && now > st.rise && now < st.set;
+      sunBox.innerHTML = `<svg viewBox="0 0 ${Wd} ${Hd}" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Sonnenbogen von ${tfmt(st.rise)} bis ${tfmt(st.set)}">
+        <path d="M${x0} ${base} Q ${Wd / 2} ${cy} ${x1} ${base}" fill="none" stroke="var(--line)" stroke-width="2" stroke-dasharray="4 5"/>
+        <line x1="10" x2="${Wd - 10}" y1="${base}" y2="${base}" stroke="var(--line)"/>
+        <text x="${x0}" y="${base + 14}" font-size="11" fill="var(--muted)" text-anchor="middle">${tfmt(st.rise)}</text>
+        <text x="${x1}" y="${base + 14}" font-size="11" fill="var(--muted)" text-anchor="middle">${tfmt(st.set)}</text>
+        ${up ? `<circle cx="${px}" cy="${py}" r="14" fill="var(--sun)" opacity=".25"><animate attributeName="r" values="12;17;12" dur="3s" repeatCount="indefinite"/></circle><circle cx="${px}" cy="${py}" r="8" fill="var(--sun)"/>
+        <text x="${px}" y="${Math.max(12, py - 18)}" font-size="11" font-weight="700" fill="var(--fg)" text-anchor="middle">jetzt · noch ${Math.max(0, Math.round((st.set - now) / 36e5 * 10) / 10).toLocaleString("de-DE")} h Licht</text>` :
+        `<text x="${Wd / 2}" y="${top + 16}" font-size="12" fill="var(--muted)" text-anchor="middle">${isToday && now >= st.set ? "Sonne ist untergegangen" : "Sonnenbogen"}</text>`}
+      </svg>`;
+    }
+    function renderDays() {
+      daysEl.replaceChildren(...avail().map(d => {
+        const dt = parse(d), w = WEATHER[d], b = document.createElement("button"); b.type = "button";
+        b.textContent = `${WD[dt.getDay()].slice(0, 2)} ${dt.getDate()}. · ${w.max}°`; b.setAttribute("aria-pressed", String(d === day));
+        b.addEventListener("click", () => { day = d; if (mode !== "day") setMode("day"); renderDays(); renderPanel(); drawOverlay(); seed(); ctx.clearRect(0, 0, W, H); if (reduceMotion) frame(); });
+        return b;
+      }));
+    }
+    // ---- Live data: Open-Meteo grid forecast + RainViewer radar, written into the page by the weather agent every 3 hours ----
+    let LIVE = null; try { LIVE = JSON.parse(document.getElementById("live-data").textContent); } catch {}
+    if (!LIVE || !LIVE.fc || !LIVE.fc.t || !LIVE.fc.t.length) LIVE = null;
+    const L = LIVE && (() => {
+      const f = LIVE.fc, rad = Math.PI / 180;
+      const u = f.ws.map((s, p) => s.map((v, h) => v == null || f.wd[p][h] == null ? 0 : -v * Math.sin(f.wd[p][h] * rad)));
+      const v = f.ws.map((s, p) => s.map((x, h) => x == null || f.wd[p][h] == null ? 0 : -x * Math.cos(f.wd[p][h] * rad)));
+      return { f, NX: LIVE.lons.length, NY: LIVE.lats.length, u, v, n: f.t.length };
+    })();
+    const field = document.createElement("canvas");
+    const rgba = c => { const m = c.match(/rgba?\(([^)]+)\)/); if (!m) return [255, 255, 255, .5]; const p = m[1].split(",").map(Number); return [p[0], p[1], p[2], p[3] ?? 1]; };
+    const RIMG = (LIVE && LIVE.radar || []).map(fr => { const im = new Image(); im.src = "data:image/png;base64," + fr.png; return im; });
+    const madridHour = () => { const s = new Intl.DateTimeFormat("sv-SE", { timeZone: TZ, year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", hour12: false }).format(new Date()); return s.replace(" ", "T").slice(0, 13) + ":00"; };
+    let t = 0, t0 = 0, playing = !reduceMotion, radarOn = false, rIdx = 0, lastBase = -9, lastHour = -1, lastRadar = 0;
+    if (L) { const i = L.f.t.indexOf(madridHour()); t = t0 = i >= 0 ? i : 0; }
+    const DIR16 = ["N", "NNO", "NO", "ONO", "O", "OSO", "SO", "SSO", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"];
+    const DIRLONG = { N: "Nord", NO: "Nordost", O: "Ost", SO: "Südost", S: "Süd", SW: "Südwest", W: "West", NW: "Nordwest" };
+    const dirOf = (u, v) => (Math.atan2(-u, -v) * 180 / Math.PI + 360) % 360;
+    const dirName = deg => { const d = DIR16[Math.round(deg / 22.5) % 16]; return DIRLONG[d] || d; };
+    function sample(arr, lon, lat, tt) {
+      const [l0, la0, l1, la1] = LIVE.bbox;
+      const fi = Math.max(0, Math.min(L.NX - 1, (lon - l0) / (l1 - l0) * (L.NX - 1))), fj = Math.max(0, Math.min(L.NY - 1, (la1 - lat) / (la1 - la0) * (L.NY - 1)));
+      const i0 = Math.floor(fi), j0 = Math.floor(fj), i1 = Math.min(L.NX - 1, i0 + 1), j1 = Math.min(L.NY - 1, j0 + 1), a = fi - i0, b = fj - j0;
+      const h0 = Math.max(0, Math.min(L.n - 1, Math.floor(tt))), h1 = Math.min(L.n - 1, h0 + 1), c = tt - Math.floor(tt);
+      const g = (j, i) => { const s = arr[j * L.NX + i]; const x0 = s[h0] ?? 0, x1 = s[h1] ?? x0; return x0 + (x1 - x0) * c; };
+      return (g(j0, i0) * (1 - a) + g(j0, i1) * a) * (1 - b) + (g(j1, i0) * (1 - a) + g(j1, i1) * a) * b;
+    }
+    const unproj = (x, y) => [(vb.x + x / W * vb.w) / (KX * 100), -(vb.y + y / H * vb.h) / 100];
+    const hourLabel = h => { const s = L.f.t[Math.max(0, Math.min(L.n - 1, h))]; const dt = parse(s.slice(0, 10)); return `${WD[dt.getDay()].slice(0, 2)} ${dt.getDate()}., ${s.slice(11, 16)} Uhr`; };
+    function liveBase() {
+      fctx.clearRect(0, 0, W, H);
+      if (radarOn) {
+        const im = RIMG[rIdx]; if (!im || !im.complete) return;
+        const [x0, y0] = toScreen(vb, W, H, LIVE.bbox[0], LIVE.bbox[3]), [x1, y1] = toScreen(vb, W, H, LIVE.bbox[2], LIVE.bbox[1]);
+        fctx.save(); fctx.filter = "blur(1.5px)"; fctx.globalAlpha = .9; fctx.drawImage(im, x0, y0, x1 - x0, y1 - y0); fctx.restore();
+        return;
+      }
+      // Smooth field: sample the grid into a small offscreen image, then scale it up with smoothing.
+      const GW = 72, GH = Math.max(24, Math.round(72 * H / W)), img = field.getContext("2d").createImageData(GW, GH), d = img.data;
+      field.width = GW; field.height = GH;
+      const [cr, cg, cb, ca] = rgba(css("--cloudlive")), [rr, rg, rb] = rgba(css("--rain"));
+      for (let y = 0; y < GH; y++) for (let x = 0; x < GW; x++) {
+        const [lo, la] = unproj((x + .5) / GW * W, (y + .5) / GH * H);
+        const c = Math.max(0, sample(L.f.cloud, lo, la, t) / 100), r = Math.min(1, Math.max(0, sample(L.f.rain, lo, la, t)) / 1.5);
+        const ac = c * c * ca, ar = r > .02 ? .35 + r * .55 : 0, a = ar + ac * (1 - ar), k = (y * GW + x) * 4;
+        d[k] = a ? (rr * ar + cr * ac * (1 - ar)) / a : 0; d[k + 1] = a ? (rg * ar + cg * ac * (1 - ar)) / a : 0; d[k + 2] = a ? (rb * ar + cb * ac * (1 - ar)) / a : 0; d[k + 3] = a * 255;
+      }
+      field.getContext("2d").putImageData(img, 0, 0);
+      fctx.save(); fctx.imageSmoothingEnabled = true; fctx.imageSmoothingQuality = "high"; fctx.filter = "blur(6px)"; fctx.drawImage(field, -8, -8, W + 16, H + 16); fctx.restore();
+      fctx.globalAlpha = 1;
+    }
+    function liveOverlay() {
+      ov.replaceChildren();
+      const h = Math.round(t);
+      [["Palma", 2.65, 39.57], ["Sóller", 2.715, 39.766], ["Manacor", 3.209, 39.57]].forEach(([n, lo, la]) => {
+        const [x, y] = toScreen(vb, W, H, lo, la), b = document.createElement("div"); b.className = "wx-bubble";
+        b.innerHTML = `${Math.round(sample(L.f.temp, lo, la, h))}° <small>${n}</small>`; b.style.left = x + "px"; b.style.top = y + "px"; ov.append(b);
+      });
+      const [x, y] = toScreen(vb, W, H, HOME.lon, HOME.lat), b = document.createElement("div"); b.className = "wx-bubble home";
+      b.textContent = `Unterkunft ${Math.round(sample(L.f.temp, HOME.lon, HOME.lat, h))}°`; b.style.left = x + "px"; b.style.top = y + "px"; ov.append(b);
+    }
+    function liveCompass() {
+      const u = sample(L.u, HOME.lon, HOME.lat, t), v = sample(L.v, HOME.lon, HOME.lat, t), deg = dirOf(u, v);
+      comp.innerHTML = `<svg viewBox="0 0 74 74" aria-hidden="true"><circle cx="37" cy="37" r="30" fill="none" stroke="var(--line)"/><text x="37" y="13" text-anchor="middle" font-size="9" font-weight="700" fill="var(--muted)">N</text><g class="needle" style="transform: rotate(${deg + 180}deg)"><path d="M37 14 44 40 37 35 30 40z" fill="var(--accent)"/><circle cx="37" cy="37" r="3" fill="var(--accent)"/></g><text x="37" y="62" text-anchor="middle" font-size="9" font-weight="700" fill="var(--fg)">${Math.round(Math.hypot(u, v))} km/h</text></svg>`;
+      comp.title = `Wind in Alcúdia aus ${dirName(deg)}`;
+    }
+    function livePanel() {
+      const h = Math.round(t), lo = HOME.lon, la = HOME.lat;
+      const u = sample(L.u, lo, la, h), v = sample(L.v, lo, la, h), ws = Math.round(Math.hypot(u, v)), gust = Math.round(sample(L.f.gust, lo, la, h));
+      const rain = Math.round(sample(L.f.rain, lo, la, h) * 10) / 10, cloud = Math.round(sample(L.f.cloud, lo, la, h)), temp = Math.round(sample(L.f.temp, lo, la, h));
+      const sea = (LIVE.sea || [])[0], wave = sea && sea.wave[h], sst = sea && sea.sst[h];
+      const k = rain >= .2 ? "rain" : cloud > 70 ? "cloud" : cloud > 25 ? "part" : "sun";
+      const made = new Date(LIVE.made);
+      panel.innerHTML =
+        `<div class="wxs-big"><svg viewBox="0 0 34 34" aria-hidden="true">${ICONS[k]}</svg><div><b>${temp}°</b><span>Alcúdia · ${hourLabel(h)}</span></div></div>` +
+        stat("Wind", `${dirName(dirOf(u, v))}, ${ws} km/h`, `Böen bis ${gust} km/h`) +
+        `<div class="wxs-stat"><span class="k">Regen</span><span class="v">${rain.toLocaleString("de-DE")} mm/h</span><div class="rainbar"><i style="width:${Math.min(100, rain / 3 * 100)}%"></i></div></div>` +
+        stat("Wolken", `${cloud} %`, cloud > 70 ? "bedeckt" : cloud > 25 ? "wechselnd" : "meist klar") +
+        stat("Meer", sst != null ? `${sst.toLocaleString("de-DE")}°` : "k. A.", wave != null ? `Wellen ${wave.toLocaleString("de-DE")} m · ${esc(sea.n)}` : "") +
+        stat("Daten", `Open-Meteo`, `abgerufen ${made.toLocaleString("de-DE", { timeZone: TZ, weekday: "short", hour: "2-digit", minute: "2-digit" })} Uhr${Date.now() - made > 6 * 36e5 ? " · älter als 6 h" : ""}`) +
+        stat("Radar", RIMG.length ? `${LIVE.radar.filter(r => r.any).length} von ${RIMG.length} Bildern mit Regen` : "k. A.", RIMG.length ? `letzte ${Math.round((Date.parse(LIVE.radar.at(-1).t) - Date.parse(LIVE.radar[0].t)) / 6e4)} min vor dem Abruf` : "") +
+        (WX.warn ? stat("Warnungen", esc(WX.warn), "", "wide" + (/kein/i.test(WX.warn) ? "" : " warn")) : "");
+      renderSun(sunTimes(L.f.t[h].slice(0, 10)), L.f.t[h].slice(0, 10));
+    }
+    function liveFrame() {
+      const now = performance.now();
+      if (radarOn) {
+        if (now - lastRadar > 650) { rIdx = (rIdx + 1) % Math.max(1, RIMG.length); lastRadar = now; liveBase(); timeLabel(); }
+      } else if (playing) {
+        t += 1 / 75; if (t > L.n - 1) t = t0;
+      }
+      if (!radarOn && Math.abs(t - lastBase) > .06) { liveBase(); lastBase = t; range.value = t; timeLabel(); }
+      if (Math.round(t) !== lastHour) { lastHour = Math.round(t); liveOverlay(); livePanel(); liveCompass(); }
+      ctx.globalCompositeOperation = "destination-out"; ctx.fillStyle = "rgba(0,0,0,.08)"; ctx.fillRect(0, 0, W, H);
+      ctx.globalCompositeOperation = "source-over"; ctx.lineWidth = 1.5; ctx.lineCap = "round";
+      const paths = [new Path2D(), new Path2D(), new Path2D()];
+      parts.forEach(p => {
+        const [lo, la] = unproj(p.x, p.y), u = sample(L.u, lo, la, t), v = sample(L.v, lo, la, t), s = Math.hypot(u, v);
+        const nx = p.x + u * .07, ny = p.y - v * .07, path = paths[s < 15 ? 0 : s < 30 ? 1 : 2];
+        path.moveTo(p.x, p.y); path.lineTo(nx, ny); p.x = nx; p.y = ny; p.a += 1;
+        if (p.a > 110 || p.x < -5 || p.y < -5 || p.x > W + 5 || p.y > H + 5) { p.x = Math.random() * W; p.y = Math.random() * H; p.a = 0; }
+      });
+      [["--wind", 0], ["--gold", 1], ["--warn", 2]].forEach(([c, i]) => { ctx.strokeStyle = css(c); ctx.stroke(paths[i]); });
+    }
+    const timeBox = $("#wxs-time"), range = $("#wxs-range"), playBtn = $("#wxs-play"), radarBtn = $("#wxs-radar"), tLabel = $("#wxs-tlabel"), legend = $("#wxs-legend");
+    function timeLabel() {
+      if (radarOn && LIVE.radar[rIdx]) { const d = new Date(LIVE.radar[rIdx].t); tLabel.textContent = `Radar ${d.toLocaleTimeString("de-DE", { timeZone: TZ, hour: "2-digit", minute: "2-digit" })} Uhr`; }
+      else tLabel.textContent = hourLabel(Math.round(t));
+    }
+    function setPlaying(p) { playing = p; playBtn.textContent = p ? "❚❚" : "▶"; playBtn.setAttribute("aria-label", p ? "Pause" : "Abspielen"); }
+    if (L) {
+      range.max = L.n - 1; range.value = t;
+      range.addEventListener("input", () => { setPlaying(false); if (radarOn) { radarOn = false; radarBtn.setAttribute("aria-pressed", "false"); } t = +range.value; lastBase = -9; if (!running) liveFrame(); });
+      playBtn.addEventListener("click", () => { setPlaying(!playing); if (radarOn) { radarOn = false; radarBtn.setAttribute("aria-pressed", "false"); lastBase = -9; } });
+      radarBtn.hidden = !RIMG.length;
+      radarBtn.addEventListener("click", () => { radarOn = !radarOn; radarBtn.setAttribute("aria-pressed", String(radarOn)); rIdx = 0; lastRadar = 0; lastBase = -9; liveBase(); timeLabel(); if (!running) liveFrame(); });
+      setPlaying(playing);
+    }
+    let mode = L ? "live" : "day";
+    function setMode(m) {
+      mode = m;
+      $("#wxs-mode").querySelectorAll("button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.m === m)));
+      daysEl.hidden = m === "live"; timeBox.hidden = m !== "live"; legend.hidden = m !== "live";
+      fctx.clearRect(0, 0, W, H); ctx.clearRect(0, 0, W, H); lastBase = -9; lastHour = -1;
+      seed(); drawOverlay(); renderPanel(); if (!running) frame();
+    }
+    $("#wxs-mode").querySelectorAll("button").forEach(b => b.addEventListener("click", () => setMode(b.dataset.m)));
+    if (!L) $("#wxs-mode").hidden = true;
+    layout(); renderDays(); seed(); setMode(mode);
+    if (reduceMotion) frame();
+    new ResizeObserver(() => { layout(); seed(); }).observe(mapBox);
+    new IntersectionObserver(es => { visible = es[0].isIntersecting; visible ? start() : stop(); }).observe(mapBox);
+    document.addEventListener("visibilitychange", () => document.hidden ? stop() : start());
+    start();
+  }
+
+  // ---- Ideas: each can be added as a card to the pool, or deleted for everyone (kept as hidden keys in the board state) ----
+  const ideaKey = (it) => `${it.t}|${it.q || ""}`;
+  const SCENE = (body) => `<svg viewBox="0 0 300 84" preserveAspectRatio="xMidYMax slice" aria-hidden="true" fill="currentColor">${body}</svg>`;
+  const SCENES = {
+    wander: SCENE(`<path opacity=".35" d="M0 84 60 30l40 30 50-46 60 52 40-24 50 42z"/><path opacity=".7" d="M0 84 50 52l40 22 60-38 70 48 30-14 50 14z"/>`),
+    ausflug: SCENE(`<circle opacity=".45" cx="232" cy="30" r="16"/><path opacity=".35" d="M0 84V58c40-10 80 8 120 0s80-18 120-6 40 8 60 4v28z"/><path opacity=".7" d="M96 70h60l-8 10h-44zM124 38v32h4V38zm4 4 18 22h-18z"/>`),
+    stadt: SCENE(`<path opacity=".4" d="M20 84V50h30v-14h22v48zM96 84V40l22-18 22 18v44zM160 84V54h40V34h26v50zM240 84V58h40v26z"/><path opacity=".7" d="M0 84v-8h300v8z"/>`),
+    well: SCENE(`<circle opacity=".35" cx="150" cy="40" r="22"/><path opacity=".7" d="M150 74c-20-6-36-20-38-36 14 4 28 14 38 30 10-16 24-26 38-30-2 16-18 30-38 36z"/><path opacity=".45" d="M0 84c50-8 100-8 150 0s100 8 150 0v0z"/>`),
+    spa: SCENE(`<circle opacity=".45" cx="70" cy="28" r="14"/><path opacity=".35" d="M0 60c25-8 50-8 75 0s50 8 75 0 50-8 75 0 50 8 75 0v24H0z"/><path opacity=".7" d="M0 72c25-6 50-6 75 0s50 6 75 0 50-6 75 0 50 6 75 0v12H0z"/>`),
+    mix: SCENE(`<circle opacity=".35" cx="150" cy="48" r="28"/><path opacity=".7" d="M118 20v26a8 8 0 0 0 6 8v24h4V54a8 8 0 0 0 6-8V20h-3v22h-3V20h-3v22h-3V20zM172 20c-8 6-10 18-8 30h6v28h4V20z"/>`)
+  };
+  {
+    let ideas = []; try { ideas = JSON.parse(document.getElementById("ideas-data").textContent); } catch {}
+    const grid = $("#ideas"), filterBar = $("#imap-filter");
+    let filter = "all";
+    const shown = () => ideas.filter(it => !(state.hiddenIdeas || []).includes(ideaKey(it)) && (filter === "all" || (filter === "base" ? !it.q : it.q === filter)));
+    function ideaFocus(it) {
+      const el = [...grid.children].find(e => e.__it === it); if (!el) return;
+      el.scrollIntoView({ block: "nearest", inline: "start", behavior: reduceMotion ? "auto" : "smooth" });
+      el.classList.remove("flash"); void el.offsetWidth; el.classList.add("flash");
+    }
+    // ---- Idea map: pins for the shown ideas, zooms to them; filter by research request ----
+    const IM = (() => {
+      const box = $("#imap"), svg = $("#imap-svg"), layer = $("#imap-pins"), pop = $("#imap-pop");
+      mapSvg(svg);
+      let vb = null, target = null, anim = 0, pins = [], selected = null;
+      const size = () => [box.clientWidth || 1, box.clientHeight || 1];
+      function bboxFor(list) {
+        const pts = list.filter(i => typeof i.lat === "number").map(i => [i.lon, i.lat]);
+        if (!pts.length) pts.push([HOME.lon, HOME.lat]);
+        let lo0 = Math.min(...pts.map(p => p[0])), lo1 = Math.max(...pts.map(p => p[0])), la0 = Math.min(...pts.map(p => p[1])), la1 = Math.max(...pts.map(p => p[1]));
+        const pad = Math.max(.035, (lo1 - lo0) * .18, (la1 - la0) * .18);
+        return [lo0 - pad, la0 - pad * .8, lo1 + pad, la1 + pad * .8];
+      }
+      function place() {
+        const [W, H] = size();
+        svg.setAttribute("viewBox", `${vb.x} ${vb.y} ${vb.w} ${vb.h}`);
+        const placed = [];
+        pins.forEach(p => {
+          let [x, y] = toScreen(vb, W, H, p.lon, p.lat), a = 0, r = 0;
+          const bx = x, by = y;
+          while (placed.some(q => Math.hypot(q[0] - x, q[1] - y) < 18) && r < 80) { a += 1.1; r = 14 + a * 2.2; x = bx + Math.cos(a) * r; y = by + Math.sin(a) * r; }
+          placed.push([x, y]);
+          p.el.style.left = x + "px"; p.el.style.top = y + "px";
+          p.el.hidden = x < -20 || y < -20 || x > W + 20 || y > H + 30;
+        });
+        layer.querySelectorAll(".town").forEach(t => { const [x, y] = toScreen(vb, W, H, +t.dataset.lon, +t.dataset.lat); t.style.left = x + "px"; t.style.top = y + "px"; t.hidden = x < 10 || y < 10 || x > W - 10 || y > H - 10; });
+        if (selected && !pop.hidden) placePop();
+      }
+      function zoomTo(b, instant) {
+        const [W, H] = size();
+        target = fitBox(...b, W / H);
+        cancelAnimationFrame(anim);
+        if (!vb || instant || reduceMotion) { vb = target; place(); return; }
+        const from = { ...vb }, t0 = performance.now();
+        const step = now => { const k = ease(Math.min(1, (now - t0) / 750)); vb = { x: from.x + (target.x - from.x) * k, y: from.y + (target.y - from.y) * k, w: from.w + (target.w - from.w) * k, h: from.h + (target.h - from.h) * k }; place(); if (k < 1) anim = requestAnimationFrame(step); };
+        anim = requestAnimationFrame(step);
+      }
+      function placePop() {
+        const p = pins.find(q => q.it === selected); if (!p) return;
+        const [W] = size(), x = parseFloat(p.el.style.left), y = parseFloat(p.el.style.top);
+        pop.style.left = Math.max(8, Math.min(W - pop.offsetWidth - 8, x - pop.offsetWidth / 2)) + "px";
+        pop.style.top = Math.max(8, y - pop.offsetHeight - 30) + "px";
+      }
+      function open(it) {
+        selected = it; pins.forEach(p => p.el.classList.toggle("on", p.it === it));
+        if (it === HOME) { pop.hidden = true; return; }
+        pop.innerHTML = `<button type="button" class="close" aria-label="Schließen">×</button><b></b><span></span><div class="row"><button type="button" class="go">Zur Idee</button></div>`;
+        $("b", pop).textContent = it.t; $("span", pop).textContent = [it.cat, it.when].filter(Boolean).join(" · ");
+        $(".close", pop).addEventListener("click", () => { pop.hidden = true; selected = null; pins.forEach(p => p.el.classList.remove("on")); });
+        $(".go", pop).addEventListener("click", () => ideaFocus(it));
+        pop.hidden = false; placePop();
+      }
+      function show(list) {
+        layer.replaceChildren(); pins = []; pop.hidden = true; selected = null;
+        TOWNS.forEach(([n, lon, lat]) => { const t = document.createElement("span"); t.className = "town"; t.textContent = n; t.dataset.lon = lon; t.dataset.lat = lat; layer.append(t); });
+        const withPos = list.filter(i => typeof i.lat === "number" && typeof i.lon === "number");
+        [HOME, ...withPos].forEach(it => {
+          const b = document.createElement("button"); b.type = "button"; b.className = "pin" + (it === HOME ? " home" : ""); if (it.type) b.dataset.type = it.type;
+          b.setAttribute("aria-label", it.t); b.title = it.t;
+          b.addEventListener("click", () => open(it));
+          layer.append(b); pins.push({ it, el: b, lon: it.lon, lat: it.lat });
+        });
+        zoomTo(bboxFor(withPos.length ? withPos : [HOME]));
+      }
+      function focus(it) { zoomTo([it.lon - .03, it.lat - .022, it.lon + .03, it.lat + .022]); setTimeout(() => open(it), reduceMotion ? 0 : 780); box.scrollIntoView({ block: "nearest", behavior: reduceMotion ? "auto" : "smooth" }); }
+      new ResizeObserver(() => { if (target) { const [W, H] = size(); const c = [target.x + target.w / 2, target.y + target.h / 2]; let w = target.w, h = target.h; if (w / h > W / H) h = w / (W / H); else w = h * (W / H); vb = target = { x: c[0] - w / 2, y: c[1] - h / 2, w, h }; place(); } }).observe(box);
+      return { show, focus };
+    })();
+    function ideaEl(it) {
+      const el = document.createElement("article");
+      el.className = "idea"; el.dataset.type = it.type; el.__it = it;
+      const key = ideaKey(it);
+      el.innerHTML = `<a class="idea-pic" target="_blank" rel="noopener"><span class="look">Fotos ansehen ↗</span></a><button type="button" class="idea-del">×</button><span class="cat"></span><h3></h3><span class="when"></span><p></p><div class="idea-actions"><button type="button" class="idea-add">+ Als Kachel</button><a class="src" target="_blank" rel="noopener">Quelle ↗</a></div>`;
+      const pic = $(".idea-pic", el);
+      pic.href = "https://www.google.com/search?tbm=isch&q=" + encodeURIComponent(`${it.t} Mallorca`);
+      pic.setAttribute("aria-label", `Fotos von ${it.t} ansehen (öffnet die Bildersuche)`);
+      if (it.img) {
+        const im = document.createElement("img"); im.src = it.img; im.alt = it.imgNote ? `${it.imgNote} (Symbolbild)` : it.t; im.loading = "lazy"; pic.prepend(im);
+        if (it.imgCredit) {
+          const cr = document.createElement("a"); cr.className = "idea-credit"; cr.target = "_blank"; cr.rel = "noopener";
+          cr.textContent = (it.imgNote ? it.imgNote + " · " : "") + "Foto: " + it.imgCredit; cr.title = cr.textContent;
+          if (it.imgPage) cr.href = it.imgPage;
+          pic.after(cr);
+        }
+      }
+      else pic.insertAdjacentHTML("afterbegin", SCENES[it.type] || SCENES.mix);
+      const del = $(".idea-del", el);
+      del.setAttribute("aria-label", `${it.t} aus den Ideen löschen`);
+      del.addEventListener("click", () => {
+        if (!del.classList.contains("armed")) { del.classList.add("armed"); del.textContent = "Löschen?"; setTimeout(() => { if (del.isConnected) { del.classList.remove("armed"); del.textContent = "×"; } }, 3500); return; }
+        state.hiddenIdeas = [...(state.hiddenIdeas || []), key];
+        changed(); renderIdeas();
+      });
+      $(".cat", el).textContent = it.cat;
+      if (it.q) { const q = document.createElement("span"); q.className = "q"; q.textContent = ` · zu „${it.q}“`; $(".cat", el).append(q); }
+      $("h3", el).textContent = it.t; $(".when", el).textContent = it.when || ""; $("p", el).textContent = it.d;
+      if (it.src) $(".src", el).href = it.src; else $(".src", el).remove();
+      if (typeof it.lat === "number") { const m = document.createElement("button"); m.type = "button"; m.className = "idea-map"; m.textContent = "Auf Karte"; m.addEventListener("click", () => IM.focus(it)); $(".idea-actions", el).append(m); }
+      if (it.cat === "Hinweis") $(".idea-add", el).remove();
+      const btn = $(".idea-add", el);
+      if (btn) {
+        btn.setAttribute("aria-label", `${it.t} als Kachel hinzufügen`);
+        btn.addEventListener("click", () => {
+          if (btn.classList.contains("done")) return;
+          addCard({ type: TYPES[it.type] ? it.type : "mix", t: it.t, d: it.when || "", len: it.len ?? 120 });
+          btn.classList.add("done"); btn.textContent = "Hinzugefügt ✓";
+        });
+      }
+      return el;
+    }
+    function renderFilter() {
+      const live = ideas.filter(it => !(state.hiddenIdeas || []).includes(ideaKey(it)));
+      const qs = [...new Set(live.map(i => i.q).filter(Boolean))];
+      const opts = [["all", "Alle", live.length]];
+      if (live.some(i => !i.q)) opts.push(["base", "Grundideen", live.filter(i => !i.q).length]);
+      qs.forEach(q => opts.push([q, `„${q}“`, live.filter(i => i.q === q).length]));
+      if (!opts.some(o => o[0] === filter)) filter = "all";
+      filterBar.replaceChildren(...opts.map(([v, label, n]) => {
+        const b = document.createElement("button"); b.type = "button"; b.setAttribute("aria-pressed", String(v === filter)); b.title = label;
+        b.textContent = label + " "; const s = document.createElement("small"); s.textContent = n; b.append(s);
+        b.addEventListener("click", () => { filter = v; renderIdeas(); });
+        return b;
+      }));
+    }
+    function renderIdeas() {
+      renderFilter();
+      const list = shown();
+      grid.replaceChildren(...list.map(ideaEl));
+      IM.show(list);
+    }
+    renderIdeas();
+
+    // ---- Research requests: the field fires a research agent via the "Claude Code Remote" connector ----
+    const RESEARCH_TRIGGER = "trig_01XWnQekkzzbBBiQNi5gfigP", PKEY = "herbstwoche-research";
+    const rForm = $("#research"), rInput = $("#research-q"), rGo = $("#research-go"), rStatus = $("#research-status");
+    const mcpReady = window.claude?.use ? window.claude.use("mcp").catch(() => null) : Promise.resolve(null);
+    const readPending = () => { try { return JSON.parse(localStorage.getItem(PKEY) || "[]"); } catch { return []; } };
+    const writePending = (p) => { try { localStorage.setItem(PKEY, JSON.stringify(p)); } catch {} };
+    function showPending() {
+      const answered = new Set(ideas.map(i => i.q).filter(Boolean));
+      const p = readPending().filter(x => !answered.has(x.q) && Date.now() - x.at < 6 * 3600e3);
+      writePending(p);
+      const box = $("#pending"); box.replaceChildren();
+      p.forEach(x => {
+        const t = new Date(x.at), late = Date.now() - x.at > 20 * 60e3, el = document.createElement("span");
+        if (late) el.className = "stale";
+        el.textContent = `„${x.q}“ · ${late ? "noch keine Treffer, evtl. erneut senden" : `läuft seit ${String(t.getHours()).padStart(2, "0")}:${String(t.getMinutes()).padStart(2, "0")}`}`;
+        box.append(el);
+      });
+    }
+    const say = (txt, err) => { rStatus.textContent = txt; rStatus.classList.toggle("err", !!err); };
+    rForm.addEventListener("submit", async e => {
+      e.preventDefault();
+      const q = rInput.value.trim();
+      if (!q) { rInput.focus(); return; }
+      rGo.disabled = true; say("Auftrag wird gestartet …");
+      try {
+        const mcp = await mcpReady;
+        if (!mcp) { say("Die Recherche lässt sich nur starten, wenn die Seite direkt in claude.ai geöffnet ist.", true); return; }
+        await mcp.callTool("Claude Code Remote", "fire_trigger", { trigger_id: RESEARCH_TRIGGER, text: `Recherchewunsch: ${q}` });
+        writePending([...readPending().filter(x => x.q !== q), { q, at: Date.now() }]); showPending();
+        rInput.value = "";
+        say(`Der Agent sucht jetzt nach „${q}“. Die Treffer erscheinen in ein paar Minuten hier, die Seite lädt dann kurz neu.`);
+      } catch (err) {
+        const code = err && err.code;
+        if (code === "server_not_connected" || code === "selection_required") say("Die Verbindung „Claude Code Remote“ ist für dich nicht eingerichtet. Sie lässt sich in claude.ai unter Einstellungen → Connectors hinzufügen.", true);
+        else if (code === "needs_reauth") say("Die Verbindung „Claude Code Remote“ ist abgelaufen. Bitte in claude.ai unter Einstellungen → Connectors neu verbinden.", true);
+        else if (code === "not_in_manifest" || code === "approval_required" || code === "consent_required") say("Die Seite darf die Recherche noch nicht starten. Beim nächsten Klick fragt claude.ai erneut um Erlaubnis, alternativ im Berechtigungen-Menü der Seite freigeben.", true);
+        else if (code === "blocked_by_policy") say("Deine Organisation erlaubt diese Aktion nicht.", true);
+        else if (code === "tool_error") say("Der Auftrag wurde abgelehnt. Starten kann ihn nur der Besitzer dieser Seite, weil der Recherche-Auftrag in dessen Konto liegt.", true);
+        else if (code === "server_unavailable" || code === "upstream_error" || code === "cancelled") say("Keine eindeutige Antwort. Der Auftrag läuft vielleicht trotzdem. Schau in ein paar Minuten nach, bevor du ihn erneut sendest.", true);
+        else say(`Die Recherche konnte nicht gestartet werden${code ? ` (${code})` : ""}.`, true);
+      } finally { rGo.disabled = false; }
+    });
+    showPending();
+  }
+
+  // ---- Pointer spotlight on cards ----
+  document.addEventListener("pointermove", e => {
+    if (e.pointerType !== "mouse" || drag) return;
+    const c = e.target.closest && e.target.closest(".card"); if (!c) return;
+    const r = c.getBoundingClientRect();
+    c.style.setProperty("--mx", `${e.clientX - r.left}px`); c.style.setProperty("--my", `${e.clientY - r.top}px`);
+  }, { passive: true });
+
+  let start = null; try { start = sessionStorage.getItem("herbstwoche-day"); } catch {}
+  render();
+  {
+    if (!state.days.includes(start)) start = state.days.includes(todayIso) ? todayIso : state.days[0];
+    if (start) showDay(start, false);
+    markTab();
+  }
+  (window.claude?.use ? window.claude.use("artifact") : Promise.resolve(null)).then(a => {
+    artifact = a;
+    if (a) { mode = "shared"; return; }
+    mode = "local";
+    try { const s = JSON.parse(localStorage.getItem("herbstwoche") || "null"); if (s && s.cards) { state = s; render(); } } catch {}
+  }).catch(() => { mode = "local"; });
+})();
+</script>
