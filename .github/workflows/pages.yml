@@ -1,0 +1,50 @@
+name: Wetter & Seite
+
+# Every push (e.g. a plan change saved from the page) redeploys the site.
+# Every 3 hours the weather and live-map data are fetched, committed and deployed.
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "41 */3 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Wetter und Live-Karte holen
+        if: github.event_name != 'push'
+        run: |
+          pip install --quiet pillow
+          python3 scripts/fetch_weather.py data/weather.json || echo "Tageswetter fehlgeschlagen"
+          python3 scripts/fetch_live.py data/live.json || echo "Live-Daten fehlgeschlagen"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/weather.json data/live.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Wetter aktualisiert"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - id: deployment
+        uses: actions/deploy-pages@v4

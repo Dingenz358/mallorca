@@ -1,0 +1,126 @@
+{
+ "days": [
+  "2026-10-28",
+  "2026-10-29",
+  "2026-10-30",
+  "2026-10-31"
+ ],
+ "cards": {
+  "s1": {
+   "type": "spa",
+   "t": "Spa",
+   "d": "Sauna, Dampfbad oder Behandlung",
+   "len": 90
+  },
+  "s2": {
+   "type": "spa",
+   "t": "Spa",
+   "d": "Sauna, Dampfbad oder Behandlung",
+   "len": 90
+  },
+  "s3": {
+   "type": "spa",
+   "t": "Spa",
+   "d": "Sauna, Dampfbad oder Behandlung",
+   "len": 90
+  },
+  "s5": {
+   "type": "spa",
+   "t": "Spa",
+   "d": "Sauna, Dampfbad oder Behandlung",
+   "len": 90
+  },
+  "k7": {
+   "type": "spa",
+   "t": "Fußmassage",
+   "d": "",
+   "len": 45
+  },
+  "k9": {
+   "type": "wander",
+   "t": "Schnorcheln",
+   "d": "",
+   "len": 90
+  },
+  "k10": {
+   "type": "wander",
+   "t": "Alcudia",
+   "d": "",
+   "len": 120
+  },
+  "k11": {
+   "type": "well",
+   "t": "Pool",
+   "d": "",
+   "len": 60
+  },
+  "k12": {
+   "type": "mix",
+   "t": "Ganzkörper Massage",
+   "d": "",
+   "len": 90
+  },
+  "m19": {
+   "kind": "motto",
+   "type": "mix",
+   "t": "Wandertag"
+  },
+  "m22": {
+   "kind": "motto",
+   "type": "ausflug",
+   "t": "Ausflug Tag"
+  },
+  "m23": {
+   "kind": "motto",
+   "type": "stadt",
+   "t": "Bergstadt-Tag"
+  },
+  "m24": {
+   "kind": "motto",
+   "type": "ausflug",
+   "t": "Freestyle Tag"
+  },
+  "m25": {
+   "kind": "motto",
+   "type": "spa",
+   "t": "Großer Wellness Tag"
+  },
+  "m26": {
+   "kind": "motto",
+   "type": "mix",
+   "t": "Palma de Mallorca Tag"
+  }
+ },
+ "cols": {
+  "pool": [
+   "k11",
+   "k10",
+   "k9",
+   "s2"
+  ],
+  "2026-10-28": [
+   "s1"
+  ],
+  "2026-10-29": [
+   "k7",
+   "s3"
+  ],
+  "2026-10-30": [
+   "k12",
+   "s5"
+  ],
+  "2026-10-31": []
+ },
+ "next": 27,
+ "mottoPool": [
+  "m24",
+  "m23"
+ ],
+ "dayMotto": {
+  "2026-10-28": "m22",
+  "2026-10-29": "m19",
+  "2026-10-30": "m25",
+  "2026-10-31": "m26"
+ },
+ "mottoSeeded": true
+}
