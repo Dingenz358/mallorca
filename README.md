@@ -13,19 +13,30 @@ https://claude.ai/artifact/AnNbhTL4P9nJf5R4sHSASN
 - Wetter-Studio „Mallorca-Wetter“: animierte Karte mit 48 h Live-Daten (Wind, Böen, Wolken, Regen, Temperatur, Wellen, Meerestemperatur) von Open-Meteo und Regenradar von RainViewer; Tagesübersicht, Sonnenbogen und Mondphase
 - „Ideen für Mallorca“ mit Fotos von Wikimedia Commons, Karte mit Pins und ein Suchfeld, das einen Recherche-Agenten startet
 
+## GitHub Pages
+
+Die Seite läuft als GitHub Pages unter https://dingenz358.github.io/mallorca/ .
+
+- **Ansehen:** Ohne Anmeldung sehen alle den Plan schreibgeschützt. Die Seite lädt Änderungen alle 90 Sekunden nach.
+- **Bearbeiten (nur Lukas):** Unten auf der Seite auf „Bearbeiten (Token)“ tippen und ein GitHub-Token einfügen. Das Token bleibt nur in diesem Browser. Jede Änderung wird als Commit in `data/board.json` gespeichert und ist für alle nach 1–2 Minuten sichtbar.
+  Token anlegen: GitHub → Settings → Developer settings → Personal access tokens → Fine-grained tokens → „Generate new token“. Repository access: „Only select repositories“ → `Dingenz358/mallorca`. Permissions → Repository permissions → Contents: „Read and write“.
+- **Wetter:** Der Workflow `.github/workflows/pages.yml` holt alle 3 Stunden die Tagesvorhersage (`scripts/fetch_weather.py`) und die Live-Kartendaten (`scripts/fetch_live.py`) und veröffentlicht die Seite neu. Über „Actions → Wetter & Seite → Run workflow“ geht das auch sofort.
+- **Recherche-Suchfeld:** Funktioniert nur in der Claude-Version (Artifact), weil dort der Agent gestartet wird.
+
 ## Inhalt
 
 | Pfad | Inhalt |
 | --- | --- |
-| `index.html` | Die komplette Seite (HTML, CSS, JS) inklusive der Datenblöcke `weather`, `ideas-data`, `live-data` und `board-state` |
-| `scripts/fetch_live.py` | Holt das Wetter-Raster, Seegang und Radarbilder und schreibt das JSON für den Block `live-data` |
-| `scripts/commons.py`, `scripts/fetch_photos.py` | Suche und Download der Ideen-Fotos von Wikimedia Commons |
+| `index.html` | Die Seite (HTML, CSS, JS). Lädt beim Start die Dateien aus `data/` |
+| `data/board.json` | Der Plan: Tage, Kacheln, Mottos, ausgeblendete Ideen |
+| `data/weather.json`, `data/live.json` | Tagesvorhersage und 48-h-Live-Daten mit Radar, alle 3 h aktualisiert |
+| `data/ideas.json` | Die Ideen für Mallorca |
 | `data/islands.json` | Küstenlinie Mallorca/Menorca (geo-maps earth-lands 100 m, © OpenStreetMap-Mitwirkende, ODbL) |
+| `scripts/fetch_weather.py`, `scripts/fetch_live.py` | Wetterabruf bei Open-Meteo und RainViewer |
+| `scripts/commons.py`, `scripts/fetch_photos.py` | Suche und Download der Ideen-Fotos von Wikimedia Commons |
 | `photos/` | Ideen-Fotos (Urheber und Lizenz je Foto in `photos/meta.json`) und das Titelbild `hero.jpg` |
-| `agents/` | Auftragstexte der beiden geplanten Agenten (Wetter alle 3 h, Recherche aus dem Suchfeld) |
+| `agents/` | Auftragstexte der beiden Claude-Agenten (Wetter für das Artifact, Recherche aus dem Suchfeld) |
 
-## Hinweise
+## Quellen
 
-- Die Seite ist für claude.ai gebaut: Speichern für alle (`artifact.publish`), die Bilder (`/_blob/…`) und das Recherche-Suchfeld (Connector „Claude Code Remote“) funktionieren nur dort. Lokal geöffnet speichert sie Änderungen nur im Browser.
-- `index.html` ist ein Stand vom 28.10.2026. Der aktuelle Plan, das Wetter und die Ideen liegen im Artifact.
-- Wetterdaten: Open-Meteo (CC BY 4.0), RainViewer. Fotos: Wikimedia Commons, Lizenzen siehe `photos/meta.json`.
+Wetterdaten: Open-Meteo (CC BY 4.0), Radar: RainViewer. Fotos: Wikimedia Commons, Lizenzen siehe `photos/meta.json`.
