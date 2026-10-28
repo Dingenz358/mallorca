@@ -1,5 +1,5 @@
 {
- "asOf": "2026-10-28T11:19",
+ "asOf": "2026-10-28T14:04",
  "days": {
   "2026-10-26": {
    "k": "sun",
@@ -16,26 +16,26 @@
   },
   "2026-10-28": {
    "k": "cloud",
-   "txt": "Bedeckt",
+   "txt": "Überwiegend bewölkt",
    "max": 24,
    "min": 13,
    "rain": 0,
    "wind": {
     "dir": "NO",
-    "kmh": 19,
-    "txt": "mäßig, Böen bis 39 km/h"
+    "kmh": 16,
+    "txt": "mäßig, Böen bis 35 km/h"
    }
   },
   "2026-10-29": {
-   "k": "cloud",
-   "txt": "Überwiegend bewölkt",
-   "max": 23,
-   "min": 11,
+   "k": "part",
+   "txt": "Teils sonnig",
+   "max": 24,
+   "min": 12,
    "rain": 3,
    "wind": {
-    "dir": "NNW",
-    "kmh": 11,
-    "txt": "schwach, Böen bis 24 km/h"
+    "dir": "NW",
+    "kmh": 12,
+    "txt": "mäßig, Böen bis 27 km/h"
    }
   },
   "2026-10-30": {
@@ -45,9 +45,9 @@
    "min": 13,
    "rain": 3,
    "wind": {
-    "dir": "NNO",
-    "kmh": 10,
-    "txt": "schwach, Böen bis 22 km/h"
+    "dir": "NO",
+    "kmh": 11,
+    "txt": "schwach, Böen bis 23 km/h"
    }
   },
   "2026-10-31": {
@@ -58,20 +58,20 @@
    "rain": 0,
    "wind": {
     "dir": "NO",
-    "kmh": 17,
+    "kmh": 18,
     "txt": "mäßig, Böen bis 36 km/h"
    }
   },
   "2026-11-01": {
-   "k": "part",
-   "txt": "Teils sonnig",
+   "k": "sun",
+   "txt": "Überwiegend sonnig",
    "max": 22,
-   "min": 8,
+   "min": 7,
    "rain": 0,
    "wind": {
     "dir": "NNW",
-    "kmh": 13,
-    "txt": "mäßig, Böen bis 27 km/h"
+    "kmh": 14,
+    "txt": "mäßig, Böen bis 28 km/h"
    }
   },
   "2026-11-02": {
