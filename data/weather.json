@@ -1,5 +1,5 @@
 {
- "asOf": "2026-10-30T02:21",
+ "asOf": "2026-10-30T11:27",
  "days": {
   "2026-10-26": {
    "k": "sun",
@@ -41,85 +41,85 @@
   "2026-10-30": {
    "k": "part",
    "txt": "Teils sonnig",
-   "max": 24,
+   "max": 23,
    "min": 13,
    "rain": 3,
    "wind": {
     "dir": "NO",
-    "kmh": 11,
-    "txt": "schwach, Böen bis 24 km/h"
+    "kmh": 8,
+    "txt": "schwach, Böen bis 19 km/h"
    }
   },
   "2026-10-31": {
    "k": "sun",
    "txt": "Sonnig",
    "max": 22,
-   "min": 10,
+   "min": 11,
    "rain": 0,
    "wind": {
     "dir": "NO",
-    "kmh": 19,
-    "txt": "mäßig, Böen bis 40 km/h"
+    "kmh": 20,
+    "txt": "mäßig, Böen bis 41 km/h"
    }
   },
   "2026-11-01": {
    "k": "sun",
-   "txt": "Überwiegend sonnig",
+   "txt": "Sonnig",
    "max": 22,
    "min": 8,
    "rain": 0,
    "wind": {
     "dir": "NNW",
-    "kmh": 16,
-    "txt": "mäßig, Böen bis 34 km/h"
+    "kmh": 15,
+    "txt": "mäßig, Böen bis 33 km/h"
    }
   },
   "2026-11-02": {
-   "k": "part",
-   "txt": "Teils sonnig",
+   "k": "cloud",
+   "txt": "Überwiegend bewölkt",
    "max": 20,
-   "min": 7,
+   "min": 10,
    "rain": 0,
    "wind": {
     "dir": "NO",
-    "kmh": 12,
-    "txt": "mäßig, Böen bis 29 km/h"
+    "kmh": 11,
+    "txt": "schwach, Böen bis 24 km/h"
    }
   },
   "2026-11-03": {
    "k": "rain",
    "txt": "Einzelne Schauer",
-   "max": 16,
-   "min": 7,
-   "rain": 51,
+   "max": 17,
+   "min": 10,
+   "rain": 62,
    "wind": {
-    "dir": "NO",
-    "kmh": 15,
-    "txt": "mäßig, Böen bis 25 km/h"
+    "dir": "NNW",
+    "kmh": 14,
+    "txt": "mäßig, Böen bis 29 km/h"
    }
   },
   "2026-11-04": {
-   "k": "cloud",
-   "txt": "Überwiegend bewölkt",
-   "max": 17,
-   "min": 13,
-   "rain": 50,
+   "k": "part",
+   "txt": "Teils sonnig",
+   "max": 20,
+   "min": 11,
+   "rain": 35,
    "wind": {
-    "dir": "ONO",
-    "kmh": 17,
-    "txt": "mäßig, Böen bis 32 km/h"
+    "dir": "NO",
+    "kmh": 10,
+    "txt": "schwach, Böen bis 22 km/h"
    }
   },
   "2026-11-05": {
-   "k": "rain",
-   "txt": "Leichter Regen",
-   "max": 19,
+   "k": "part",
+   "txt": "Teils sonnig, vereinzelt Tropfen",
+   "max": 20,
    "min": 12,
-   "rain": 26,
+   "rain": 29,
    "wind": {
-    "dir": "NNO",
-    "kmh": 9,
-    "txt": "schwach, Böen bis 22 km/h"
+    "dir": "OSO",
+    "kmh": 12,
+    "txt": "mäßig, Böen bis 23 km/h"
    }
   }
  },
