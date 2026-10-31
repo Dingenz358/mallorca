@@ -1,5 +1,5 @@
 {
- "asOf": "2026-10-31T14:03",
+ "asOf": "2026-10-31T20:32",
  "days": {
   "2026-10-26": {
    "k": "sun",
@@ -55,83 +55,83 @@
    "txt": "Überwiegend sonnig",
    "max": 21,
    "min": 11,
-   "rain": 0,
+   "rain": 3,
    "wind": {
     "dir": "NO",
-    "kmh": 19,
-    "txt": "mäßig, Böen bis 39 km/h"
+    "kmh": 18,
+    "txt": "mäßig, Böen bis 38 km/h"
    }
   },
   "2026-11-01": {
    "k": "sun",
    "txt": "Überwiegend sonnig",
    "max": 22,
-   "min": 9,
+   "min": 8,
    "rain": 0,
    "wind": {
     "dir": "NNW",
-    "kmh": 14,
-    "txt": "mäßig, Böen bis 31 km/h"
+    "kmh": 16,
+    "txt": "mäßig, Böen bis 35 km/h"
    }
   },
   "2026-11-02": {
    "k": "part",
    "txt": "Teils sonnig",
    "max": 20,
-   "min": 10,
-   "rain": 3,
-   "wind": {
-    "dir": "NO",
-    "kmh": 12,
-    "txt": "mäßig, Böen bis 27 km/h"
-   }
-  },
-  "2026-11-03": {
-   "k": "cloud",
-   "txt": "Bedeckt",
-   "max": 19,
-   "min": 10,
-   "rain": 53,
-   "wind": {
-    "dir": "ONO",
-    "kmh": 14,
-    "txt": "mäßig, Böen bis 27 km/h"
-   }
-  },
-  "2026-11-04": {
-   "k": "rain",
-   "txt": "Gewitter",
-   "max": 21,
-   "min": 12,
-   "rain": 30,
+   "min": 9,
+   "rain": 0,
    "wind": {
     "dir": "NO",
     "kmh": 10,
-    "txt": "schwach, Böen bis 26 km/h"
+    "txt": "schwach, Böen bis 24 km/h"
+   }
+  },
+  "2026-11-03": {
+   "k": "rain",
+   "txt": "Einzelne Schauer",
+   "max": 17,
+   "min": 9,
+   "rain": 82,
+   "wind": {
+    "dir": "NNO",
+    "kmh": 8,
+    "txt": "schwach, Böen bis 20 km/h"
+   }
+  },
+  "2026-11-04": {
+   "k": "cloud",
+   "txt": "Überwiegend bewölkt, vereinzelt Tropfen",
+   "max": 21,
+   "min": 11,
+   "rain": 45,
+   "wind": {
+    "dir": "NO",
+    "kmh": 6,
+    "txt": "schwach, Böen bis 13 km/h"
    }
   },
   "2026-11-05": {
    "k": "sun",
    "txt": "Überwiegend sonnig",
-   "max": 21,
-   "min": 11,
-   "rain": 16,
+   "max": 22,
+   "min": 10,
+   "rain": 10,
    "wind": {
-    "dir": "NW",
-    "kmh": 9,
-    "txt": "schwach, Böen bis 28 km/h"
+    "dir": "N",
+    "kmh": 8,
+    "txt": "schwach, Böen bis 18 km/h"
    }
   },
   "2026-11-06": {
    "k": "sun",
-   "txt": "Überwiegend sonnig",
+   "txt": "Sonnig",
    "max": 21,
    "min": 11,
-   "rain": 9,
+   "rain": 4,
    "wind": {
     "dir": "ONO",
-    "kmh": 12,
-    "txt": "mäßig, Böen bis 23 km/h"
+    "kmh": 8,
+    "txt": "schwach, Böen bis 17 km/h"
    }
   }
  },
