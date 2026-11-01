@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-01T17:23",
+ "asOf": "2026-11-01T23:25",
  "days": {
   "2026-10-26": {
    "k": "sun",
@@ -77,72 +77,72 @@
   "2026-11-02": {
    "k": "cloud",
    "txt": "Überwiegend bewölkt",
-   "max": 20,
-   "min": 11,
+   "max": 21,
+   "min": 10,
    "rain": 0,
    "wind": {
     "dir": "NO",
-    "kmh": 10,
-    "txt": "schwach, Böen bis 23 km/h"
+    "kmh": 11,
+    "txt": "schwach, Böen bis 24 km/h"
    }
   },
   "2026-11-03": {
    "k": "rain",
-   "txt": "Gewitter",
-   "max": 17,
-   "min": 10,
-   "rain": 82,
+   "txt": "Einzelne Schauer",
+   "max": 15,
+   "min": 9,
+   "rain": 88,
    "wind": {
     "dir": "NO",
-    "kmh": 8,
+    "kmh": 9,
     "txt": "schwach, Böen bis 22 km/h"
    }
   },
   "2026-11-04": {
    "k": "cloud",
-   "txt": "Überwiegend bewölkt",
+   "txt": "Bedeckt, vereinzelt Tropfen",
    "max": 19,
-   "min": 9,
-   "rain": 19,
+   "min": 11,
+   "rain": 39,
    "wind": {
     "dir": "NO",
     "kmh": 11,
-    "txt": "schwach, Böen bis 23 km/h"
+    "txt": "schwach, Böen bis 24 km/h"
    }
   },
   "2026-11-05": {
    "k": "sun",
-   "txt": "Überwiegend sonnig",
+   "txt": "Sonnig",
    "max": 22,
-   "min": 7,
-   "rain": 13,
+   "min": 10,
+   "rain": 5,
    "wind": {
-    "dir": "NO",
-    "kmh": 10,
-    "txt": "schwach, Böen bis 24 km/h"
+    "dir": "NNW",
+    "kmh": 9,
+    "txt": "schwach, Böen bis 20 km/h"
    }
   },
   "2026-11-06": {
-   "k": "sun",
-   "txt": "Überwiegend sonnig",
-   "max": 21,
-   "min": 12,
-   "rain": 4,
+   "k": "part",
+   "txt": "Teils sonnig",
+   "max": 22,
+   "min": 10,
+   "rain": 12,
    "wind": {
     "dir": "N",
     "kmh": 9,
-    "txt": "schwach, Böen bis 18 km/h"
+    "txt": "schwach, Böen bis 20 km/h"
    }
   },
   "2026-11-07": {
-   "k": "part",
-   "txt": "Teils sonnig",
+   "k": "cloud",
+   "txt": "Bedeckt",
    "max": 21,
-   "min": 10,
-   "rain": 18,
+   "min": 14,
+   "rain": 14,
    "wind": {
-    "dir": "ONO",
-    "kmh": 9,
+    "dir": "O",
+    "kmh": 8,
     "txt": "schwach, Böen bis 18 km/h"
    }
   }
