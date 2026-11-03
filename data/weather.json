@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-03T04:04",
+ "asOf": "2026-11-03T12:20",
  "days": {
   "2026-10-26": {
    "k": "sun",
@@ -88,92 +88,92 @@
   },
   "2026-11-03": {
    "k": "rain",
-   "txt": "Regen",
+   "txt": "Einzelne Schauer",
    "max": 15,
    "min": 10,
-   "rain": 95,
+   "rain": 100,
    "wind": {
     "dir": "NO",
-    "kmh": 14,
-    "txt": "mäßig, Böen bis 29 km/h"
+    "kmh": 12,
+    "txt": "schwach, Böen bis 25 km/h"
    }
   },
   "2026-11-04": {
    "k": "cloud",
-   "txt": "Überwiegend bewölkt",
-   "max": 20,
+   "txt": "Überwiegend bewölkt, vereinzelt Tropfen",
+   "max": 19,
    "min": 11,
-   "rain": 35,
+   "rain": 45,
    "wind": {
     "dir": "NO",
-    "kmh": 11,
-    "txt": "schwach, Böen bis 26 km/h"
+    "kmh": 13,
+    "txt": "mäßig, Böen bis 27 km/h"
    }
   },
   "2026-11-05": {
    "k": "sun",
    "txt": "Überwiegend sonnig",
-   "max": 22,
+   "max": 21,
    "min": 10,
-   "rain": 8,
+   "rain": 13,
    "wind": {
     "dir": "NNW",
-    "kmh": 12,
+    "kmh": 10,
     "txt": "schwach, Böen bis 26 km/h"
    }
   },
   "2026-11-06": {
    "k": "sun",
-   "txt": "Überwiegend sonnig",
-   "max": 22,
-   "min": 10,
-   "rain": 3,
+   "txt": "Sonnig",
+   "max": 21,
+   "min": 9,
+   "rain": 4,
    "wind": {
     "dir": "N",
-    "kmh": 8,
+    "kmh": 9,
     "txt": "schwach, Böen bis 20 km/h"
    }
   },
   "2026-11-07": {
    "k": "cloud",
    "txt": "Bedeckt",
-   "max": 20,
-   "min": 9,
-   "rain": 4,
+   "max": 21,
+   "min": 7,
+   "rain": 3,
    "wind": {
-    "dir": "NO",
+    "dir": "NNO",
     "kmh": 8,
-    "txt": "schwach, Böen bis 19 km/h"
+    "txt": "schwach, Böen bis 18 km/h"
    }
   },
   "2026-11-08": {
    "k": "cloud",
-   "txt": "Überwiegend bewölkt, vereinzelt Tropfen",
-   "max": 23,
-   "min": 17,
-   "rain": 20,
+   "txt": "Überwiegend bewölkt",
+   "max": 21,
+   "min": 12,
+   "rain": 10,
    "wind": {
-    "dir": "OSO",
-    "kmh": 16,
-    "txt": "mäßig, Böen bis 30 km/h"
+    "dir": "O",
+    "kmh": 20,
+    "txt": "mäßig, Böen bis 36 km/h"
    }
   },
   "2026-11-09": {
-   "k": "cloud",
-   "txt": "Bedeckt",
-   "max": 24,
-   "min": 18,
-   "rain": 23,
+   "k": "rain",
+   "txt": "Leichter Regen",
+   "max": 25,
+   "min": 17,
+   "rain": 46,
    "wind": {
-    "dir": "SSW",
-    "kmh": 26,
-    "txt": "mäßig, Böen bis 49 km/h"
+    "dir": "OSO",
+    "kmh": 20,
+    "txt": "mäßig, Böen bis 42 km/h"
    }
   }
  },
  "src": "Open-Meteo",
  "sea": {
-  "temp": 23,
+  "temp": 22,
   "txt": "Bucht von Alcúdia, Modellwert Open-Meteo"
  }
 }
