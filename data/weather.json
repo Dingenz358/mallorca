@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-02T20:47",
+ "asOf": "2026-11-03T04:04",
  "days": {
   "2026-10-26": {
    "k": "sun",
@@ -89,61 +89,61 @@
   "2026-11-03": {
    "k": "rain",
    "txt": "Regen",
-   "max": 14,
-   "min": 11,
-   "rain": 90,
+   "max": 15,
+   "min": 10,
+   "rain": 95,
    "wind": {
     "dir": "NO",
-    "kmh": 12,
-    "txt": "mäßig, Böen bis 26 km/h"
+    "kmh": 14,
+    "txt": "mäßig, Böen bis 29 km/h"
    }
   },
   "2026-11-04": {
    "k": "cloud",
-   "txt": "Überwiegend bewölkt, vereinzelt Tropfen",
-   "max": 21,
-   "min": 10,
-   "rain": 30,
+   "txt": "Überwiegend bewölkt",
+   "max": 20,
+   "min": 11,
+   "rain": 35,
    "wind": {
     "dir": "NO",
-    "kmh": 10,
-    "txt": "schwach, Böen bis 23 km/h"
+    "kmh": 11,
+    "txt": "schwach, Böen bis 26 km/h"
    }
   },
   "2026-11-05": {
-   "k": "part",
-   "txt": "Teils sonnig",
-   "max": 21,
-   "min": 9,
+   "k": "sun",
+   "txt": "Überwiegend sonnig",
+   "max": 22,
+   "min": 10,
    "rain": 8,
    "wind": {
-    "dir": "N",
-    "kmh": 11,
-    "txt": "schwach, Böen bis 28 km/h"
+    "dir": "NNW",
+    "kmh": 12,
+    "txt": "schwach, Böen bis 26 km/h"
    }
   },
   "2026-11-06": {
    "k": "sun",
-   "txt": "Sonnig",
-   "max": 21,
-   "min": 9,
+   "txt": "Überwiegend sonnig",
+   "max": 22,
+   "min": 10,
    "rain": 3,
    "wind": {
     "dir": "N",
-    "kmh": 9,
-    "txt": "schwach, Böen bis 19 km/h"
+    "kmh": 8,
+    "txt": "schwach, Böen bis 20 km/h"
    }
   },
   "2026-11-07": {
    "k": "cloud",
    "txt": "Bedeckt",
-   "max": 21,
-   "min": 8,
+   "max": 20,
+   "min": 9,
    "rain": 4,
    "wind": {
-    "dir": "O",
-    "kmh": 13,
-    "txt": "mäßig, Böen bis 24 km/h"
+    "dir": "NO",
+    "kmh": 8,
+    "txt": "schwach, Böen bis 19 km/h"
    }
   },
   "2026-11-08": {
@@ -156,6 +156,18 @@
     "dir": "OSO",
     "kmh": 16,
     "txt": "mäßig, Böen bis 30 km/h"
+   }
+  },
+  "2026-11-09": {
+   "k": "cloud",
+   "txt": "Bedeckt",
+   "max": 24,
+   "min": 18,
+   "rain": 23,
+   "wind": {
+    "dir": "SSW",
+    "kmh": 26,
+    "txt": "mäßig, Böen bis 49 km/h"
    }
   }
  },
