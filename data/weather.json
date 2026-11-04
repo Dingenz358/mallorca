@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-04T12:34",
+ "asOf": "2026-11-04T21:02",
  "days": {
   "2026-10-26": {
    "k": "sun",
@@ -107,19 +107,19 @@
    "wind": {
     "dir": "NO",
     "kmh": 10,
-    "txt": "schwach, Böen bis 20 km/h"
+    "txt": "schwach, Böen bis 21 km/h"
    }
   },
   "2026-11-05": {
-   "k": "sun",
-   "txt": "Sonnig",
+   "k": "part",
+   "txt": "Teils sonnig",
    "max": 22,
-   "min": 9,
-   "rain": 8,
+   "min": 11,
+   "rain": 5,
    "wind": {
     "dir": "N",
-    "kmh": 10,
-    "txt": "schwach, Böen bis 21 km/h"
+    "kmh": 11,
+    "txt": "schwach, Böen bis 25 km/h"
    }
   },
   "2026-11-06": {
@@ -130,16 +130,16 @@
    "rain": 3,
    "wind": {
     "dir": "N",
-    "kmh": 7,
-    "txt": "schwach, Böen bis 14 km/h"
+    "kmh": 9,
+    "txt": "schwach, Böen bis 20 km/h"
    }
   },
   "2026-11-07": {
    "k": "cloud",
-   "txt": "Überwiegend bewölkt",
+   "txt": "Bedeckt",
    "max": 20,
    "min": 8,
-   "rain": 0,
+   "rain": 3,
    "wind": {
     "dir": "NNO",
     "kmh": 7,
@@ -149,37 +149,37 @@
   "2026-11-08": {
    "k": "cloud",
    "txt": "Überwiegend bewölkt",
-   "max": 23,
-   "min": 12,
-   "rain": 0,
+   "max": 22,
+   "min": 10,
+   "rain": 3,
    "wind": {
-    "dir": "ONO",
-    "kmh": 14,
-    "txt": "mäßig, Böen bis 27 km/h"
+    "dir": "NO",
+    "kmh": 11,
+    "txt": "schwach, Böen bis 23 km/h"
    }
   },
   "2026-11-09": {
    "k": "cloud",
    "txt": "Bedeckt",
-   "max": 23,
-   "min": 17,
-   "rain": 16,
+   "max": 22,
+   "min": 14,
+   "rain": 18,
    "wind": {
-    "dir": "O",
-    "kmh": 8,
-    "txt": "schwach, Böen bis 18 km/h"
+    "dir": "ONO",
+    "kmh": 17,
+    "txt": "mäßig, Böen bis 30 km/h"
    }
   },
   "2026-11-10": {
-   "k": "sun",
-   "txt": "Überwiegend sonnig",
-   "max": 24,
-   "min": 21,
-   "rain": 35,
+   "k": "rain",
+   "txt": "Einzelne Schauer",
+   "max": 22,
+   "min": 19,
+   "rain": 26,
    "wind": {
-    "dir": "SW",
-    "kmh": 25,
-    "txt": "mäßig, Böen bis 46 km/h"
+    "dir": "SSW",
+    "kmh": 23,
+    "txt": "mäßig, Böen bis 50 km/h"
    }
   }
  },
