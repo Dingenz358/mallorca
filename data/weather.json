@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-04T21:02",
+ "asOf": "2026-11-05T02:48",
  "days": {
   "2026-10-26": {
    "k": "sun",
@@ -115,59 +115,59 @@
    "txt": "Teils sonnig",
    "max": 22,
    "min": 11,
-   "rain": 5,
-   "wind": {
-    "dir": "N",
-    "kmh": 11,
-    "txt": "schwach, Böen bis 25 km/h"
-   }
-  },
-  "2026-11-06": {
-   "k": "sun",
-   "txt": "Sonnig",
-   "max": 22,
-   "min": 9,
    "rain": 3,
    "wind": {
     "dir": "N",
+    "kmh": 11,
+    "txt": "schwach, Böen bis 23 km/h"
+   }
+  },
+  "2026-11-06": {
+   "k": "part",
+   "txt": "Teils sonnig",
+   "max": 21,
+   "min": 9,
+   "rain": 8,
+   "wind": {
+    "dir": "NNO",
     "kmh": 9,
-    "txt": "schwach, Böen bis 20 km/h"
+    "txt": "schwach, Böen bis 19 km/h"
    }
   },
   "2026-11-07": {
    "k": "cloud",
    "txt": "Bedeckt",
    "max": 20,
-   "min": 8,
+   "min": 10,
    "rain": 3,
    "wind": {
     "dir": "NNO",
     "kmh": 7,
-    "txt": "schwach, Böen bis 14 km/h"
+    "txt": "schwach, Böen bis 13 km/h"
    }
   },
   "2026-11-08": {
-   "k": "cloud",
-   "txt": "Überwiegend bewölkt",
-   "max": 22,
-   "min": 10,
-   "rain": 3,
+   "k": "part",
+   "txt": "Teils sonnig",
+   "max": 23,
+   "min": 11,
+   "rain": 0,
    "wind": {
-    "dir": "NO",
-    "kmh": 11,
-    "txt": "schwach, Böen bis 23 km/h"
+    "dir": "ONO",
+    "kmh": 12,
+    "txt": "mäßig, Böen bis 24 km/h"
    }
   },
   "2026-11-09": {
    "k": "cloud",
-   "txt": "Bedeckt",
-   "max": 22,
-   "min": 14,
+   "txt": "Bedeckt, vereinzelt Tropfen",
+   "max": 24,
+   "min": 17,
    "rain": 18,
    "wind": {
-    "dir": "ONO",
-    "kmh": 17,
-    "txt": "mäßig, Böen bis 30 km/h"
+    "dir": "NO",
+    "kmh": 10,
+    "txt": "schwach, Böen bis 20 km/h"
    }
   },
   "2026-11-10": {
@@ -180,6 +180,18 @@
     "dir": "SSW",
     "kmh": 23,
     "txt": "mäßig, Böen bis 50 km/h"
+   }
+  },
+  "2026-11-11": {
+   "k": "rain",
+   "txt": "Leichter Regen",
+   "max": 20,
+   "min": 17,
+   "rain": 63,
+   "wind": {
+    "dir": "WSW",
+    "kmh": 30,
+    "txt": "frisch, Böen bis 54 km/h"
    }
   }
  },
