@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-05T21:16",
+ "asOf": "2026-11-06T02:48",
  "days": {
   "2026-10-26": {
    "k": "sun",
@@ -123,63 +123,63 @@
    }
   },
   "2026-11-06": {
-   "k": "sun",
-   "txt": "Überwiegend sonnig",
-   "max": 22,
+   "k": "part",
+   "txt": "Teils sonnig",
+   "max": 21,
    "min": 10,
    "rain": 0,
    "wind": {
     "dir": "NNO",
     "kmh": 8,
-    "txt": "schwach, Böen bis 18 km/h"
+    "txt": "schwach, Böen bis 15 km/h"
    }
   },
   "2026-11-07": {
    "k": "cloud",
-   "txt": "Bedeckt, vereinzelt Tropfen",
+   "txt": "Überwiegend bewölkt",
    "max": 20,
-   "min": 11,
-   "rain": 8,
+   "min": 10,
+   "rain": 3,
    "wind": {
     "dir": "NNO",
-    "kmh": 9,
-    "txt": "schwach, Böen bis 19 km/h"
+    "kmh": 7,
+    "txt": "schwach, Böen bis 14 km/h"
    }
   },
   "2026-11-08": {
-   "k": "part",
-   "txt": "Teils sonnig",
+   "k": "cloud",
+   "txt": "Überwiegend bewölkt",
    "max": 22,
-   "min": 12,
+   "min": 10,
    "rain": 0,
    "wind": {
-    "dir": "ONO",
+    "dir": "NO",
     "kmh": 10,
-    "txt": "schwach, Böen bis 21 km/h"
+    "txt": "schwach, Böen bis 22 km/h"
    }
   },
   "2026-11-09": {
    "k": "cloud",
    "txt": "Bedeckt, vereinzelt Tropfen",
-   "max": 23,
+   "max": 22,
    "min": 16,
-   "rain": 10,
+   "rain": 5,
    "wind": {
-    "dir": "NO",
-    "kmh": 14,
-    "txt": "mäßig, Böen bis 28 km/h"
+    "dir": "NNO",
+    "kmh": 9,
+    "txt": "schwach, Böen bis 17 km/h"
    }
   },
   "2026-11-10": {
-   "k": "rain",
-   "txt": "Einzelne Schauer",
-   "max": 23,
-   "min": 20,
-   "rain": 28,
+   "k": "part",
+   "txt": "Teils sonnig",
+   "max": 24,
+   "min": 18,
+   "rain": 21,
    "wind": {
     "dir": "SW",
-    "kmh": 24,
-    "txt": "mäßig, Böen bis 44 km/h"
+    "kmh": 14,
+    "txt": "mäßig, Böen bis 28 km/h"
    }
   },
   "2026-11-11": {
@@ -192,6 +192,18 @@
     "dir": "SW",
     "kmh": 18,
     "txt": "mäßig, Böen bis 33 km/h"
+   }
+  },
+  "2026-11-12": {
+   "k": "rain",
+   "txt": "Einzelne Schauer",
+   "max": 21,
+   "min": 19,
+   "rain": 26,
+   "wind": {
+    "dir": "WSW",
+    "kmh": 29,
+    "txt": "mäßig, Böen bis 56 km/h"
    }
   }
  },
