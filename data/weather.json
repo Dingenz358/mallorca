@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-07T18:51",
+ "asOf": "2026-11-07T23:17",
  "days": {
   "2026-10-26": {
    "k": "sun",
@@ -150,8 +150,8 @@
    "k": "cloud",
    "txt": "Bedeckt",
    "max": 22,
-   "min": 11,
-   "rain": 0,
+   "min": 12,
+   "rain": 5,
    "wind": {
     "dir": "NO",
     "kmh": 11,
@@ -163,7 +163,7 @@
    "txt": "Bedeckt, vereinzelt Tropfen",
    "max": 23,
    "min": 16,
-   "rain": 5,
+   "rain": 15,
    "wind": {
     "dir": "NNO",
     "kmh": 10,
@@ -175,7 +175,7 @@
    "txt": "Überwiegend bewölkt",
    "max": 24,
    "min": 17,
-   "rain": 3,
+   "rain": 6,
    "wind": {
     "dir": "SW",
     "kmh": 17,
@@ -187,7 +187,7 @@
    "txt": "Gewitter",
    "max": 23,
    "min": 19,
-   "rain": 5,
+   "rain": 7,
    "wind": {
     "dir": "SW",
     "kmh": 14,
@@ -199,7 +199,7 @@
    "txt": "Regen",
    "max": 23,
    "min": 18,
-   "rain": 37,
+   "rain": 49,
    "wind": {
     "dir": "SW",
     "kmh": 23,
