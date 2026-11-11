@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-10T22:25",
+ "asOf": "2026-11-11T02:28",
  "days": {
   "2026-10-26": {
    "k": "sun",
@@ -183,63 +183,63 @@
    }
   },
   "2026-11-11": {
-   "k": "rain",
-   "txt": "Leichter Regen",
+   "k": "cloud",
+   "txt": "Bedeckt, vereinzelt Tropfen",
    "max": 23,
    "min": 18,
-   "rain": 55,
+   "rain": 70,
    "wind": {
-    "dir": "SW",
-    "kmh": 17,
-    "txt": "mäßig, Böen bis 35 km/h"
+    "dir": "SSW",
+    "kmh": 13,
+    "txt": "mäßig, Böen bis 27 km/h"
    }
   },
   "2026-11-12": {
    "k": "rain",
-   "txt": "Einzelne Schauer",
+   "txt": "Leichter Regen",
    "max": 23,
    "min": 18,
-   "rain": 73,
+   "rain": 80,
    "wind": {
     "dir": "WSW",
-    "kmh": 36,
-    "txt": "frisch, Böen bis 75 km/h"
+    "kmh": 31,
+    "txt": "frisch, Böen bis 66 km/h"
    }
   },
   "2026-11-13": {
    "k": "sun",
-   "txt": "Überwiegend sonnig",
+   "txt": "Sonnig",
    "max": 22,
-   "min": 15,
-   "rain": 2,
+   "min": 17,
+   "rain": 0,
    "wind": {
     "dir": "W",
-    "kmh": 24,
+    "kmh": 25,
     "txt": "mäßig, Böen bis 52 km/h"
    }
   },
   "2026-11-14": {
    "k": "rain",
-   "txt": "Einzelne Schauer",
+   "txt": "Regen",
    "max": 22,
-   "min": 12,
-   "rain": 20,
+   "min": 16,
+   "rain": 17,
    "wind": {
     "dir": "SW",
-    "kmh": 16,
-    "txt": "mäßig, Böen bis 31 km/h"
+    "kmh": 19,
+    "txt": "mäßig, Böen bis 39 km/h"
    }
   },
   "2026-11-15": {
-   "k": "rain",
-   "txt": "Gewitter",
+   "k": "part",
+   "txt": "Teils sonnig",
    "max": 20,
-   "min": 17,
-   "rain": 43,
+   "min": 16,
+   "rain": 32,
    "wind": {
-    "dir": "WSW",
-    "kmh": 25,
-    "txt": "mäßig, Böen bis 49 km/h"
+    "dir": "W",
+    "kmh": 20,
+    "txt": "mäßig, Böen bis 43 km/h"
    }
   },
   "2026-11-16": {
@@ -252,6 +252,18 @@
     "dir": "WSW",
     "kmh": 27,
     "txt": "mäßig, Böen bis 54 km/h"
+   }
+  },
+  "2026-11-17": {
+   "k": "rain",
+   "txt": "Regen",
+   "max": 23,
+   "min": 19,
+   "rain": 24,
+   "wind": {
+    "dir": "SW",
+    "kmh": 39,
+    "txt": "stark, Böen bis 76 km/h"
    }
   }
  },
