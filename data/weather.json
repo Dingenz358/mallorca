@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-12T12:50",
+ "asOf": "2026-11-12T21:26",
  "days": {
   "2026-10-26": {
    "k": "sun",
@@ -197,91 +197,91 @@
   "2026-11-12": {
    "k": "rain",
    "txt": "Leichter Regen",
-   "max": 23,
+   "max": 24,
    "min": 18,
    "rain": 98,
    "wind": {
     "dir": "W",
-    "kmh": 33,
-    "txt": "frisch, Böen bis 69 km/h"
+    "kmh": 34,
+    "txt": "frisch, Böen bis 71 km/h"
    }
   },
   "2026-11-13": {
    "k": "sun",
-   "txt": "Überwiegend sonnig",
-   "max": 22,
-   "min": 16,
-   "rain": 0,
+   "txt": "Sonnig",
+   "max": 23,
+   "min": 17,
+   "rain": 3,
    "wind": {
     "dir": "W",
-    "kmh": 22,
-    "txt": "mäßig, Böen bis 47 km/h"
+    "kmh": 23,
+    "txt": "mäßig, Böen bis 49 km/h"
    }
   },
   "2026-11-14": {
    "k": "part",
    "txt": "Teils sonnig",
-   "max": 21,
-   "min": 14,
-   "rain": 20,
+   "max": 22,
+   "min": 16,
+   "rain": 2,
    "wind": {
     "dir": "WSW",
     "kmh": 20,
-    "txt": "mäßig, Böen bis 40 km/h"
+    "txt": "mäßig, Böen bis 41 km/h"
    }
   },
   "2026-11-15": {
-   "k": "part",
-   "txt": "Teils sonnig",
-   "max": 21,
-   "min": 14,
-   "rain": 20,
+   "k": "cloud",
+   "txt": "Überwiegend bewölkt",
+   "max": 22,
+   "min": 13,
+   "rain": 9,
    "wind": {
     "dir": "WSW",
-    "kmh": 14,
-    "txt": "mäßig, Böen bis 32 km/h"
+    "kmh": 15,
+    "txt": "mäßig, Böen bis 31 km/h"
    }
   },
   "2026-11-16": {
-   "k": "part",
-   "txt": "Teils sonnig, vereinzelt Tropfen",
-   "max": 21,
-   "min": 10,
-   "rain": 18,
+   "k": "cloud",
+   "txt": "Bedeckt",
+   "max": 22,
+   "min": 13,
+   "rain": 9,
    "wind": {
-    "dir": "WNW",
-    "kmh": 23,
-    "txt": "mäßig, Böen bis 49 km/h"
+    "dir": "WSW",
+    "kmh": 24,
+    "txt": "mäßig, Böen bis 53 km/h"
    }
   },
   "2026-11-17": {
-   "k": "rain",
-   "txt": "Leichter Regen",
+   "k": "cloud",
+   "txt": "Überwiegend bewölkt",
    "max": 22,
-   "min": 9,
-   "rain": 36,
+   "min": 11,
+   "rain": 17,
    "wind": {
     "dir": "WSW",
-    "kmh": 30,
-    "txt": "frisch, Böen bis 58 km/h"
+    "kmh": 23,
+    "txt": "mäßig, Böen bis 48 km/h"
    }
   },
   "2026-11-18": {
-   "k": "part",
-   "txt": "Teils sonnig, vereinzelt Tropfen",
+   "k": "sun",
+   "txt": "Überwiegend sonnig",
    "max": 22,
-   "min": 19,
-   "rain": 38,
+   "min": 21,
+   "rain": 18,
    "wind": {
     "dir": "WSW",
-    "kmh": 33,
-    "txt": "frisch, Böen bis 68 km/h"
+    "kmh": 29,
+    "txt": "frisch, Böen bis 62 km/h"
    }
   }
  },
  "src": "Open-Meteo",
  "sea": {
-  "temp": 22,
+  "temp": 21,
   "txt": "Bucht von Alcúdia, Modellwert Open-Meteo"
  }
 }
