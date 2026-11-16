@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-16T00:10",
+ "asOf": "2026-11-16T08:16",
  "days": {
   "2026-10-26": {
    "k": "sun",
@@ -243,15 +243,15 @@
    }
   },
   "2026-11-16": {
-   "k": "part",
-   "txt": "Teils sonnig",
-   "max": 23,
+   "k": "cloud",
+   "txt": "Bedeckt",
+   "max": 22,
    "min": 12,
    "rain": 0,
    "wind": {
-    "dir": "WSW",
+    "dir": "SW",
     "kmh": 14,
-    "txt": "mäßig, Böen bis 29 km/h"
+    "txt": "mäßig, Böen bis 30 km/h"
    }
   },
   "2026-11-17": {
@@ -259,47 +259,47 @@
    "txt": "Bedeckt",
    "max": 22,
    "min": 17,
-   "rain": 0,
+   "rain": 3,
    "wind": {
     "dir": "SW",
     "kmh": 21,
-    "txt": "mäßig, Böen bis 43 km/h"
+    "txt": "mäßig, Böen bis 44 km/h"
    }
   },
   "2026-11-18": {
    "k": "part",
-   "txt": "Teils sonnig",
+   "txt": "Teils sonnig, vereinzelt Tropfen",
    "max": 24,
-   "min": 19,
-   "rain": 10,
+   "min": 18,
+   "rain": 15,
    "wind": {
     "dir": "WSW",
-    "kmh": 19,
-    "txt": "mäßig, Böen bis 39 km/h"
+    "kmh": 24,
+    "txt": "mäßig, Böen bis 49 km/h"
    }
   },
   "2026-11-19": {
-   "k": "part",
-   "txt": "Teils sonnig",
+   "k": "rain",
+   "txt": "Einzelne Schauer",
    "max": 23,
-   "min": 14,
-   "rain": 19,
+   "min": 15,
+   "rain": 35,
    "wind": {
     "dir": "W",
-    "kmh": 21,
-    "txt": "mäßig, Böen bis 56 km/h"
+    "kmh": 17,
+    "txt": "mäßig, Böen bis 42 km/h"
    }
   },
   "2026-11-20": {
    "k": "sun",
    "txt": "Überwiegend sonnig",
    "max": 20,
-   "min": 13,
+   "min": 11,
    "rain": 0,
    "wind": {
     "dir": "NW",
     "kmh": 14,
-    "txt": "mäßig, Böen bis 31 km/h"
+    "txt": "mäßig, Böen bis 32 km/h"
    }
   },
   "2026-11-21": {
@@ -307,23 +307,23 @@
    "txt": "Überwiegend bewölkt",
    "max": 20,
    "min": 11,
-   "rain": 0,
+   "rain": 3,
    "wind": {
-    "dir": "OSO",
+    "dir": "ONO",
     "kmh": 9,
-    "txt": "schwach, Böen bis 19 km/h"
+    "txt": "schwach, Böen bis 18 km/h"
    }
   },
   "2026-11-22": {
    "k": "cloud",
-   "txt": "Bedeckt, vereinzelt Tropfen",
+   "txt": "Überwiegend bewölkt",
    "max": 21,
    "min": 14,
-   "rain": 10,
+   "rain": 5,
    "wind": {
-    "dir": "W",
-    "kmh": 28,
-    "txt": "mäßig, Böen bis 56 km/h"
+    "dir": "WNW",
+    "kmh": 18,
+    "txt": "mäßig, Böen bis 40 km/h"
    }
   }
  },
