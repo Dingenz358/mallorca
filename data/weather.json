@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-19T21:58",
+ "asOf": "2026-11-20T13:10",
  "days": {
   "2026-10-26": {
    "k": "sun",
@@ -291,15 +291,15 @@
    }
   },
   "2026-11-20": {
-   "k": "part",
-   "txt": "Teils sonnig",
+   "k": "sun",
+   "txt": "Überwiegend sonnig",
    "max": 21,
-   "min": 11,
+   "min": 10,
    "rain": 0,
    "wind": {
-    "dir": "NW",
-    "kmh": 13,
-    "txt": "mäßig, Böen bis 29 km/h"
+    "dir": "W",
+    "kmh": 14,
+    "txt": "mäßig, Böen bis 32 km/h"
    }
   },
   "2026-11-21": {
@@ -311,7 +311,7 @@
    "wind": {
     "dir": "SW",
     "kmh": 14,
-    "txt": "mäßig, Böen bis 32 km/h"
+    "txt": "mäßig, Böen bis 31 km/h"
    }
   },
   "2026-11-22": {
@@ -319,47 +319,59 @@
    "txt": "Sonnig",
    "max": 20,
    "min": 16,
-   "rain": 18,
+   "rain": 20,
    "wind": {
     "dir": "WNW",
-    "kmh": 26,
-    "txt": "mäßig, Böen bis 57 km/h"
+    "kmh": 23,
+    "txt": "mäßig, Böen bis 51 km/h"
    }
   },
   "2026-11-23": {
    "k": "sun",
    "txt": "Sonnig",
-   "max": 19,
-   "min": 8,
+   "max": 18,
+   "min": 7,
    "rain": 0,
    "wind": {
     "dir": "NW",
-    "kmh": 16,
-    "txt": "mäßig, Böen bis 32 km/h"
+    "kmh": 17,
+    "txt": "mäßig, Böen bis 37 km/h"
    }
   },
   "2026-11-24": {
    "k": "cloud",
    "txt": "Bedeckt",
-   "max": 19,
+   "max": 20,
    "min": 7,
-   "rain": 0,
+   "rain": 8,
    "wind": {
-    "dir": "O",
+    "dir": "ONO",
     "kmh": 9,
-    "txt": "schwach, Böen bis 19 km/h"
+    "txt": "schwach, Böen bis 22 km/h"
    }
   },
   "2026-11-25": {
    "k": "cloud",
    "txt": "Überwiegend bewölkt",
-   "max": 18,
+   "max": 17,
    "min": 14,
-   "rain": 26,
+   "rain": 23,
    "wind": {
-    "dir": "WSW",
-    "kmh": 24,
-    "txt": "mäßig, Böen bis 50 km/h"
+    "dir": "W",
+    "kmh": 21,
+    "txt": "mäßig, Böen bis 42 km/h"
+   }
+  },
+  "2026-11-26": {
+   "k": "cloud",
+   "txt": "Überwiegend bewölkt",
+   "max": 16,
+   "min": 9,
+   "rain": 23,
+   "wind": {
+    "dir": "NNW",
+    "kmh": 7,
+    "txt": "schwach, Böen bis 14 km/h"
    }
   }
  },
