@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-20T13:10",
+ "asOf": "2026-11-20T21:43",
  "days": {
   "2026-10-26": {
    "k": "sun",
@@ -297,7 +297,7 @@
    "min": 10,
    "rain": 0,
    "wind": {
-    "dir": "W",
+    "dir": "WNW",
     "kmh": 14,
     "txt": "mäßig, Böen bis 32 km/h"
    }
@@ -309,69 +309,69 @@
    "min": 10,
    "rain": 0,
    "wind": {
-    "dir": "SW",
-    "kmh": 14,
-    "txt": "mäßig, Böen bis 31 km/h"
+    "dir": "WSW",
+    "kmh": 12,
+    "txt": "schwach, Böen bis 27 km/h"
    }
   },
   "2026-11-22": {
    "k": "sun",
-   "txt": "Sonnig",
+   "txt": "Sonnig, vereinzelt Tropfen",
    "max": 20,
    "min": 16,
-   "rain": 20,
+   "rain": 33,
    "wind": {
     "dir": "WNW",
-    "kmh": 23,
+    "kmh": 24,
     "txt": "mäßig, Böen bis 51 km/h"
    }
   },
   "2026-11-23": {
    "k": "sun",
-   "txt": "Sonnig",
+   "txt": "Überwiegend sonnig",
    "max": 18,
-   "min": 7,
+   "min": 9,
    "rain": 0,
    "wind": {
     "dir": "NW",
-    "kmh": 17,
-    "txt": "mäßig, Böen bis 37 km/h"
+    "kmh": 18,
+    "txt": "mäßig, Böen bis 38 km/h"
    }
   },
   "2026-11-24": {
    "k": "cloud",
    "txt": "Bedeckt",
-   "max": 20,
+   "max": 19,
    "min": 7,
-   "rain": 8,
+   "rain": 6,
    "wind": {
-    "dir": "ONO",
+    "dir": "NO",
     "kmh": 9,
-    "txt": "schwach, Böen bis 22 km/h"
+    "txt": "schwach, Böen bis 19 km/h"
    }
   },
   "2026-11-25": {
-   "k": "cloud",
-   "txt": "Überwiegend bewölkt",
-   "max": 17,
+   "k": "part",
+   "txt": "Teils sonnig",
+   "max": 18,
    "min": 14,
-   "rain": 23,
+   "rain": 9,
    "wind": {
     "dir": "W",
-    "kmh": 21,
-    "txt": "mäßig, Böen bis 42 km/h"
+    "kmh": 23,
+    "txt": "mäßig, Böen bis 45 km/h"
    }
   },
   "2026-11-26": {
-   "k": "cloud",
-   "txt": "Überwiegend bewölkt",
+   "k": "part",
+   "txt": "Teils sonnig",
    "max": 16,
-   "min": 9,
-   "rain": 23,
+   "min": 12,
+   "rain": 5,
    "wind": {
-    "dir": "NNW",
-    "kmh": 7,
-    "txt": "schwach, Böen bis 14 km/h"
+    "dir": "W",
+    "kmh": 12,
+    "txt": "schwach, Böen bis 24 km/h"
    }
   }
  },
