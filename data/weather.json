@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-21T20:46",
+ "asOf": "2026-11-22T02:34",
  "days": {
   "2026-10-26": {
    "k": "sun",
@@ -318,12 +318,12 @@
    "k": "sun",
    "txt": "Sonnig",
    "max": 21,
-   "min": 15,
-   "rain": 15,
+   "min": 16,
+   "rain": 0,
    "wind": {
     "dir": "WNW",
-    "kmh": 22,
-    "txt": "mäßig, Böen bis 47 km/h"
+    "kmh": 25,
+    "txt": "mäßig, Böen bis 53 km/h"
    }
   },
   "2026-11-23": {
@@ -335,7 +335,7 @@
    "wind": {
     "dir": "NW",
     "kmh": 16,
-    "txt": "mäßig, Böen bis 34 km/h"
+    "txt": "mäßig, Böen bis 33 km/h"
    }
   },
   "2026-11-24": {
@@ -343,35 +343,35 @@
    "txt": "Überwiegend bewölkt, vereinzelt Tropfen",
    "max": 18,
    "min": 5,
-   "rain": 15,
+   "rain": 4,
    "wind": {
-    "dir": "W",
+    "dir": "N",
     "kmh": 9,
-    "txt": "schwach, Böen bis 22 km/h"
+    "txt": "schwach, Böen bis 19 km/h"
    }
   },
   "2026-11-25": {
    "k": "part",
-   "txt": "Teils sonnig",
+   "txt": "Teils sonnig, vereinzelt Tropfen",
    "max": 18,
-   "min": 10,
-   "rain": 20,
+   "min": 11,
+   "rain": 13,
    "wind": {
-    "dir": "WNW",
-    "kmh": 16,
-    "txt": "mäßig, Böen bis 37 km/h"
+    "dir": "W",
+    "kmh": 20,
+    "txt": "mäßig, Böen bis 43 km/h"
    }
   },
   "2026-11-26": {
-   "k": "sun",
-   "txt": "Überwiegend sonnig",
+   "k": "part",
+   "txt": "Teils sonnig",
    "max": 16,
    "min": 10,
    "rain": 3,
    "wind": {
     "dir": "NW",
-    "kmh": 16,
-    "txt": "mäßig, Böen bis 34 km/h"
+    "kmh": 21,
+    "txt": "mäßig, Böen bis 46 km/h"
    }
   },
   "2026-11-27": {
@@ -385,11 +385,23 @@
     "kmh": 16,
     "txt": "mäßig, Böen bis 30 km/h"
    }
+  },
+  "2026-11-28": {
+   "k": "cloud",
+   "txt": "Überwiegend bewölkt",
+   "max": 14,
+   "min": 6,
+   "rain": 8,
+   "wind": {
+    "dir": "NO",
+    "kmh": 14,
+    "txt": "mäßig, Böen bis 34 km/h"
+   }
   }
  },
  "src": "Open-Meteo",
  "sea": {
-  "temp": 21,
+  "temp": 20,
   "txt": "Bucht von Alcúdia, Modellwert Open-Meteo"
  }
 }
