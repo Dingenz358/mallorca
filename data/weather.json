@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-25T01:06",
+ "asOf": "2026-11-25T10:08",
  "days": {
   "2026-10-26": {
    "k": "sun",
@@ -352,58 +352,58 @@
   },
   "2026-11-25": {
    "k": "part",
-   "txt": "Teils sonnig",
+   "txt": "Teils sonnig, vereinzelt Tropfen",
    "max": 18,
    "min": 13,
-   "rain": 20,
+   "rain": 33,
    "wind": {
     "dir": "W",
     "kmh": 26,
-    "txt": "mäßig, Böen bis 59 km/h"
+    "txt": "mäßig, Böen bis 61 km/h"
    }
   },
   "2026-11-26": {
-   "k": "part",
-   "txt": "Teils sonnig",
+   "k": "sun",
+   "txt": "Überwiegend sonnig",
    "max": 16,
-   "min": 6,
-   "rain": 3,
+   "min": 7,
+   "rain": 0,
    "wind": {
-    "dir": "WNW",
-    "kmh": 21,
-    "txt": "mäßig, Böen bis 48 km/h"
+    "dir": "NW",
+    "kmh": 20,
+    "txt": "mäßig, Böen bis 44 km/h"
    }
   },
   "2026-11-27": {
-   "k": "part",
-   "txt": "Teils sonnig",
-   "max": 17,
-   "min": 5,
-   "rain": 3,
+   "k": "sun",
+   "txt": "Überwiegend sonnig",
+   "max": 18,
+   "min": 6,
+   "rain": 0,
    "wind": {
     "dir": "N",
-    "kmh": 8,
-    "txt": "schwach, Böen bis 19 km/h"
+    "kmh": 9,
+    "txt": "schwach, Böen bis 20 km/h"
    }
   },
   "2026-11-28": {
    "k": "part",
    "txt": "Teils sonnig",
    "max": 19,
-   "min": 4,
+   "min": 5,
    "rain": 0,
    "wind": {
     "dir": "N",
     "kmh": 8,
-    "txt": "schwach, Böen bis 20 km/h"
+    "txt": "schwach, Böen bis 18 km/h"
    }
   },
   "2026-11-29": {
-   "k": "cloud",
-   "txt": "Überwiegend bewölkt",
+   "k": "part",
+   "txt": "Teils sonnig",
    "max": 18,
-   "min": 4,
-   "rain": 2,
+   "min": 7,
+   "rain": 0,
    "wind": {
     "dir": "N",
     "kmh": 6,
@@ -412,26 +412,26 @@
   },
   "2026-11-30": {
    "k": "cloud",
-   "txt": "Überwiegend bewölkt, vereinzelt Tropfen",
+   "txt": "Bedeckt",
    "max": 16,
-   "min": 11,
-   "rain": 16,
+   "min": 10,
+   "rain": 8,
    "wind": {
-    "dir": "ONO",
-    "kmh": 9,
-    "txt": "schwach, Böen bis 21 km/h"
+    "dir": "NO",
+    "kmh": 6,
+    "txt": "schwach, Böen bis 13 km/h"
    }
   },
   "2026-12-01": {
    "k": "cloud",
-   "txt": "Überwiegend bewölkt",
+   "txt": "Bedeckt, vereinzelt Tropfen",
    "max": 16,
-   "min": 10,
-   "rain": 14,
+   "min": 12,
+   "rain": 8,
    "wind": {
-    "dir": "ONO",
-    "kmh": 7,
-    "txt": "schwach, Böen bis 16 km/h"
+    "dir": "NO",
+    "kmh": 12,
+    "txt": "mäßig, Böen bis 24 km/h"
    }
   }
  },
