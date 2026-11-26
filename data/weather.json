@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-26T04:45",
+ "asOf": "2026-11-26T18:19",
  "days": {
   "2026-10-26": {
    "k": "sun",
@@ -366,84 +366,84 @@
    "k": "sun",
    "txt": "Überwiegend sonnig",
    "max": 16,
-   "min": 10,
+   "min": 11,
    "rain": 0,
    "wind": {
     "dir": "WNW",
-    "kmh": 20,
-    "txt": "mäßig, Böen bis 46 km/h"
+    "kmh": 19,
+    "txt": "mäßig, Böen bis 43 km/h"
    }
   },
   "2026-11-27": {
    "k": "sun",
    "txt": "Überwiegend sonnig",
    "max": 17,
-   "min": 6,
-   "rain": 0,
+   "min": 5,
+   "rain": 3,
    "wind": {
     "dir": "NNW",
     "kmh": 11,
-    "txt": "schwach, Böen bis 26 km/h"
+    "txt": "schwach, Böen bis 27 km/h"
    }
   },
   "2026-11-28": {
    "k": "part",
    "txt": "Teils sonnig",
    "max": 19,
-   "min": 5,
+   "min": 4,
    "rain": 0,
    "wind": {
     "dir": "N",
-    "kmh": 8,
-    "txt": "schwach, Böen bis 19 km/h"
+    "kmh": 9,
+    "txt": "schwach, Böen bis 21 km/h"
    }
   },
   "2026-11-29": {
-   "k": "cloud",
-   "txt": "Überwiegend bewölkt",
-   "max": 18,
-   "min": 8,
+   "k": "part",
+   "txt": "Teils sonnig",
+   "max": 19,
+   "min": 6,
    "rain": 0,
    "wind": {
     "dir": "NNO",
     "kmh": 6,
-    "txt": "schwach, Böen bis 13 km/h"
+    "txt": "schwach, Böen bis 14 km/h"
    }
   },
   "2026-11-30": {
    "k": "cloud",
-   "txt": "Überwiegend bewölkt",
+   "txt": "Bedeckt",
    "max": 18,
-   "min": 9,
-   "rain": 7,
+   "min": 10,
+   "rain": 8,
    "wind": {
     "dir": "NO",
-    "kmh": 13,
-    "txt": "mäßig, Böen bis 32 km/h"
+    "kmh": 12,
+    "txt": "schwach, Böen bis 27 km/h"
    }
   },
   "2026-12-01": {
-   "k": "part",
-   "txt": "Teils sonnig",
-   "max": 17,
-   "min": 8,
-   "rain": 5,
-   "wind": {
-    "dir": "N",
-    "kmh": 8,
-    "txt": "schwach, Böen bis 17 km/h"
-   }
-  },
-  "2026-12-02": {
-   "k": "sun",
-   "txt": "Überwiegend sonnig",
+   "k": "cloud",
+   "txt": "Bedeckt",
    "max": 16,
-   "min": 10,
+   "min": 9,
    "rain": 3,
    "wind": {
     "dir": "NO",
-    "kmh": 20,
-    "txt": "mäßig, Böen bis 39 km/h"
+    "kmh": 6,
+    "txt": "schwach, Böen bis 14 km/h"
+   }
+  },
+  "2026-12-02": {
+   "k": "cloud",
+   "txt": "Überwiegend bewölkt",
+   "max": 18,
+   "min": 10,
+   "rain": 5,
+   "wind": {
+    "dir": "ONO",
+    "kmh": 6,
+    "txt": "schwach, Böen bis 15 km/h"
    }
   }
  },
