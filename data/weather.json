@@ -1,5 +1,5 @@
 {
- "asOf": "2026-11-27T02:55",
+ "asOf": "2026-11-28T00:43",
  "days": {
   "2026-10-26": {
    "k": "sun",
@@ -394,68 +394,80 @@
    "rain": 0,
    "wind": {
     "dir": "N",
-    "kmh": 8,
-    "txt": "schwach, Böen bis 19 km/h"
+    "kmh": 7,
+    "txt": "schwach, Böen bis 18 km/h"
    }
   },
   "2026-11-29": {
-   "k": "part",
-   "txt": "Teils sonnig",
+   "k": "cloud",
+   "txt": "Überwiegend bewölkt",
    "max": 18,
-   "min": 8,
-   "rain": 3,
+   "min": 7,
+   "rain": 5,
    "wind": {
-    "dir": "NNO",
-    "kmh": 7,
-    "txt": "schwach, Böen bis 16 km/h"
+    "dir": "NO",
+    "kmh": 6,
+    "txt": "schwach, Böen bis 14 km/h"
    }
   },
   "2026-11-30": {
-   "k": "cloud",
-   "txt": "Bedeckt, vereinzelt Tropfen",
-   "max": 17,
-   "min": 10,
-   "rain": 8,
-   "wind": {
-    "dir": "NO",
-    "kmh": 10,
-    "txt": "schwach, Böen bis 22 km/h"
-   }
-  },
-  "2026-12-01": {
    "k": "part",
    "txt": "Teils sonnig",
    "max": 18,
    "min": 7,
-   "rain": 8,
+   "rain": 3,
    "wind": {
-    "dir": "NNO",
-    "kmh": 4,
-    "txt": "schwach, Böen bis 10 km/h"
+    "dir": "NO",
+    "kmh": 10,
+    "txt": "schwach, Böen bis 23 km/h"
+   }
+  },
+  "2026-12-01": {
+   "k": "cloud",
+   "txt": "Überwiegend bewölkt",
+   "max": 17,
+   "min": 5,
+   "rain": 3,
+   "wind": {
+    "dir": "NO",
+    "kmh": 6,
+    "txt": "schwach, Böen bis 13 km/h"
    }
   },
   "2026-12-02": {
-   "k": "cloud",
-   "txt": "Überwiegend bewölkt",
+   "k": "sun",
+   "txt": "Sonnig",
    "max": 18,
-   "min": 10,
-   "rain": 8,
+   "min": 3,
+   "rain": 0,
    "wind": {
-    "dir": "ONO",
+    "dir": "NO",
     "kmh": 6,
-    "txt": "schwach, Böen bis 15 km/h"
+    "txt": "schwach, Böen bis 14 km/h"
    }
   },
   "2026-12-03": {
    "k": "cloud",
-   "txt": "Überwiegend bewölkt, vereinzelt Tropfen",
+   "txt": "Bedeckt",
    "max": 17,
-   "min": 11,
-   "rain": 0,
+   "min": 7,
+   "rain": 5,
    "wind": {
-    "dir": "NNO",
-    "kmh": 9,
-    "txt": "schwach, Böen bis 18 km/h"
+    "dir": "ONO",
+    "kmh": 6,
+    "txt": "schwach, Böen bis 12 km/h"
+   }
+  },
+  "2026-12-04": {
+   "k": "rain",
+   "txt": "Einzelne Schauer",
+   "max": 16,
+   "min": 10,
+   "rain": 3,
+   "wind": {
+    "dir": "ONO",
+    "kmh": 10,
+    "txt": "schwach, Böen bis 21 km/h"
    }
   }
  },
